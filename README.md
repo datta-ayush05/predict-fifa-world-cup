@@ -1,6 +1,7 @@
 # FIFA World Cup 2026 Prediction Model
 
-[![Kaggle](https://shields.io)](https://www.kaggle.com/code/ayushdatta15/fifa-world-cup-prediction-a-gnn-model)
+[![Kaggle](https://img.shields.io/badge/Kaggle-035a7d?style=for-the-badge&logo=kaggle&logoColor=white)](https://www.kaggle.com/code/ayushdatta15/fifa-world-cup-prediction-a-gnn-model)
+
 
 
 A Graph Neural Network Approach Integrating Time-Decay Weighting, Elo Ratings, and Latent Roster Strengths.
