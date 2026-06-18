@@ -5,8 +5,8 @@ Graph Neural Network with:
 - Continuous time-decay weighting (exponential decay favoring recent matches)
 - Rolling ELO ratings integrated as node/edge features
 - Latent Roster Strengths extracted from multiple EA FC player datasets (position-weighted)
-- Expected Goals directly output via Softplus activation and Poisson NLL training
-- Native Poisson sampling for match goal simulations and outcomes
+- Expected Goals directly output via Softplus activation and Dixon-Coles NLL training
+- Joint probability sampling via 2D grid for match goal simulations and outcomes
 - Home / Away / Neutral venue adjustment
 - Penalty shootout probability (moderate penalty)
 - Official 2026 format: 12 groups → R32 → R16 → QF → SF → Final
@@ -26,6 +26,7 @@ import random
 import warnings
 from collections import defaultdict
 from copy import deepcopy
+from functools import cmp_to_key
 from itertools import combinations
 
 import numpy as np
@@ -569,7 +570,7 @@ class MatchGNN(nn.Module):
     Graph Attention Network (2 layers) that produces team embeddings,
     then a match predictor head over concatenated pair embeddings.
 
-    Output: [lambda_home, lambda_away] (Expected Goals)
+    Output: [lambda_home, lambda_away, rho_raw] (Expected Goals & Dixon-Coles Rho)
     """
 
     def __init__(
@@ -592,7 +593,7 @@ class MatchGNN(nn.Module):
             nn.Dropout(dropout),
             nn.Linear(128, 64),
             nn.ReLU(),
-            nn.Linear(64, 2),  # [lambda_home, lambda_away]
+            nn.Linear(64, 3),  # [lambda_home, lambda_away, rho_raw]
         )
 
     def encode(self, data: Data) -> torch.Tensor:
@@ -615,7 +616,7 @@ class MatchGNN(nn.Module):
     ) -> torch.Tensor:
         """
         venue: 'home_a' | 'home_b' | 'neutral'
-        Returns Expected Goals [lambda_a, lambda_b]
+        Returns Expected Goals and Rho [lambda_a, lambda_b, rho]
         """
         ea = embeddings[idx_a]
         eb = embeddings[idx_b]
@@ -628,9 +629,21 @@ class MatchGNN(nn.Module):
             [elo_norm, venue_flag, delta_s], dtype=torch.float, device=embeddings.device
         )
         inp = torch.cat([ea, eb, extra])
-        raw_lambda = self.predictor(inp)
+        raw_out = self.predictor(inp)
 
-        return F.softplus(raw_lambda)
+        lambda_a = F.softplus(raw_out[0])
+        lambda_b = F.softplus(raw_out[1])
+        rho_raw = raw_out[2]
+        
+        # Dynamic bounds for rho: max(-1/la, -1/lb) <= rho <= min(1/(la*lb), 1)
+        min_bound = torch.max(-1.0 / (lambda_a + 1e-8), -1.0 / (lambda_b + 1e-8))
+        max_bound = torch.min(1.0 / (lambda_a * lambda_b + 1e-8), torch.tensor(1.0, device=lambda_a.device))
+        
+        # Scale Tanh from [-1, 1] to [min_bound, max_bound] safely
+        rho = ((torch.tanh(rho_raw) + 1.0) / 2.0) * (max_bound - min_bound) + min_bound
+        rho = torch.clamp(rho, min=min_bound + 1e-4, max=max_bound - 1e-4)
+        
+        return torch.stack([lambda_a, lambda_b, rho])
 
 
 # ─────────────────────────────────────────────
@@ -762,22 +775,40 @@ def train_model(
         inp = torch.cat([ea, eb, extra], dim=1)
 
         # Pass through the predictor head
-        raw_lambda = model.predictor(inp)
+        raw_out = model.predictor(inp)
 
-        lambdas = F.softplus(raw_lambda)
-        lambda_h = lambdas[:, 0]
-        lambda_a = lambdas[:, 1]
+        lambda_h = F.softplus(raw_out[:, 0])
+        lambda_a = F.softplus(raw_out[:, 1])
+        rho_raw = raw_out[:, 2]
+
+        # Dynamic bounds for rho: max(-1/la, -1/la) <= rho <= min(1/(la*lb), 1)
+        min_bound = torch.max(-1.0 / (lambda_h + 1e-8), -1.0 / (lambda_a + 1e-8))
+        max_bound = torch.min(1.0 / (lambda_h * lambda_a + 1e-8), torch.tensor(1.0, device=lambda_h.device))
+        
+        rho = ((torch.tanh(rho_raw) + 1.0) / 2.0) * (max_bound - min_bound) + min_bound
+        rho = torch.clamp(rho, min=min_bound + 1e-4, max=max_bound - 1e-4)
 
         # Calculate loss only for training slice
-        # Poisson Negative Log-Likelihood Loss: Loss = lambda - actual * log(lambda)
-        loss_h = lambda_h[train_idx] - actual_hs[train_idx] * torch.log(
-            lambda_h[train_idx] + 1e-8
-        )
-        loss_a = lambda_a[train_idx] - actual_aw[train_idx] * torch.log(
-            lambda_a[train_idx] + 1e-8
-        )
+        lh_t = lambda_h[train_idx]
+        la_t = lambda_a[train_idx]
+        rho_t = rho[train_idx]
+        x = actual_hs[train_idx]
+        y = actual_aw[train_idx]
 
-        loss_all = loss_h + loss_a
+        # Base independent poisson log-likelihood (omitting log(x!) constants)
+        ll_h = x * torch.log(lh_t + 1e-8) - lh_t
+        ll_a = y * torch.log(la_t + 1e-8) - la_t
+
+        tau = torch.ones_like(lh_t)
+        tau = torch.where((x == 0) & (y == 0), 1.0 - lh_t * la_t * rho_t, tau)
+        tau = torch.where((x == 0) & (y == 1), 1.0 + lh_t * rho_t, tau)
+        tau = torch.where((x == 1) & (y == 0), 1.0 + la_t * rho_t, tau)
+        tau = torch.where((x == 1) & (y == 1), 1.0 - rho_t, tau)
+        
+        tau = torch.clamp(tau, min=1e-8)
+        
+        # Dixon-Coles Joint Negative Log-Likelihood
+        loss_all = -(torch.log(tau) + ll_h + ll_a)
 
         batch_weights = weight[train_idx]
         batch_weights = batch_weights / (batch_weights.mean() + 1e-8)
@@ -796,18 +827,30 @@ def train_model(
                 val_emb = model.encode(graph)
                 v_ea, v_eb = val_emb[hi[val_idx]], val_emb[ai[val_idx]]
                 v_inp = torch.cat([v_ea, v_eb, extra[val_idx]], dim=1)
-                v_raw_lambda = model.predictor(v_inp)
-                v_lambdas = F.softplus(v_raw_lambda)
+                v_raw_out = model.predictor(v_inp)
+                v_lh = F.softplus(v_raw_out[:, 0])
+                v_la = F.softplus(v_raw_out[:, 1])
+                v_rho_raw = v_raw_out[:, 2]
 
-                v_lambda_h = v_lambdas[:, 0]
-                v_lambda_a = v_lambdas[:, 1]
-                v_loss_h = v_lambda_h - actual_hs[val_idx] * torch.log(
-                    v_lambda_h + 1e-8
-                )
-                v_loss_a = v_lambda_a - actual_aw[val_idx] * torch.log(
-                    v_lambda_a + 1e-8
-                )
-                val_loss = (v_loss_h + v_loss_a).mean().item()
+                v_min = torch.max(-1.0 / (v_lh + 1e-8), -1.0 / (v_la + 1e-8))
+                v_max = torch.min(1.0 / (v_lh * v_la + 1e-8), torch.tensor(1.0, device=v_lh.device))
+                v_rho = ((torch.tanh(v_rho_raw) + 1.0) / 2.0) * (v_max - v_min) + v_min
+                v_rho = torch.clamp(v_rho, min=v_min + 1e-4, max=v_max - 1e-4)
+
+                vx = actual_hs[val_idx]
+                vy = actual_aw[val_idx]
+
+                v_ll_h = vx * torch.log(v_lh + 1e-8) - v_lh
+                v_ll_a = vy * torch.log(v_la + 1e-8) - v_la
+
+                v_tau = torch.ones_like(v_lh)
+                v_tau = torch.where((vx == 0) & (vy == 0), 1.0 - v_lh * v_la * v_rho, v_tau)
+                v_tau = torch.where((vx == 0) & (vy == 1), 1.0 + v_lh * v_rho, v_tau)
+                v_tau = torch.where((vx == 1) & (vy == 0), 1.0 + v_la * v_rho, v_tau)
+                v_tau = torch.where((vx == 1) & (vy == 1), 1.0 - v_rho, v_tau)
+                v_tau = torch.clamp(v_tau, min=1e-8)
+
+                val_loss = -(torch.log(v_tau) + v_ll_h + v_ll_a).mean().item()
 
             print(
                 f"  Epoch {epoch:3d} | train_loss={train_loss.item():.4f} | val_loss={val_loss:.4f}"
@@ -862,11 +905,12 @@ def precompute_match_probabilities(
                     embeddings, ib, ia, eb, ea, venue_2, s_b, s_a
                 )
 
-                # Average the forward and reversed lambdas for stability
+                # Average the forward and reversed lambdas and rho for stability
                 gnn_lambdas = np.array(
                     [
                         (lambdas1[0].item() + lambdas2[1].item()) / 2.0,
                         (lambdas1[1].item() + lambdas2[0].item()) / 2.0,
+                        (lambdas1[2].item() + lambdas2[2].item()) / 2.0,
                     ]
                 )
 
@@ -884,7 +928,6 @@ def simulate_match(
     roster_strengths: dict = None,
     venue: str = "neutral",
     knockout: bool = False,
-    deterministic: bool = False,
     prob_matrix: dict = None,
 ) -> tuple[str, dict]:
     """
@@ -909,7 +952,7 @@ def simulate_match(
         if ia is None or ib is None:
             # fallback: pure ELO
             p_a = 1 / (1 + 10 ** (-(ea - eb) / 400))
-            final_lambdas = np.array([p_a * 2.6, (1 - p_a) * 2.6])
+            final_lambdas = np.array([p_a * 2.6, (1 - p_a) * 2.6, 0.0])
         else:
             s_a = roster_strengths.get(team_a, 0.5) if roster_strengths else 0.5
             s_b = roster_strengths.get(team_b, 0.5) if roster_strengths else 0.5
@@ -922,15 +965,32 @@ def simulate_match(
                     [
                         (lambdas1[0].item() + lambdas2[1].item()) / 2.0,
                         (lambdas1[1].item() + lambdas2[0].item()) / 2.0,
+                        (lambdas1[2].item() + lambdas2[2].item()) / 2.0,
                     ]
                 )
 
-    if deterministic:
-        gf_a = round(final_lambdas[0])
-        gf_b = round(final_lambdas[1])
-    else:
-        gf_a = np.random.poisson(final_lambdas[0])
-        gf_b = np.random.poisson(final_lambdas[1])
+    la, lb, rho = final_lambdas[0], final_lambdas[1], final_lambdas[2]
+    
+    # Base independent Poisson PMF (goals up to 10)
+    goals = np.arange(11)
+    prob_a = np.array([math.exp(-la) * (la**k) / math.factorial(k) for k in goals])
+    prob_b = np.array([math.exp(-lb) * (lb**k) / math.factorial(k) for k in goals])
+    
+    # Joint probability matrix P(X=x, Y=y)
+    P = np.outer(prob_a, prob_b)
+    
+    # Dixon-Coles adjustments
+    P[0, 0] *= max(0, 1.0 - la * lb * rho)
+    P[0, 1] *= max(0, 1.0 + la * rho)
+    P[1, 0] *= max(0, 1.0 + lb * rho)
+    P[1, 1] *= max(0, 1.0 - rho)
+    
+    # Normalize to ensure valid probability distribution
+    P /= P.sum()
+    
+    # Sample flat index
+    flat_idx = np.random.choice(121, p=P.flatten())
+    gf_a, gf_b = np.unravel_index(flat_idx, P.shape)
 
     winner = team_a if gf_a > gf_b else (team_b if gf_b > gf_a else None)
 
@@ -940,7 +1000,7 @@ def simulate_match(
         p_a_pen = max(0.35, min(0.65, PENALTY_SHOOTOUT_PROB_EACH + elo_edge))
         winner = (
             team_a
-            if (p_a_pen > 0.5 if deterministic else random.random() < p_a_pen)
+            if random.random() < p_a_pen
             else team_b
         )
         return winner, {
@@ -971,7 +1031,6 @@ def run_group_stage(
     team_idx,
     current_elos,
     roster_strengths=None,
-    deterministic: bool = False,
     prob_matrix: dict = None,
 ):
     """
@@ -997,7 +1056,6 @@ def run_group_stage(
                 roster_strengths,
                 "neutral",
                 False,
-                deterministic,
                 prob_matrix,
             )
             gf_a = res["gf_a"]
@@ -1023,15 +1081,21 @@ def run_group_stage(
                 h2h[ta][tb] += 1
                 h2h[tb][ta] += 1
 
-        # Sort: pts → gd → gf → random (lots)
+        def team_cmp(t1, t2):
+            if table[t1]["pts"] != table[t2]["pts"]:
+                return table[t1]["pts"] - table[t2]["pts"]
+            if table[t1]["gd"] != table[t2]["gd"]:
+                return table[t1]["gd"] - table[t2]["gd"]
+            if table[t1]["gf"] != table[t2]["gf"]:
+                return table[t1]["gf"] - table[t2]["gf"]
+            if h2h[t1][t2] != h2h[t2][t1]:
+                return h2h[t1][t2] - h2h[t2][t1]
+            return 1 if random.random() > 0.5 else -1
+
+        # Sort: pts → gd → gf → H2H → random (lots)
         ranked = sorted(
             teams,
-            key=lambda t: (
-                table[t]["pts"],
-                table[t]["gd"],
-                table[t]["gf"],
-                random.random(),
-            ),
+            key=cmp_to_key(team_cmp),
             reverse=True,
         )
         standings[grp] = {"table": table, "ranked": ranked}
@@ -1102,7 +1166,6 @@ def run_knockout_round(
     current_elos,
     round_name: str,
     roster_strengths: dict = None,
-    deterministic: bool = False,
     prob_matrix: dict = None,
 ) -> list[str]:
     """Simulate one knockout round. Returns list of winners."""
@@ -1121,7 +1184,6 @@ def run_knockout_round(
             roster_strengths=roster_strengths,
             venue="neutral",
             knockout=True,
-            deterministic=deterministic,
             prob_matrix=prob_matrix,
         )
         note = ""
@@ -1203,7 +1265,6 @@ def simulate_tournament(
                 roster_strengths,
                 "neutral",
                 True,
-                False,
                 prob_matrix,
             )
             r32_winners.append(winner)
@@ -1222,7 +1283,6 @@ def simulate_tournament(
                 roster_strengths,
                 "neutral",
                 True,
-                False,
                 prob_matrix,
             )
             r16_winners.append(winner)
@@ -1241,7 +1301,6 @@ def simulate_tournament(
                 roster_strengths,
                 "neutral",
                 True,
-                False,
                 prob_matrix,
             )
             qf_winners.append(winner)
@@ -1260,7 +1319,6 @@ def simulate_tournament(
                 roster_strengths,
                 "neutral",
                 True,
-                False,
                 prob_matrix,
             )
             loser = ta if winner == tb else tb
@@ -1281,7 +1339,6 @@ def simulate_tournament(
             roster_strengths,
             "neutral",
             True,
-            False,
             prob_matrix,
         )
         final_counts[fn_a] += 1
@@ -1291,178 +1348,7 @@ def simulate_tournament(
     return win_counts, final_counts, sf_counts, n_sims
 
 
-# ─────────────────────────────────────────────
-# 12. SINGLE TOURNAMENT WALKTHROUGH
-# ─────────────────────────────────────────────
 
-
-def run_single_walkthrough(
-    model,
-    graph,
-    team_idx,
-    current_elos,
-    roster_strengths=None,
-    prob_matrix=None,
-):
-    device = next(model.parameters()).device
-    graph = graph.to(device)
-    model.eval()
-    with torch.no_grad():
-        embeddings = model.encode(graph)
-
-    if prob_matrix is None:
-        prob_matrix = precompute_match_probabilities(
-            model, embeddings, team_idx, current_elos, roster_strengths
-        )
-
-    print("\n" + "=" * 60)
-    print("  FIFA WORLD CUP 2026 - MAXIMUM LIKELIHOOD BRACKET")
-    print("=" * 60)
-
-    # ── Group Stage ────────────────────────────────────
-    print("\n📋 GROUP STAGE")
-    standings = run_group_stage(
-        model,
-        embeddings,
-        team_idx,
-        current_elos,
-        roster_strengths=roster_strengths,
-        deterministic=True,
-        prob_matrix=prob_matrix,
-    )
-
-    for grp in sorted(standings):
-        s = standings[grp]
-        print(f"\n  Group {grp}")
-        print(f"  {'Team':<30} {'Pts':>4} {'GD':>4} {'GF':>4} {'GA':>4}")
-        print(f"  {'─' * 46}")
-        for rank, team in enumerate(s["ranked"], 1):
-            t = s["table"][team]
-            adv = " ✅" if rank <= 2 else (" 🔘" if rank == 3 else "")
-            print(
-                f"  {rank}. {team:<28} {t['pts']:>4} {t['gd']:>4} "
-                f"{t['gf']:>4} {t['ga']:>4}{adv}"
-            )
-
-    best_thirds = pick_best_third_place(standings)
-    print(f"\n  🔘 8 Best Third-Place Teams advancing:")
-    for i, t in enumerate(best_thirds, 1):
-        print(f"     {i}. {t}")
-
-    # ── R32 ───────────────────────────────────────────
-    r32_matchups = build_r32_bracket(standings, best_thirds)
-    r32_winners = run_knockout_round(
-        r32_matchups,
-        model,
-        embeddings,
-        team_idx,
-        current_elos,
-        "⚡ ROUND OF 32",
-        roster_strengths=roster_strengths,
-        deterministic=True,
-        prob_matrix=prob_matrix,
-    )
-
-    # ── R16 ───────────────────────────────────────────
-    r16_matchups = pair_winners(r32_winners)
-    r16_winners = run_knockout_round(
-        r16_matchups,
-        model,
-        embeddings,
-        team_idx,
-        current_elos,
-        "⚡ ROUND OF 16",
-        roster_strengths=roster_strengths,
-        deterministic=True,
-        prob_matrix=prob_matrix,
-    )
-
-    # ── QF ────────────────────────────────────────────
-    qf_matchups = pair_winners(r16_winners)
-    qf_winners = run_knockout_round(
-        qf_matchups,
-        model,
-        embeddings,
-        team_idx,
-        current_elos,
-        "⚡ QUARTER-FINALS",
-        roster_strengths=roster_strengths,
-        deterministic=True,
-        prob_matrix=prob_matrix,
-    )
-
-    # ── SF ────────────────────────────────────────────
-    sf_matchups = pair_winners(qf_winners)
-    sf_winners, sf_losers = [], []
-    print(f"\n  {'─' * 48}")
-    print(f"  ⚡ SEMI-FINALS")
-    print(f"  {'─' * 48}")
-    for ta, tb in sf_matchups:
-        winner, res = simulate_match(
-            model,
-            embeddings,
-            ta,
-            tb,
-            team_idx,
-            current_elos,
-            roster_strengths=roster_strengths,
-            venue="neutral",
-            knockout=True,
-            deterministic=True,
-            prob_matrix=prob_matrix,
-        )
-        loser = ta if winner == tb else tb
-        note = " (pens)" if res["outcome"] == "penalties" else ""
-        print(f"  {ta:<30} vs {tb:<30} → {winner}{note}")
-        sf_winners.append(winner)
-        sf_losers.append(loser)
-
-    # ── 3rd Place ─────────────────────────────────────
-    print(f"\n  {'─' * 48}")
-    print(f"  🥉 THIRD PLACE PLAY-OFF")
-    print(f"  {'─' * 48}")
-    t3_winner, res = simulate_match(
-        model,
-        embeddings,
-        sf_losers[0],
-        sf_losers[1],
-        team_idx,
-        current_elos,
-        roster_strengths=roster_strengths,
-        venue="neutral",
-        knockout=True,
-        deterministic=True,
-        prob_matrix=prob_matrix,
-    )
-    note = " (pens)" if res["outcome"] == "penalties" else ""
-    print(f"  {sf_losers[0]:<30} vs {sf_losers[1]:<30} → {t3_winner}{note}")
-
-    # ── Final ─────────────────────────────────────────
-    print(f"\n  {'─' * 48}")
-    print(f"  🏆 FINAL")
-    print(f"  {'─' * 48}")
-    fn_a, fn_b = sf_winners
-    champion, res = simulate_match(
-        model,
-        embeddings,
-        fn_a,
-        fn_b,
-        team_idx,
-        current_elos,
-        roster_strengths=roster_strengths,
-        venue="neutral",
-        knockout=True,
-        deterministic=True,
-        prob_matrix=prob_matrix,
-    )
-    note = " (pens)" if res["outcome"] == "penalties" else ""
-    runner_up = fn_a if champion == fn_b else fn_b
-    print(f"  {fn_a:<30} vs {fn_b:<30} → {champion}{note}")
-    print(f"\n  🏆 CHAMPION:    {champion}")
-    print(f"  🥈 RUNNER-UP:   {runner_up}")
-    print(f"  🥉 THIRD PLACE: {t3_winner}")
-
-    return champion
 
 
 # ─────────────────────────────────────────────
@@ -1598,16 +1484,6 @@ def main(
         embeddings = model.encode(graph)
     prob_matrix = precompute_match_probabilities(
         model, embeddings, team_idx, current_elos, roster_strengths_26
-    )
-
-    # ── Single Walkthrough ────────────────────────────
-    champion = run_single_walkthrough(
-        model,
-        graph,
-        team_idx,
-        current_elos,
-        roster_strengths_26,
-        prob_matrix=prob_matrix,
     )
 
     # ── Monte Carlo ───────────────────────────────────
