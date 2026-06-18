@@ -926,7 +926,7 @@ def simulate_match(
         if ia is None or ib is None:
             # fallback: pure ELO
             p_a = 1 / (1 + 10 ** (-(ea - eb) / 400))
-            final_lambdas = np.array([p_a * 1.5, (1 - p_a) * 1.5])
+            final_lambdas = np.array([p_a * 2.6, (1 - p_a) * 2.6])
         else:
             s_a = roster_strengths.get(team_a, 0.5) if roster_strengths else 0.5
             s_b = roster_strengths.get(team_b, 0.5) if roster_strengths else 0.5

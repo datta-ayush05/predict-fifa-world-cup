@@ -1,0 +1,331 @@
+THE OUTPUT AS SEEN IN TERMINAL
+
+Loading results.csv …
+Building ELO: 100%|██████████| 49425/49425 [00:04<00:00, 10622.60it/s]
+
+📊 Top 10 ELO Ratings (pre-tournament):
+   1. Spain                           2086.3
+   2. Argentina                       2082.4
+   3. France                          2047.2
+   4. England                         1997.0
+   5. Portugal                        1961.1
+   6. Brazil                          1959.5
+   7. Colombia                        1946.4
+   8. Germany                         1946.3
+   9. Ecuador                         1930.8
+  10. Morocco                         1929.4
+
+-> Extracting Latent Roster Strengths from /kaggle/input/datasets/ayushdatta15/wc-predict/Fifa 23 Players Data (1).csv...
+
+-> Extracting Latent Roster Strengths from /kaggle/input/datasets/ayushdatta15/wc-predict/Fifa 23 Players Data (1).csv...
+
+-> Extracting Latent Roster Strengths from /kaggle/input/datasets/ayushdatta15/wc-predict/male_fc_24_players.csv...
+
+-> Extracting Latent Roster Strengths from /kaggle/input/datasets/ayushdatta15/wc-predict/male_players.csv...
+
+-> Extracting Latent Roster Strengths from /kaggle/input/datasets/ayushdatta15/wc-predict/ea_fc26_players.csv...
+
+🔗 Initialising GNN model & Walk-Forward Training …
+
+   ========================================
+   ▶ Walk-forward Window: 2022
+   ========================================
+   Building Training Graph (data up to 2021) ...
+   Train Nodes: 320  |  Train Edges: 22278
+   Training on 1922 samples from 2022 ...
+
+🚀 Starting Fast Vectorized Training...
+  Epoch   1 | train_loss=1.9499 | val_loss=2.0219 | scale=1.501
+  Epoch   5 | train_loss=1.8149 | val_loss=1.8315 | scale=1.505
+  Epoch  10 | train_loss=1.7060 | val_loss=1.6475 | scale=1.509
+  Epoch  15 | train_loss=1.6836 | val_loss=1.6632 | scale=1.513
+  Epoch  20 | train_loss=1.6865 | val_loss=1.7037 | scale=1.516
+  Epoch  25 | train_loss=1.6698 | val_loss=1.6597 | scale=1.519
+  Epoch  30 | train_loss=1.6751 | val_loss=1.6431 | scale=1.522
+  Epoch  35 | train_loss=1.6609 | val_loss=1.6596 | scale=1.524
+  Epoch  40 | train_loss=1.6596 | val_loss=1.6660 | scale=1.525
+
+   ========================================
+   ▶ Walk-forward Window: 2023
+   ========================================
+   Building Training Graph (data up to 2022) ...
+   Train Nodes: 326  |  Train Edges: 22646
+   Training on 2098 samples from 2023 ...
+
+🚀 Starting Fast Vectorized Training...
+  Epoch   1 | train_loss=1.5114 | val_loss=1.1079 | scale=1.526
+  Epoch   5 | train_loss=1.4921 | val_loss=1.0516 | scale=1.526
+  Epoch  10 | train_loss=1.5021 | val_loss=1.0360 | scale=1.524
+  Epoch  15 | train_loss=1.4897 | val_loss=1.0508 | scale=1.522
+  Epoch  20 | train_loss=1.4872 | val_loss=1.0365 | scale=1.519
+  Epoch  25 | train_loss=1.4820 | val_loss=1.0190 | scale=1.517
+  Epoch  30 | train_loss=1.4771 | val_loss=1.0172 | scale=1.515
+  Epoch  35 | train_loss=1.4793 | val_loss=1.0176 | scale=1.513
+  Epoch  40 | train_loss=1.4781 | val_loss=1.0097 | scale=1.511
+
+   ========================================
+   ▶ Walk-forward Window: 2024
+   ========================================
+   Building Training Graph (data up to 2023) ...
+   Train Nodes: 328  |  Train Edges: 23030
+   Training on 2462 samples from 2024 ...
+
+🚀 Starting Fast Vectorized Training...
+  Epoch   1 | train_loss=1.5896 | val_loss=1.4755 | scale=1.511
+  Epoch   5 | train_loss=1.5848 | val_loss=1.4862 | scale=1.509
+  Epoch  10 | train_loss=1.5799 | val_loss=1.5039 | scale=1.508
+  Epoch  15 | train_loss=1.5748 | val_loss=1.4986 | scale=1.508
+  Epoch  20 | train_loss=1.5777 | val_loss=1.4858 | scale=1.507
+  Epoch  25 | train_loss=1.5755 | val_loss=1.4816 | scale=1.506
+  Epoch  30 | train_loss=1.5695 | val_loss=1.4833 | scale=1.506
+  Epoch  35 | train_loss=1.5791 | val_loss=1.4861 | scale=1.505
+  Epoch  40 | train_loss=1.5678 | val_loss=1.4887 | scale=1.505
+
+   ========================================
+   ▶ Walk-forward Window: 2025
+   ========================================
+   Building Training Graph (data up to 2024) ...
+   Train Nodes: 328  |  Train Edges: 23372
+   Training on 2000 samples from 2025 ...
+
+🚀 Starting Fast Vectorized Training...
+  Epoch   1 | train_loss=1.3761 | val_loss=1.4090 | scale=1.505
+  Epoch   5 | train_loss=1.3761 | val_loss=1.4012 | scale=1.505
+  Epoch  10 | train_loss=1.3749 | val_loss=1.3907 | scale=1.505
+  Epoch  15 | train_loss=1.3663 | val_loss=1.3851 | scale=1.506
+  Epoch  20 | train_loss=1.3552 | val_loss=1.3832 | scale=1.506
+  Epoch  25 | train_loss=1.3645 | val_loss=1.3827 | scale=1.506
+  Epoch  30 | train_loss=1.3616 | val_loss=1.3827 | scale=1.506
+  Epoch  35 | train_loss=1.3624 | val_loss=1.3827 | scale=1.506
+  Epoch  40 | train_loss=1.3650 | val_loss=1.3827 | scale=1.506
+
+🔗 Building Full Inference Graph (up to 2026) ...
+   Inference Nodes: 329  |  Inference Edges: 23958
+⚡ Precomputing static expected goals (Host advantages applied) for O(1) lookup...
+
+============================================================
+  FIFA WORLD CUP 2026 - MAXIMUM LIKELIHOOD BRACKET
+============================================================
+
+📋 GROUP STAGE
+
+  Group A
+  Team                            Pts   GD   GF   GA
+  ──────────────────────────────────────────────
+  1. Mexico                          9    4    6    2 ✅
+  2. South Korea                     6    1    5    4 ✅
+  3. Czech Republic                  3   -1    4    5 🔘
+  4. South Africa                    0   -4    2    6
+
+  Group B
+  Team                            Pts   GD   GF   GA
+  ──────────────────────────────────────────────
+  1. Canada                          7    2    5    3 ✅
+  2. Switzerland                     7    2    5    3 ✅
+  3. Bosnia and Herzegovina          3   -1    4    5 🔘
+  4. Qatar                           0   -3    3    6
+
+  Group C
+  Team                            Pts   GD   GF   GA
+  ──────────────────────────────────────────────
+  1. Brazil                          7    4    6    2 ✅
+  2. Morocco                         5    1    4    3 ✅
+  3. Scotland                        4    0    4    4 🔘
+  4. Haiti                           0   -5    2    7
+
+  Group D
+  Team                            Pts   GD   GF   GA
+  ──────────────────────────────────────────────
+  1. Australia                       3    0    3    3 ✅
+  2. Turkey                          3    0    3    3 ✅
+  3. Paraguay                        3    0    3    3 🔘
+  4. United States                   3    0    3    3
+
+  Group E
+  Team                            Pts   GD   GF   GA
+  ──────────────────────────────────────────────
+  1. Germany                         7    4    6    2 ✅
+  2. Ecuador                         7    4    6    2 ✅
+  3. Ivory Coast                     3   -1    4    5 🔘
+  4. Curacao                         0   -7    1    8
+
+  Group F
+  Team                            Pts   GD   GF   GA
+  ──────────────────────────────────────────────
+  1. Netherlands                     7    2    5    3 ✅
+  2. Japan                           7    2    5    3 ✅
+  3. Sweden                          1   -2    3    5 🔘
+  4. Tunisia                         1   -2    3    5
+
+  Group G
+  Team                            Pts   GD   GF   GA
+  ──────────────────────────────────────────────
+  1. Belgium                         9    3    6    3 ✅
+  2. Egypt                           4    0    4    4 ✅
+  3. Iran                            4    0    4    4 🔘
+  4. New Zealand                     0   -3    3    6
+
+  Group H
+  Team                            Pts   GD   GF   GA
+  ──────────────────────────────────────────────
+  1. Spain                           9    7    8    1 ✅
+  2. Uruguay                         6    1    5    4 ✅
+  3. Saudi Arabia                    1   -4    2    6 🔘
+  4. Cape Verde                      1   -4    2    6
+
+  Group I
+  Team                            Pts   GD   GF   GA
+  ──────────────────────────────────────────────
+  1. France                          9    4    6    2 ✅
+  2. Senegal                         4    0    4    4 ✅
+  3. Norway                          4    0    4    4 🔘
+  4. Iraq                            0   -4    2    6
+
+  Group J
+  Team                            Pts   GD   GF   GA
+  ──────────────────────────────────────────────
+  1. Argentina                       9    5    7    2 ✅
+  2. Austria                         4    0    4    4 ✅
+  3. Algeria                         4    0    4    4 🔘
+  4. Jordan                          0   -5    2    7
+
+  Group K
+  Team                            Pts   GD   GF   GA
+  ──────────────────────────────────────────────
+  1. Portugal                        7    2    5    3 ✅
+  2. Colombia                        7    2    5    3 ✅
+  3. Uzbekistan                      1   -2    3    5 🔘
+  4. DR Congo                        1   -2    3    5
+
+  Group L
+  Team                            Pts   GD   GF   GA
+  ──────────────────────────────────────────────
+  1. England                         9    4    6    2 ✅
+  2. Croatia                         6    1    5    4 ✅
+  3. Panama                          3   -1    4    5 🔘
+  4. Ghana                           0   -4    2    6
+
+  🔘 8 Best Third-Place Teams advancing:
+     1. Algeria
+     2. Iran
+     3. Scotland
+     4. Norway
+     5. Paraguay
+     6. Czech Republic
+     7. Panama
+     8. Bosnia and Herzegovina
+
+  ────────────────────────────────────────────────
+  ⚡ ROUND OF 32
+  ────────────────────────────────────────────────
+  Spain                          vs Czech Republic                 → Spain
+  Argentina                      vs Panama                         → Argentina
+  Mexico                         vs Bosnia and Herzegovina         → Mexico
+  France                         vs Turkey                         → France
+  England                        vs Paraguay                       → England
+  Belgium                        vs Australia                      → Australia (pens)
+  Brazil                         vs Iran                           → Brazil
+  Germany                        vs Austria                        → Germany
+  Ecuador                        vs Egypt                          → Ecuador
+  Japan                          vs Algeria                        → Japan (pens)
+  Switzerland                    vs Senegal                        → Switzerland (pens)
+  Portugal                       vs Norway                         → Portugal (pens)
+  Canada                         vs Scotland                       → Scotland (pens)
+  Colombia                       vs Morocco                        → Colombia (pens)
+  Netherlands                    vs Uruguay                        → Netherlands (pens)
+  Croatia                        vs South Korea                    → Croatia
+
+  ────────────────────────────────────────────────
+  ⚡ ROUND OF 16
+  ────────────────────────────────────────────────
+  Spain                          vs Ecuador                        → Spain
+  Argentina                      vs Japan                          → Argentina
+  Mexico                         vs Switzerland                    → Mexico
+  France                         vs Portugal                       → France (pens)
+  England                        vs Scotland                       → England
+  Australia                      vs Colombia                       → Colombia
+  Brazil                         vs Netherlands                    → Brazil (pens)
+  Germany                        vs Croatia                        → Germany (pens)
+
+  ────────────────────────────────────────────────
+  ⚡ QUARTER-FINALS
+  ────────────────────────────────────────────────
+  Spain                          vs England                        → Spain (pens)
+  Argentina                      vs Colombia                       → Argentina
+  Mexico                         vs Brazil                         → Brazil (pens)
+  France                         vs Germany                        → France
+
+  ────────────────────────────────────────────────
+  ⚡ SEMI-FINALS
+  ────────────────────────────────────────────────
+  Spain                          vs Brazil                         → Spain
+  Argentina                      vs France                         → Argentina (pens)
+
+  ────────────────────────────────────────────────
+  🥉 THIRD PLACE PLAY-OFF
+  ────────────────────────────────────────────────
+  Brazil                         vs France                         → France (pens)
+
+  ────────────────────────────────────────────────
+  🏆 FINAL
+  ────────────────────────────────────────────────
+  Spain                          vs Argentina                      → Spain (pens)
+
+  🏆 CHAMPION:    Spain
+  🥈 RUNNER-UP:   Argentina
+  🥉 THIRD PLACE: France
+
+============================================================
+  Running 10000 Monte Carlo simulations …
+============================================================
+Simulating: 100%|██████████| 10000/10000 [00:06<00:00, 1441.40it/s]
+
+============================================================
+  MONTE CARLO RESULTS  (n=10000 simulations)
+============================================================
+
+  Team                              Win%   Final%    SF%
+  ──────────────────────────────────────────────────────
+  Spain                            21.6%    31.6%   45.0%
+  Argentina                        18.8%    28.6%   41.8%
+  France                           13.4%    23.3%   36.5%
+  England                           7.6%    15.4%   27.4%
+  Portugal                          4.4%    10.1%   19.9%
+  Mexico                            4.3%     9.7%   20.5%
+  Brazil                            4.2%     9.0%   19.2%
+  Germany                           3.2%     8.1%   17.0%
+  Colombia                          3.2%     7.4%   16.1%
+  Ecuador                           2.5%     6.3%   14.8%
+  Netherlands                       2.2%     5.8%   13.3%
+  Morocco                           1.8%     5.0%   12.3%
+  Croatia                           1.6%     4.5%   11.4%
+  Norway                            1.5%     3.9%    9.4%
+  Japan                             1.2%     3.4%    9.6%
+  Uruguay                           1.2%     3.4%    8.5%
+  Turkey                            1.2%     3.3%    8.2%
+  Belgium                           0.9%     3.0%    8.3%
+  United States                     0.7%     1.8%    5.2%
+  Switzerland                       0.7%     2.6%    7.6%
+  Canada                            0.6%     2.4%    7.0%
+  Paraguay                          0.4%     1.7%    5.1%
+  South Korea                       0.4%     1.2%    4.3%
+  Austria                           0.4%     1.3%    4.4%
+  Scotland                          0.3%     1.1%    3.4%
+  Australia                         0.3%     1.1%    3.6%
+  Senegal                           0.3%     1.0%    3.3%
+  Ivory Coast                       0.2%     0.8%    3.2%
+  Algeria                           0.2%     0.8%    2.7%
+  Iran                              0.2%     0.6%    2.6%
+  Egypt                             0.1%     0.4%    1.8%
+  Sweden                            0.1%     0.3%    1.3%
+  Czech Republic                    0.1%     0.2%    0.9%
+  Panama                            0.0%     0.2%    1.3%
+  DR Congo                          0.0%     0.1%    0.6%
+  Uzbekistan                        0.0%     0.1%    0.7%
+  Saudi Arabia                      0.0%     0.1%    0.2%
+  Cape Verde                        0.0%     0.0%    0.1%
+  Tunisia                           0.0%     0.0%    0.3%
+  Iraq                              0.0%     0.0%    0.2%
+  Jordan                            0.0%     0.0%    0.1%
+
+  Teams not appearing in semis: Curacao
