@@ -35,16 +35,16 @@ The comprehensive simulation highlights the dominant favorites and their respect
 
 | Nation | Win % | Final % | Semi-Final % |
 | :--- | :---: | :---: | :---: |
-| **Spain** | 21.6% | 31.6% | 45.0% |
-| **Argentina** | 18.8% | 28.6% | 41.8% |
-| **France** | 13.4% | 23.3% | 36.5% |
-| **England** | 7.6% | 15.4% | 27.4% |
-| **Portugal** | 4.4% | 10.1% | 19.9% |
-| **Mexico** | 4.3% | 9.7% | 20.5% |
-| **Brazil** | 4.2% | 9.0% | 19.2% |
-| **Germany** | 3.2% | 8.1% | 17.0% |
-| **Colombia** | 3.2% | 7.4% | 16.1% |
-| **Ecuador** | 2.5% | 6.3% | 14.8% |
+| **Spain** | 21.8% | 32.3% | 45.9% |
+| **Argentina** | 18.7% | 28.8% | 42.3% |
+| **France** | 13.0% | 22.9% | 35.5% |
+| **England** | 7.6% | 15.0% | 27.0% |
+| **Brazil** | 4.6% | 10.2% | 20.0% |
+| **Portugal** | 4.4% | 9.6% | 19.3% |
+| **Mexico** | 4.0% | 9.2% | 19.4% |
+| **Germany** | 3.2% | 7.5% | 16.8% |
+| **Colombia** | 3.2% | 7.6% | 16.0% |
+| **Ecuador** | 2.6% | 6.4% | 14.8% |
 
 *(For the complete distribution spanning all 48 participating nations, refer to the generated simulation outputs).*
 
