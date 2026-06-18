@@ -595,8 +595,6 @@ class MatchGNN(nn.Module):
             nn.Linear(64, 2),  # [lambda_home, lambda_away]
         )
 
-        self.elo_scale = nn.Parameter(torch.tensor(1.5))
-
     def encode(self, data: Data) -> torch.Tensor:
         x, ei, ea = data.x, data.edge_index, data.edge_attr
         x = F.elu(self.gat1(x, ei, ea))
@@ -632,10 +630,6 @@ class MatchGNN(nn.Module):
         inp = torch.cat([ea, eb, extra])
         raw_lambda = self.predictor(inp)
 
-        # Residual ELO Anchor
-        raw_lambda[0] += elo_norm * self.elo_scale
-        raw_lambda[1] -= elo_norm * self.elo_scale
-
         return F.softplus(raw_lambda)
 
 
@@ -654,11 +648,10 @@ def prepare_training_samples(
         elo_a_list,
         elo_b_list,
         venue_list,
-        label_list,
         weight_list,
         hs_list,
         aw_list,
-    ) = [], [], [], [], [], [], [], [], []
+    ) = [], [], [], [], [], [], [], []
 
     for _, row in df.iterrows():
         h, a = row["home_team"], row["away_team"]
@@ -677,7 +670,6 @@ def prepare_training_samples(
         venue_list.append(1.0 if not neutral else 0.0)
         hs_list.append(hs)
         aw_list.append(aw)
-        label_list.append(0 if hs > aw else (1 if hs == aw else 2))
         weight_list.append(tw)
 
         # Reversed match (Team A = away_team, Team B = home_team)
@@ -689,7 +681,6 @@ def prepare_training_samples(
         venue_list.append(-1.0 if not neutral else 0.0)
         hs_list.append(aw)
         aw_list.append(hs)
-        label_list.append(2 if hs > aw else (1 if hs == aw else 0))
         weight_list.append(tw)
 
     return {
@@ -698,7 +689,6 @@ def prepare_training_samples(
         "elo_a": torch.tensor(elo_a_list, dtype=torch.float),
         "elo_b": torch.tensor(elo_b_list, dtype=torch.float),
         "venue": torch.tensor(venue_list, dtype=torch.float),
-        "label": torch.tensor(label_list, dtype=torch.long),
         "weight": torch.tensor(weight_list, dtype=torch.float),
         "hs": torch.tensor(hs_list, dtype=torch.float),
         "aw": torch.tensor(aw_list, dtype=torch.float),
@@ -723,16 +713,15 @@ def train_model(
     # Move all tensors to device
     hi, ai = samples["hi"].to(device), samples["ai"].to(device)
     elo_a, elo_b = samples["elo_a"].to(device), samples["elo_b"].to(device)
-    venue, label, weight = (
+    venue, weight = (
         samples["venue"].to(device),
-        samples["label"].to(device),
         samples["weight"].to(device),
     )
     actual_hs = samples["hs"].to(device)
     actual_aw = samples["aw"].to(device)
 
     # Vectorized Train/Val split indices (Chronological split to prevent temporal leak)
-    num_samples = len(label)
+    num_samples = len(venue)
     split = int(0.85 * num_samples)
     split -= split % 2  # Ensure even split so forward/reversed pairs aren't torn
     train_idx = torch.arange(split)
@@ -775,10 +764,6 @@ def train_model(
         # Pass through the predictor head
         raw_lambda = model.predictor(inp)
 
-        #  THE RESIDUAL ELO ANCHOR (Vectorized for Training)
-        raw_lambda[:, 0] += elo_norm.squeeze(1) * model.elo_scale
-        raw_lambda[:, 1] -= elo_norm.squeeze(1) * model.elo_scale
-
         lambdas = F.softplus(raw_lambda)
         lambda_h = lambdas[:, 0]
         lambda_a = lambdas[:, 1]
@@ -812,8 +797,6 @@ def train_model(
                 v_ea, v_eb = val_emb[hi[val_idx]], val_emb[ai[val_idx]]
                 v_inp = torch.cat([v_ea, v_eb, extra[val_idx]], dim=1)
                 v_raw_lambda = model.predictor(v_inp)
-                v_raw_lambda[:, 0] += elo_norm[val_idx].squeeze(1) * model.elo_scale
-                v_raw_lambda[:, 1] -= elo_norm[val_idx].squeeze(1) * model.elo_scale
                 v_lambdas = F.softplus(v_raw_lambda)
 
                 v_lambda_h = v_lambdas[:, 0]
@@ -827,7 +810,7 @@ def train_model(
                 val_loss = (v_loss_h + v_loss_a).mean().item()
 
             print(
-                f"  Epoch {epoch:3d} | train_loss={train_loss.item():.4f} | val_loss={val_loss:.4f} | scale={model.elo_scale.item():.3f}"
+                f"  Epoch {epoch:3d} | train_loss={train_loss.item():.4f} | val_loss={val_loss:.4f}"
             )
 
     return model
@@ -1587,7 +1570,7 @@ def main(
         samples = prepare_training_samples(
             train_df, train_team_idx, ref_date=window_end
         )
-        print(f"   Training on {len(samples['label'])} samples from {year} ...")
+        print(f"   Training on {len(samples['weight'])} samples from {year} ...")
 
         model = train_model(
             model,
