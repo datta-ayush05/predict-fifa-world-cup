@@ -10,4 +10,8 @@
 *.virtual_documents
 
 # Python Cache
-*.pyc
+__pycache__
+
+# Virtual Environments
+.venv/
+.env/

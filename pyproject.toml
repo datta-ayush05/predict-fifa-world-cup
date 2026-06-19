@@ -1,0 +1,16 @@
+[project]
+name = "predict-wc"
+version = "0.1.0"
+description = "A comparative study of World Cup predictions using Dixon Coles and GNN"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "numpy>=2.4.6",
+    "pandas>=3.0.3",
+    "requests>=2.34.2",
+    "torch>=2.12.1",
+    "torch-geometric>=2.8.0",
+    "tqdm>=4.68.3",
+]
+[tool.basedpyright]
+typeCheckingMode = "off"
