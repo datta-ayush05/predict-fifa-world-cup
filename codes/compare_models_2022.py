@@ -149,8 +149,10 @@ def run_evaluation(csv_path):
 
         def calc_nll(lambdas, act_h, act_a):
             lh, la = lambdas[0], lambdas[1]
-            nll_h = lh - act_h * np.log(lh + 1e-8)
-            nll_a = la - act_a * np.log(la + 1e-8)
+            ln_fact_h = math.lgamma(act_h + 1)
+            ln_fact_a = math.lgamma(act_a + 1)
+            nll_h = lh - act_h * np.log(lh + 1e-8) + ln_fact_h
+            nll_a = la - act_a * np.log(la + 1e-8) + ln_fact_a
             return nll_h + nll_a
 
         def calc_3way_probs(lambdas, rho=0.0):

@@ -144,32 +144,45 @@ def run_evaluation(csv_path):
         gnn_lambdas = gnn_prob_matrix.get((h, a), np.array([1.0, 1.0]))
 
         import math
+
         def calc_nll(lambdas, act_h, act_a):
             lh, la = lambdas[0], lambdas[1]
-            nll_h = lh - act_h * np.log(lh + 1e-8)
-            nll_a = la - act_a * np.log(la + 1e-8)
+            ln_fact_h = math.lgamma(act_h + 1)
+            ln_fact_a = math.lgamma(act_a + 1)
+            nll_h = lh - act_h * np.log(lh + 1e-8) + ln_fact_h
+            nll_a = la - act_a * np.log(la + 1e-8) + ln_fact_a
             return nll_h + nll_a
 
         def calc_3way_probs(lambdas, rho=0.0):
             l1, l2 = lambdas[0], lambdas[1]
             pw, pd, pl = 0.0, 0.0, 0.0
-            def poiss(k, l): return (l**k * np.exp(-l)) / math.factorial(k)
+
+            def poiss(k, l):
+                return (l**k * np.exp(-l)) / math.factorial(k)
+
             for x in range(15):
                 for y in range(15):
                     px = poiss(x, l1)
                     py = poiss(y, l2)
                     tau = 1.0
                     if rho != 0.0:
-                        if x == 0 and y == 0: tau = max(1e-8, 1 - l1 * l2 * rho)
-                        elif x == 0 and y == 1: tau = max(1e-8, 1 + l1 * rho)
-                        elif x == 1 and y == 0: tau = max(1e-8, 1 + l2 * rho)
-                        elif x == 1 and y == 1: tau = max(1e-8, 1 - rho)
+                        if x == 0 and y == 0:
+                            tau = max(1e-8, 1 - l1 * l2 * rho)
+                        elif x == 0 and y == 1:
+                            tau = max(1e-8, 1 + l1 * rho)
+                        elif x == 1 and y == 0:
+                            tau = max(1e-8, 1 + l2 * rho)
+                        elif x == 1 and y == 1:
+                            tau = max(1e-8, 1 - rho)
                     p = px * py * tau
-                    if x > y: pw += p
-                    elif x == y: pd += p
-                    else: pl += p
+                    if x > y:
+                        pw += p
+                    elif x == y:
+                        pd += p
+                    else:
+                        pl += p
             tot = pw + pd + pl
-            return pw/tot, pd/tot, pl/tot
+            return pw / tot, pd / tot, pl / tot
 
         gnn_nll = calc_nll(gnn_lambdas, hs, aws)
         dc_nll = calc_nll(dc_lambdas, hs, aws)
@@ -206,15 +219,13 @@ def run_evaluation(csv_path):
     print(
         f"\n=> {best_model} was more accurate at predicting the exact 2026 scorelines."
     )
-    
+
     scores_3way = {
         "Dixon-Coles": dc_total_3way_nll,
         "GNN": gnn_total_3way_nll,
     }
     best_model_3way = min(scores_3way, key=scores_3way.get)
-    print(
-        f"=> {best_model_3way} was more accurate at 3-way match classification."
-    )
+    print(f"=> {best_model_3way} was more accurate at 3-way match classification.")
 
 
 if __name__ == "__main__":
