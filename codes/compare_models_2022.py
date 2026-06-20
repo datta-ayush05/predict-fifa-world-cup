@@ -15,28 +15,30 @@ def run_evaluation(csv_path):
     print("Loading data...")
     df = dc.load_and_prepare(csv_path)
 
-    cutoff = pd.Timestamp("2026-06-01")
+    cutoff = pd.Timestamp("2022-11-01")
+    end_tournament = pd.Timestamp("2023-01-01")
 
-    # Train entirely on matches prior to June 2026
+    # Train entirely on matches prior to Nov 2022
     train_df = df[df["date"] < cutoff].copy()
 
-    # Evaluate strictly on live 2026 WC matches
+    # Evaluate strictly on 2022 WC matches
     test_df = df[
         (df["date"] >= cutoff)
+        & (df["date"] < end_tournament)
         & (df["tournament"].str.contains("FIFA World Cup", case=False, na=False))
     ].copy()
 
     if len(test_df) == 0:
         print(
-            "No live 2026 World Cup matches found in the dataset! Make sure results.csv is up-to-date with recent matches."
+            "No 2022 World Cup matches found in the dataset! Make sure results.csv has the matches."
         )
         return
 
-    print(f"Found {len(test_df)} live 2026 World Cup matches to test on.")
+    print(f"Found {len(test_df)} 2022 World Cup matches to test on.")
 
     # --- 1. Train Dixon Coles ---
     print("\n" + "=" * 60)
-    print("TRAINING DIXON-COLES (Knowledge Cutoff: 2026-06-01)")
+    print("TRAINING DIXON-COLES (Knowledge Cutoff: 2022-11-01)")
     print("=" * 60)
     all_teams = sorted(
         set(train_df["home_team"])
@@ -51,15 +53,15 @@ def run_evaluation(csv_path):
     )
     dc_prob_matrix = dc.precompute_match_probabilities(dc_model, dc_team_idx)
 
-    start_year = 2022
-    end_year = 2026
+    start_year = 2018
+    end_year = 2022
 
     epochs_per_window = 50
     total_epochs = epochs_per_window * (end_year - start_year)
 
     # --- 2. Train GNN ---
     print("\n" + "=" * 60)
-    print("TRAINING GNN (Knowledge Cutoff: 2026-06-01)")
+    print("TRAINING GNN (Knowledge Cutoff: 2022-11-01)")
     print("=" * 60)
 
     elo_system, df_gnn = gnn.build_elo_series(train_df)
@@ -117,9 +119,9 @@ def run_evaluation(csv_path):
         current_elos,
     )
 
-    # --- 3. Evaluate on Live WC Matches ---
+    # --- 3. Evaluate on 2022 WC Matches ---
     print("\n" + "=" * 80)
-    print("EVALUATION ON LIVE 2026 WORLD CUP MATCHES")
+    print("EVALUATION ON 2022 WORLD CUP MATCHES")
     print("=" * 80)
 
     print(
@@ -144,6 +146,7 @@ def run_evaluation(csv_path):
         gnn_lambdas = gnn_prob_matrix.get((h, a), np.array([1.0, 1.0]))
 
         import math
+
         def calc_nll(lambdas, act_h, act_a):
             lh, la = lambdas[0], lambdas[1]
             nll_h = lh - act_h * np.log(lh + 1e-8)
@@ -153,23 +156,33 @@ def run_evaluation(csv_path):
         def calc_3way_probs(lambdas, rho=0.0):
             l1, l2 = lambdas[0], lambdas[1]
             pw, pd, pl = 0.0, 0.0, 0.0
-            def poiss(k, l): return (l**k * np.exp(-l)) / math.factorial(k)
+
+            def poiss(k, l):
+                return (l**k * np.exp(-l)) / math.factorial(k)
+
             for x in range(15):
                 for y in range(15):
                     px = poiss(x, l1)
                     py = poiss(y, l2)
                     tau = 1.0
                     if rho != 0.0:
-                        if x == 0 and y == 0: tau = max(1e-8, 1 - l1 * l2 * rho)
-                        elif x == 0 and y == 1: tau = max(1e-8, 1 + l1 * rho)
-                        elif x == 1 and y == 0: tau = max(1e-8, 1 + l2 * rho)
-                        elif x == 1 and y == 1: tau = max(1e-8, 1 - rho)
+                        if x == 0 and y == 0:
+                            tau = max(1e-8, 1 - l1 * l2 * rho)
+                        elif x == 0 and y == 1:
+                            tau = max(1e-8, 1 + l1 * rho)
+                        elif x == 1 and y == 0:
+                            tau = max(1e-8, 1 + l2 * rho)
+                        elif x == 1 and y == 1:
+                            tau = max(1e-8, 1 - rho)
                     p = px * py * tau
-                    if x > y: pw += p
-                    elif x == y: pd += p
-                    else: pl += p
+                    if x > y:
+                        pw += p
+                    elif x == y:
+                        pd += p
+                    else:
+                        pl += p
             tot = pw + pd + pl
-            return pw/tot, pd/tot, pl/tot
+            return pw / tot, pd / tot, pl / tot
 
         gnn_nll = calc_nll(gnn_lambdas, hs, aws)
         dc_nll = calc_nll(dc_lambdas, hs, aws)
@@ -204,24 +217,22 @@ def run_evaluation(csv_path):
     }
     best_model = min(scores, key=scores.get)
     print(
-        f"\n=> {best_model} was more accurate at predicting the exact 2026 scorelines."
+        f"\n=> {best_model} was more accurate at predicting the exact 2022 scorelines."
     )
-    
+
     scores_3way = {
         "Dixon-Coles": dc_total_3way_nll,
         "GNN": gnn_total_3way_nll,
     }
     best_model_3way = min(scores_3way, key=scores_3way.get)
-    print(
-        f"=> {best_model_3way} was more accurate at 3-way match classification."
-    )
+    print(f"=> {best_model_3way} was more accurate at 3-way match classification.")
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--csv",
-        default="/kaggle/input/datasets/martj42/international-football-results-from-1872-to-2017/results.csv",
+        default="results.csv",
     )
     args = parser.parse_args()
     run_evaluation(args.csv)

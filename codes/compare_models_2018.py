@@ -15,28 +15,30 @@ def run_evaluation(csv_path):
     print("Loading data...")
     df = dc.load_and_prepare(csv_path)
 
-    cutoff = pd.Timestamp("2026-06-01")
+    cutoff = pd.Timestamp("2018-06-01")
+    end_tournament = pd.Timestamp("2018-08-01")
 
-    # Train entirely on matches prior to June 2026
+    # Train entirely on matches prior to June 2018
     train_df = df[df["date"] < cutoff].copy()
 
-    # Evaluate strictly on live 2026 WC matches
+    # Evaluate strictly on 2018 WC matches
     test_df = df[
         (df["date"] >= cutoff)
+        & (df["date"] < end_tournament)
         & (df["tournament"].str.contains("FIFA World Cup", case=False, na=False))
     ].copy()
 
     if len(test_df) == 0:
         print(
-            "No live 2026 World Cup matches found in the dataset! Make sure results.csv is up-to-date with recent matches."
+            "No 2018 World Cup matches found in the dataset! Make sure results.csv has the matches."
         )
         return
 
-    print(f"Found {len(test_df)} live 2026 World Cup matches to test on.")
+    print(f"Found {len(test_df)} 2018 World Cup matches to test on.")
 
     # --- 1. Train Dixon Coles ---
     print("\n" + "=" * 60)
-    print("TRAINING DIXON-COLES (Knowledge Cutoff: 2026-06-01)")
+    print("TRAINING DIXON-COLES (Knowledge Cutoff: 2018-06-01)")
     print("=" * 60)
     all_teams = sorted(
         set(train_df["home_team"])
@@ -51,15 +53,15 @@ def run_evaluation(csv_path):
     )
     dc_prob_matrix = dc.precompute_match_probabilities(dc_model, dc_team_idx)
 
-    start_year = 2022
-    end_year = 2026
+    start_year = 2014
+    end_year = 2018
 
     epochs_per_window = 50
     total_epochs = epochs_per_window * (end_year - start_year)
 
     # --- 2. Train GNN ---
     print("\n" + "=" * 60)
-    print("TRAINING GNN (Knowledge Cutoff: 2026-06-01)")
+    print("TRAINING GNN (Knowledge Cutoff: 2018-06-01)")
     print("=" * 60)
 
     elo_system, df_gnn = gnn.build_elo_series(train_df)
@@ -117,9 +119,9 @@ def run_evaluation(csv_path):
         current_elos,
     )
 
-    # --- 3. Evaluate on Live WC Matches ---
+    # --- 3. Evaluate on 2018 WC Matches ---
     print("\n" + "=" * 80)
-    print("EVALUATION ON LIVE 2026 WORLD CUP MATCHES")
+    print("EVALUATION ON 2018 WORLD CUP MATCHES")
     print("=" * 80)
 
     print(
@@ -204,7 +206,7 @@ def run_evaluation(csv_path):
     }
     best_model = min(scores, key=scores.get)
     print(
-        f"\n=> {best_model} was more accurate at predicting the exact 2026 scorelines."
+        f"\n=> {best_model} was more accurate at predicting the exact 2018 scorelines."
     )
     
     scores_3way = {
@@ -221,7 +223,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--csv",
-        default="/kaggle/input/datasets/martj42/international-football-results-from-1872-to-2017/results.csv",
+        default="results.csv",
     )
     args = parser.parse_args()
     run_evaluation(args.csv)
