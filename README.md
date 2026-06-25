@@ -24,7 +24,7 @@ The model accurately reflects the expanded 48-team FIFA World Cup 2026 format:
 
 ## Results and Findings
 
-The model was rigorously validated against Dixon Coles for the first 28 matches using a walk-forward training methodology across sequential temporal windows (2022 to 2025). The finalized inference graph was then utilized to conduct 10,000 Monte Carlo simulations of the 2026 tournament.
+The model was rigorously validated against Dixon Coles for the first 48 matches using a walk-forward training methodology across sequential temporal windows (2022 to 2025). The finalized inference graph was then utilized to conduct 10,000 Monte Carlo simulations of the 2026 tournament.
 
 ```bash
 ================================================================================
