@@ -1,0 +1,164 @@
+Loading data...
+Loading results.csv …
+Found 64 2022 World Cup matches to test on.
+
+============================================================
+TRAINING DIXON-COLES (Knowledge Cutoff: 2022-11-01)
+============================================================
+  Epoch    1 | train_loss: 1.9391 | Home Adv: 0.210 | Rho: 0.010
+  Epoch 1000 | train_loss: 1.3099 | Home Adv: 0.271 | Rho: -0.029
+Precomputing expected goals matrix...
+
+============================================================
+TRAINING GNN (Knowledge Cutoff: 2022-11-01)
+============================================================
+Building ELO: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 45623/45623 [00:02<00:00, 18235.05it/s]
+
+   ========================================
+   ▶ Walk-forward Window: 2018
+   ========================================
+
+🚀 Starting Fast Vectorized Training...
+  Epoch   1 | train_loss=2.4220 | val_loss=2.3554
+  Epoch   5 | train_loss=2.3045 | val_loss=2.2426
+  Epoch  10 | train_loss=2.0064 | val_loss=1.9376
+  Epoch  15 | train_loss=1.9340 | val_loss=1.9234
+  Epoch  20 | train_loss=1.8597 | val_loss=1.8946
+  Epoch  25 | train_loss=1.8769 | val_loss=1.8862
+  Epoch  30 | train_loss=1.8381 | val_loss=1.8635
+  Epoch  35 | train_loss=1.8032 | val_loss=1.8410
+  Epoch  40 | train_loss=1.7395 | val_loss=1.8089
+  Epoch  45 | train_loss=1.7049 | val_loss=1.7759
+  Epoch  50 | train_loss=1.6913 | val_loss=1.7404
+
+   ========================================
+   ▶ Walk-forward Window: 2019
+   ========================================
+
+🚀 Starting Fast Vectorized Training...
+  Epoch   1 | train_loss=1.4890 | val_loss=1.3812
+  Epoch   5 | train_loss=1.3914 | val_loss=1.3118
+  Epoch  10 | train_loss=1.3294 | val_loss=1.2473
+  Epoch  15 | train_loss=1.2798 | val_loss=1.2201
+  Epoch  20 | train_loss=1.2709 | val_loss=1.2093
+  Epoch  25 | train_loss=1.2814 | val_loss=1.2018
+  Epoch  30 | train_loss=1.2511 | val_loss=1.1979
+  Epoch  35 | train_loss=1.2535 | val_loss=1.1886
+  Epoch  40 | train_loss=1.2421 | val_loss=1.1775
+  Epoch  45 | train_loss=1.2485 | val_loss=1.1698
+  Epoch  50 | train_loss=1.2122 | val_loss=1.1662
+
+   ========================================
+   ▶ Walk-forward Window: 2020
+   ========================================
+
+🚀 Starting Fast Vectorized Training...
+  Epoch   1 | train_loss=1.8673 | val_loss=1.5566
+  Epoch   5 | train_loss=1.8443 | val_loss=1.5938
+  Epoch  10 | train_loss=1.8316 | val_loss=1.6504
+  Epoch  15 | train_loss=1.8366 | val_loss=1.6489
+  Epoch  20 | train_loss=1.8301 | val_loss=1.6324
+  Epoch  25 | train_loss=1.8178 | val_loss=1.6263
+  Epoch  30 | train_loss=1.8149 | val_loss=1.6282
+  Epoch  35 | train_loss=1.8285 | val_loss=1.6280
+  Epoch  40 | train_loss=1.8150 | val_loss=1.6217
+  Epoch  45 | train_loss=1.8156 | val_loss=1.6189
+  Epoch  50 | train_loss=1.8270 | val_loss=1.6175
+
+   ========================================
+   ▶ Walk-forward Window: 2021
+   ========================================
+
+🚀 Starting Fast Vectorized Training...
+  Epoch   1 | train_loss=1.2853 | val_loss=1.3990
+  Epoch   5 | train_loss=1.2744 | val_loss=1.3821
+  Epoch  10 | train_loss=1.2549 | val_loss=1.3675
+  Epoch  15 | train_loss=1.2485 | val_loss=1.3620
+  Epoch  20 | train_loss=1.2692 | val_loss=1.3590
+  Epoch  25 | train_loss=1.2613 | val_loss=1.3573
+  Epoch  30 | train_loss=1.2489 | val_loss=1.3566
+  Epoch  35 | train_loss=1.2502 | val_loss=1.3562
+  Epoch  40 | train_loss=1.2435 | val_loss=1.3561
+  Epoch  45 | train_loss=1.2340 | val_loss=1.3561
+  Epoch  50 | train_loss=1.2679 | val_loss=1.3561
+Building GNN Inference Graph...
+⚡ Precomputing static expected goals (Host advantages applied) for O(1) lookup...
+
+================================================================================
+EVALUATION ON 2022 WORLD CUP MATCHES
+================================================================================
+Date         | Home Team       | Away Team       | Actual | GNN xG       | DC xG
+-----------------------------------------------------------------------------------
+2022-11-20   | Qatar           | Ecuador         | 0-2    | 0.70-1.85    | 0.72-1.74
+2022-11-21   | Senegal         | Netherlands     | 0-2    | 0.57-2.02    | 0.65-1.68
+2022-11-21   | England         | Iran            | 6-2    | 1.62-0.84    | 1.16-0.58
+2022-11-21   | United States   | Wales           | 1-1    | 1.45-0.95    | 1.12-0.91
+2022-11-22   | France          | Australia       | 4-1    | 2.00-0.61    | 1.74-0.63
+2022-11-22   | Denmark         | Tunisia         | 0-0    | 1.81-0.69    | 1.48-0.61
+2022-11-22   | Argentina       | Saudi Arabia    | 1-2    | 2.58-0.38    | 2.00-0.40
+2022-11-22   | Mexico          | Poland          | 0-0    | 1.39-1.00    | 1.41-1.19
+2022-11-23   | Spain           | Costa Rica      | 7-0    | 2.07-0.58    | 1.89-0.43
+2022-11-23   | Morocco         | Croatia         | 0-0    | 0.86-1.53    | 0.87-1.20
+2022-11-23   | Belgium         | Canada          | 1-0    | 1.67-0.81    | 2.01-0.76
+2022-11-23   | Germany         | Japan           | 1-2    | 1.66-0.81    | 1.86-0.95
+2022-11-24   | Switzerland     | Cameroon        | 1-0    | 2.01-0.57    | 1.43-0.62
+2022-11-24   | Brazil          | Serbia          | 2-0    | 1.95-0.60    | 2.00-0.53
+2022-11-24   | Uruguay         | South Korea     | 0-0    | 1.67-0.80    | 1.34-0.66
+2022-11-24   | Portugal        | Ghana           | 3-2    | 2.38-0.43    | 1.88-0.45
+2022-11-25   | England         | United States   | 0-0    | 1.30-1.06    | 1.49-0.62
+2022-11-25   | Qatar           | Senegal         | 1-3    | 0.96-1.44    | 0.78-1.23
+2022-11-25   | Netherlands     | Ecuador         | 1-1    | 1.61-0.80    | 1.54-0.92
+2022-11-25   | Wales           | Iran            | 0-2    | 1.20-1.19    | 0.71-0.80
+2022-11-26   | France          | Denmark         | 2-1    | 1.30-1.03    | 1.07-0.93
+2022-11-26   | Tunisia         | Australia       | 0-1    | 1.19-1.19    | 1.00-1.01
+2022-11-26   | Poland          | Saudi Arabia    | 2-0    | 1.66-0.81    | 1.55-0.72
+2022-11-26   | Argentina       | Mexico          | 2-0    | 1.81-0.71    | 1.54-0.60
+2022-11-27   | Japan           | Costa Rica      | 0-1    | 1.32-1.12    | 1.12-0.70
+2022-11-27   | Spain           | Germany         | 1-1    | 1.40-0.94    | 1.61-1.14
+2022-11-27   | Belgium         | Morocco         | 0-2    | 1.90-0.64    | 1.59-0.75
+2022-11-27   | Croatia         | Canada          | 4-1    | 1.33-1.08    | 1.52-0.88
+2022-11-28   | Cameroon        | Serbia          | 3-3    | 0.65-1.86    | 0.76-1.41
+2022-11-28   | Brazil          | Switzerland     | 1-0    | 1.80-0.69    | 1.65-0.54
+2022-11-28   | South Korea     | Ghana           | 2-3    | 1.72-0.77    | 0.99-0.68
+2022-11-28   | Portugal        | Uruguay         | 2-0    | 1.29-1.05    | 1.25-0.88
+2022-11-29   | Iran            | United States   | 0-1    | 0.97-1.50    | 0.91-0.75
+2022-11-29   | Wales           | England         | 0-3    | 0.82-1.57    | 0.58-1.32
+2022-11-29   | Qatar           | Netherlands     | 0-2    | 0.46-2.37    | 0.59-2.39
+2022-11-29   | Ecuador         | Senegal         | 1-2    | 1.52-0.85    | 1.22-0.80
+2022-11-30   | Poland          | Argentina       | 0-2    | 0.56-2.04    | 0.71-1.67
+2022-11-30   | Saudi Arabia    | Mexico          | 1-2    | 0.69-1.92    | 0.67-1.29
+2022-11-30   | Australia       | Denmark         | 1-0    | 0.71-1.84    | 0.65-1.56
+2022-11-30   | Tunisia         | France          | 1-0    | 0.59-1.97    | 0.59-1.65
+2022-12-01   | Japan           | Spain           | 2-1    | 0.64-1.94    | 0.65-1.80
+2022-12-01   | Costa Rica      | Germany         | 2-4    | 0.74-1.78    | 0.63-1.96
+2022-12-01   | Croatia         | Belgium         | 0-0    | 0.89-1.50    | 1.11-1.71
+2022-12-01   | Canada          | Morocco         | 1-2    | 1.42-1.00    | 1.07-1.02
+2022-12-02   | South Korea     | Portugal        | 2-1    | 0.71-1.82    | 0.55-1.57
+2022-12-02   | Ghana           | Uruguay         | 0-2    | 0.49-2.23    | 0.54-1.60
+2022-12-02   | Serbia          | Switzerland     | 2-3    | 1.04-1.29    | 1.08-1.34
+2022-12-02   | Cameroon        | Brazil          | 1-0    | 0.34-2.66    | 0.31-2.14
+2022-12-03   | Netherlands     | United States   | 3-1    | 1.58-0.84    | 1.61-0.76
+2022-12-03   | Argentina       | Australia       | 2-1    | 2.34-0.46    | 1.81-0.54
+2022-12-04   | France          | Poland          | 3-1    | 1.70-0.73    | 1.60-0.83
+2022-12-04   | England         | Senegal         | 3-0    | 1.70-0.72    | 1.56-0.53
+2022-12-05   | Japan           | Croatia         | 1-1    | 0.94-1.48    | 0.97-1.41
+2022-12-05   | Brazil          | South Korea     | 4-1    | 2.37-0.45    | 1.93-0.35
+2022-12-06   | Portugal        | Switzerland     | 6-1    | 1.29-1.04    | 1.34-0.85
+2022-12-06   | Morocco         | Spain           | 0-0    | 0.58-1.99    | 0.58-1.53
+2022-12-09   | Netherlands     | Argentina       | 2-2    | 0.97-1.37    | 0.94-1.23
+2022-12-09   | Croatia         | Brazil          | 1-1    | 0.62-1.93    | 0.58-1.81
+2022-12-10   | Morocco         | Portugal        | 1-0    | 0.69-1.80    | 0.61-1.37
+2022-12-10   | England         | France          | 1-2    | 0.98-1.34    | 1.02-0.97
+2022-12-13   | Argentina       | Croatia         | 3-0    | 1.76-0.71    | 1.49-0.80
+2022-12-14   | France          | Morocco         | 2-0    | 1.83-0.66    | 1.33-0.63
+2022-12-17   | Croatia         | Morocco         | 2-1    | 1.53-0.86    | 1.20-0.87
+2022-12-18   | Argentina       | France          | 3-3    | 1.44-0.91    | 1.08-0.89
+-----------------------------------------------------------------------------------
+Total Negative Log-Likelihood (Lower is better):
+GNN Scoreline NLL:            192.89
+Dixon-Coles Scoreline NLL:    193.95
+GNN 3-way NLL:                67.21
+Dixon-Coles 3-way NLL:        66.41
+
+=> GNN was more accurate at predicting the exact 2022 scorelines.
+=> Dixon-Coles was more accurate at 3-way match classification.
