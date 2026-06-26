@@ -14,3 +14,5 @@ dependencies = [
 ]
 [tool.basedpyright]
 typeCheckingMode = "off"
+[tool.ruff.lint]
+ignore = ["E741"]
