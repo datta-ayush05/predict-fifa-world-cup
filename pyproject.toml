@@ -5,7 +5,7 @@ description = "A comparative study of World Cup predictions using Dixon Coles an
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
-    "numpy>=2.4.6",
+    "numpy>=2.5.0",
     "pandas>=3.0.3",
     "requests>=2.34.2",
     "torch>=2.12.1",

@@ -1,5 +1,6 @@
 # Datasets
 *.csv
+*.xlsx
 
 # PyTorch Models
 *.pt
