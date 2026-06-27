@@ -34,11 +34,7 @@ import pandas as pd
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from scipy.optimize import minimize
-from scipy.stats import skellam
-from sklearn.calibration import calibration_curve
-from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import brier_score_loss
+
 from torch_geometric.data import Data
 from torch_geometric.nn import GATConv
 from tqdm import tqdm
@@ -1061,104 +1057,6 @@ def print_mc_report(win_counts, final_counts, sf_counts, n_sims):
     )
 
 
-def evaluate_aggregated_calibration(all_lambdas, all_outcomes):
-    print("\n📊 Evaluating Aggregated Probability Calibration...")
-    if not all_lambdas or not all_outcomes:
-        print("   No predictions to evaluate.")
-        return
-
-    lambdas = np.concatenate(all_lambdas, axis=0)
-    outcomes = np.concatenate(all_outcomes, axis=0)
-
-    lambda_h = lambdas[:, 0]
-    lambda_a = lambdas[:, 1]
-
-    prob_home_win = skellam.sf(0, lambda_h, lambda_a)
-
-    # --- POST-HOC CALIBRATION (PLATT SCALING) ---
-    # Convert probabilities to logits. Clip to avoid log(0)
-    eps = 1e-7
-    p_clipped = np.clip(prob_home_win, eps, 1 - eps)
-    logits = np.log(p_clipped / (1 - p_clipped)).reshape(-1, 1)
-
-    lr = LogisticRegression(C=1e5, solver="lbfgs")  # High C for no regularization
-    lr.fit(logits, outcomes)
-
-    calibrated_prob_home_win = lr.predict_proba(logits)[:, 1]
-
-    # --- xG SCALING (For the Simulator) ---
-    def objective(c):
-        p = skellam.sf(0, c[0] * lambda_h, c[0] * lambda_a)
-        return brier_score_loss(outcomes, p)
-
-    res = minimize(objective, x0=[1.0], bounds=[(0.1, 5.0)])
-    best_c = res.x[0]
-    p_scaled = skellam.sf(0, best_c * lambda_h, best_c * lambda_a)
-
-    # Calculate Brier Scores
-    brier_orig = brier_score_loss(outcomes, prob_home_win)
-    brier_cal = brier_score_loss(outcomes, calibrated_prob_home_win)
-    brier_scaled = brier_score_loss(outcomes, p_scaled)
-    print(f"   Optimal xG Multiplier:    {best_c:.4f}")
-    print(f"   Brier Score (Original):   {brier_orig:.4f}")
-    print(f"   Brier Score (Platt):      {brier_cal:.4f}")
-    print(f"   Brier Score (xG Scaled):  {brier_scaled:.4f}")
-
-    def calc_ece(y_true, y_prob, n_bins=10):
-        bin_edges = np.linspace(0, 1, n_bins + 1)
-        ece = 0.0
-        total = len(y_prob)
-        for i in range(n_bins):
-            if i < n_bins - 1:
-                bin_mask = (y_prob >= bin_edges[i]) & (y_prob < bin_edges[i + 1])
-            else:
-                bin_mask = (y_prob >= bin_edges[i]) & (y_prob <= bin_edges[i + 1])
-            bin_count = np.sum(bin_mask)
-            if bin_count > 0:
-                bin_pred = np.mean(y_prob[bin_mask])
-                bin_true = np.mean(y_true[bin_mask])
-                ece += (bin_count / total) * np.abs(bin_pred - bin_true)
-        return ece
-
-    ece_orig = calc_ece(outcomes, prob_home_win)
-    ece_cal = calc_ece(outcomes, calibrated_prob_home_win)
-    print(f"   ECE (Original):           {ece_orig:.4f}")
-    print(f"   ECE (Calibrated):         {ece_cal:.4f}")
-
-    prob_true_orig, prob_pred_orig = calibration_curve(
-        outcomes, prob_home_win, n_bins=10
-    )
-    prob_true_cal, prob_pred_cal = calibration_curve(
-        outcomes, calibrated_prob_home_win, n_bins=10
-    )
-
-    plt.figure(figsize=(8, 8))
-    plt.plot([0, 1], [0, 1], "k:", label="Perfectly calibrated")
-    plt.plot(
-        prob_pred_orig,
-        prob_true_orig,
-        "s-",
-        color="blue",
-        label=f"Original (ECE={ece_orig:.3f})",
-        alpha=0.5,
-    )
-    plt.plot(
-        prob_pred_cal,
-        prob_true_cal,
-        "o-",
-        color="orange",
-        label=f"Calibrated (ECE={ece_cal:.3f})",
-    )
-    plt.xlabel("Mean predicted probability (Win)")
-    plt.ylabel("Fraction of positives (Win)")
-    plt.title("Reliability Diagram: Original vs Calibrated")
-    plt.legend(loc="lower right")
-    plt.grid(True)
-    plt.savefig("calibration_curve.png", dpi=300, bbox_inches="tight")
-    plt.close()
-    print("   Saved updated Reliability Diagram to calibration_curve.png")
-
-    return best_c
 
 
 # ─────────────────────────────────────────────
@@ -1192,8 +1090,7 @@ def main(
     opt = torch.optim.Adam(model.parameters(), lr=5e-4, weight_decay=1e-4)
     scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(opt, T_max=total_epochs)
 
-    all_lambdas = []
-    all_outcomes = []
+
 
     for year in range(start_year, end_year):
         window_start = pd.Timestamp(f"{year}-01-01")
@@ -1245,12 +1142,7 @@ def main(
             raw_lambda = model.predictor(inp)
             lambdas = F.softplus(raw_lambda).cpu().numpy()
 
-            actual_hs = samples["hs"].cpu().numpy()
-            actual_aw = samples["aw"].cpu().numpy()
-            outcomes = (actual_hs > actual_aw).astype(int)
 
-            all_lambdas.append(lambdas)
-            all_outcomes.append(outcomes)
 
         model = train_model(
             model,
@@ -1262,9 +1154,7 @@ def main(
             scheduler=scheduler,
         )
 
-    best_c = evaluate_aggregated_calibration(all_lambdas, all_outcomes)
-    if best_c is None:
-        best_c = 1.0
+
 
     print("\n🔗 Building Full Inference Graph (up to 2026) ...")
     graph, team_idx = build_graph(df, current_elos)
@@ -1278,9 +1168,7 @@ def main(
         model, embeddings, team_idx, current_elos
     )
 
-    print(f"\n   Applying xG Calibration Multiplier ({best_c:.3f}) to all matchups...")
-    for key in prob_matrix:
-        prob_matrix[key] = prob_matrix[key] * best_c
+
 
     win_counts, final_counts, sf_counts, group_adv_counts, _ = simulate_tournament(
         model,
