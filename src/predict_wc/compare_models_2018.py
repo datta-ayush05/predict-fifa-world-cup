@@ -1,11 +1,11 @@
 import argparse
 import os
 
-from . import dixon_coles_wc_predict as dc
+import dixon_coles_wc_predict as dc
 import numpy as np
 import pandas as pd
 import torch
-from . import wc_predict_gnn as gnn
+import wc_predict_gnn as gnn
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
 csv_path = os.path.join(script_dir, "..", "..", "data", "results.csv")

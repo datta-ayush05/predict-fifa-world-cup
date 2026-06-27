@@ -1,6 +1,6 @@
 # FIFA World Cup 2026 Prediction Model
 
- [Live Interactive Dashboard](https://predict-wc-2026.netlify.app/)
+ [Live Interactive Dashboard](https://datta-ayush05.github.io/predict-fifa-world-cup/)
 Explore full global predictions, win probabilities, and custom head-to-head scenarios on the **2026 World Cup Predictor** dashboard!
 
 A Graph Neural Network Approach Integrating Time-Decay Weighting, Elo Ratings, and Latent Roster Strengths.

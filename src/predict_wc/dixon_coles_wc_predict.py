@@ -147,7 +147,6 @@ def load_and_prepare(csv_path: str = "results.csv"):
     df = df.dropna(subset=["home_score", "away_score"])
 
     df = df.sort_values("date").reset_index(drop=True)
-    df = df[df["date"] <= REFERENCE_DATE]
 
     df["home_team"] = df["home_team"].replace(NAME_MAP)
     df["away_team"] = df["away_team"].replace(NAME_MAP)
