@@ -1087,7 +1087,7 @@ def main(
     end_year = 2026
 
     total_epochs = epochs * (end_year - start_year)
-    opt = torch.optim.Adam(model.parameters(), lr=5e-4, weight_decay=1e-4)
+    opt = torch.optim.Adam(model.parameters(), lr=1e-3, weight_decay=1e-4)
     scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(opt, T_max=total_epochs)
 
 

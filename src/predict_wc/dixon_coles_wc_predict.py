@@ -444,6 +444,7 @@ def simulate_tournament(prob_matrix, n_sims=10000):
     win_counts = defaultdict(int)
     final_counts = defaultdict(int)
     sf_counts = defaultdict(int)
+    group_adv_counts = defaultdict(int)
 
     print(f"\nRunning {n_sims} Monte Carlo simulations ...")
     for _ in tqdm(range(n_sims)):
@@ -451,6 +452,10 @@ def simulate_tournament(prob_matrix, n_sims=10000):
         best_thirds = pick_best_third_place(standings)
 
         r32_matchups = build_r32_bracket(standings, best_thirds)
+        for ta, tb in r32_matchups:
+            group_adv_counts[ta] += 1
+            group_adv_counts[tb] += 1
+
         r32_winners = [
             simulate_match(ta, tb, prob_matrix, knockout=True)[0]
             for ta, tb in r32_matchups
@@ -482,7 +487,7 @@ def simulate_tournament(prob_matrix, n_sims=10000):
         final_counts[fn_b] += 1
         win_counts[winner] += 1
 
-    return win_counts, final_counts, sf_counts
+    return win_counts, final_counts, sf_counts, group_adv_counts
 
 
 def print_mc_report(win_counts, final_counts, sf_counts, n_sims):
@@ -545,12 +550,37 @@ def main(csv_path="results.csv", epochs=1200, n_sims=5000):
     for i, (t, d) in enumerate(def_sorted, 1):
         print(f"  {i}. {t:<20} {d:.3f}")
 
+    import json
     # Run Monte Carlo
     prob_matrix = precompute_match_probabilities(model, team_idx)
-    win_counts, final_counts, sf_counts = simulate_tournament(
+    win_counts, final_counts, sf_counts, group_adv_counts = simulate_tournament(
         prob_matrix, n_sims=n_sims
     )
     print_mc_report(win_counts, final_counts, sf_counts, n_sims)
+
+    # Save results to JSON for website
+    out_data = {"teams": {}, "prob_matrix": {}, "n_sims": n_sims}
+    ALL_TEAMS = [t for g in GROUPS.values() for t in g]
+    for t in ALL_TEAMS:
+        out_data["teams"][t] = {
+            "win_prob": win_counts.get(t, 0) / n_sims,
+            "final_prob": final_counts.get(t, 0) / n_sims,
+            "sf_prob": sf_counts.get(t, 0) / n_sims,
+            "group_adv_prob": group_adv_counts.get(t, 0) / n_sims,
+            "group": next((g for g, teams in GROUPS.items() if t in teams), None),
+        }
+
+    for (t1, t2), probs in prob_matrix.items():
+        key = f"{t1}::{t2}"
+        out_data["prob_matrix"][key] = [float(probs[0]), float(probs[1])]
+
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    data_dir = os.path.join(script_dir, "..", "..", "data")
+    os.makedirs(data_dir, exist_ok=True)
+    out_path = os.path.join(data_dir, "predictions_dc.json")
+    with open(out_path, "w") as f:
+        json.dump(out_data, f, indent=2)
+    print(f"\nSaved predictions to {out_path}")
 
 
 if __name__ == "__main__":
