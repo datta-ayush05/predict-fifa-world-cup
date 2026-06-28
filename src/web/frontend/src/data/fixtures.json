@@ -1673,17 +1673,17 @@
       }
     },
     {
-      "match_id": "r16_0_Argentina_France",
+      "match_id": "r16_0_TBD_TBD",
       "stage": "Round of 16",
-      "team1": "Argentina",
-      "team2": "France",
+      "team1": "TBD",
+      "team2": "TBD",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.4042999504008362,
-        "draw_prob": 0.26498903869349916,
-        "loss_prob": 0.3307110109056646,
-        "xG1": 1.3610520958900452,
-        "xG2": 1.2047396898269653
+        "win_prob": 0.34574580434747654,
+        "draw_prob": 0.30850839130504687,
+        "loss_prob": 0.3457458043474765,
+        "xG1": 1.0,
+        "xG2": 1.0
       },
       "result": {
         "score1": null,
@@ -1692,17 +1692,17 @@
       }
     },
     {
-      "match_id": "r16_1_Brazil_Spain",
+      "match_id": "r16_1_TBD_TBD",
       "stage": "Round of 16",
-      "team1": "Brazil",
-      "team2": "Spain",
+      "team1": "TBD",
+      "team2": "TBD",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.2734285192333382,
-        "draw_prob": 0.2585235511287323,
-        "loss_prob": 0.4680479296379295,
-        "xG1": 1.0793845653533936,
-        "xG2": 1.496112048625946
+        "win_prob": 0.34574580434747654,
+        "draw_prob": 0.30850839130504687,
+        "loss_prob": 0.3457458043474765,
+        "xG1": 1.0,
+        "xG2": 1.0
       },
       "result": {
         "score1": null,
@@ -1711,17 +1711,17 @@
       }
     },
     {
-      "match_id": "r16_2_England_Germany",
+      "match_id": "r16_2_TBD_TBD",
       "stage": "Round of 16",
-      "team1": "England",
-      "team2": "Germany",
+      "team1": "TBD",
+      "team2": "TBD",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.4836190383977082,
-        "draw_prob": 0.25520984762611687,
-        "loss_prob": 0.26117111397617493,
-        "xG1": 1.5375033617019653,
-        "xG2": 1.0584232211112976
+        "win_prob": 0.34574580434747654,
+        "draw_prob": 0.30850839130504687,
+        "loss_prob": 0.3457458043474765,
+        "xG1": 1.0,
+        "xG2": 1.0
       },
       "result": {
         "score1": null,
@@ -1730,17 +1730,17 @@
       }
     },
     {
-      "match_id": "r16_3_Portugal_Netherlands",
+      "match_id": "r16_3_TBD_TBD",
       "stage": "Round of 16",
-      "team1": "Portugal",
-      "team2": "Netherlands",
+      "team1": "TBD",
+      "team2": "TBD",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.3783789442513011,
-        "draw_prob": 0.2653250098707458,
-        "loss_prob": 0.356296045877953,
-        "xG1": 1.3109335899353027,
-        "xG2": 1.2639986872673035
+        "win_prob": 0.34574580434747654,
+        "draw_prob": 0.30850839130504687,
+        "loss_prob": 0.3457458043474765,
+        "xG1": 1.0,
+        "xG2": 1.0
       },
       "result": {
         "score1": null,
@@ -1749,17 +1749,17 @@
       }
     },
     {
-      "match_id": "r16_4_Uruguay_Colombia",
+      "match_id": "r16_4_TBD_TBD",
       "stage": "Round of 16",
-      "team1": "Uruguay",
-      "team2": "Colombia",
+      "team1": "TBD",
+      "team2": "TBD",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.2220669098492615,
-        "draw_prob": 0.24583720647759155,
-        "loss_prob": 0.532095883673147,
-        "xG1": 0.9672015309333801,
-        "xG2": 1.6429367661476135
+        "win_prob": 0.34574580434747654,
+        "draw_prob": 0.30850839130504687,
+        "loss_prob": 0.3457458043474765,
+        "xG1": 1.0,
+        "xG2": 1.0
       },
       "result": {
         "score1": null,
@@ -1768,17 +1768,17 @@
       }
     },
     {
-      "match_id": "r16_5_Croatia_Senegal",
+      "match_id": "r16_5_TBD_TBD",
       "stage": "Round of 16",
-      "team1": "Croatia",
-      "team2": "Senegal",
+      "team1": "TBD",
+      "team2": "TBD",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.5046988492167745,
-        "draw_prob": 0.2525780290136465,
-        "loss_prob": 0.2427231217695788,
-        "xG1": 1.5729347467422485,
-        "xG2": 1.0079779624938965
+        "win_prob": 0.34574580434747654,
+        "draw_prob": 0.30850839130504687,
+        "loss_prob": 0.3457458043474765,
+        "xG1": 1.0,
+        "xG2": 1.0
       },
       "result": {
         "score1": null,
@@ -1787,17 +1787,17 @@
       }
     },
     {
-      "match_id": "r16_6_Morocco_UnitedStates",
+      "match_id": "r16_6_TBD_TBD",
       "stage": "Round of 16",
-      "team1": "Morocco",
-      "team2": "United States",
+      "team1": "TBD",
+      "team2": "TBD",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.37792300954114866,
-        "draw_prob": 0.2652440285317449,
-        "loss_prob": 0.35683296192710645,
-        "xG1": 1.3106201887130737,
-        "xG2": 1.2657846808433533
+        "win_prob": 0.34574580434747654,
+        "draw_prob": 0.30850839130504687,
+        "loss_prob": 0.3457458043474765,
+        "xG1": 1.0,
+        "xG2": 1.0
       },
       "result": {
         "score1": null,
@@ -1806,17 +1806,17 @@
       }
     },
     {
-      "match_id": "r16_7_Japan_SouthKorea",
+      "match_id": "r16_7_TBD_TBD",
       "stage": "Round of 16",
-      "team1": "Japan",
-      "team2": "South Korea",
+      "team1": "TBD",
+      "team2": "TBD",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.5234000360095356,
-        "draw_prob": 0.24466131060020954,
-        "loss_prob": 0.23193865339025496,
-        "xG1": 1.6542155146598816,
-        "xG2": 1.0141924023628235
+        "win_prob": 0.34574580434747654,
+        "draw_prob": 0.30850839130504687,
+        "loss_prob": 0.3457458043474765,
+        "xG1": 1.0,
+        "xG2": 1.0
       },
       "result": {
         "score1": null,
@@ -1825,17 +1825,17 @@
       }
     },
     {
-      "match_id": "qf_0_Argentina_Brazil",
+      "match_id": "qf_0_TBD_TBD",
       "stage": "Quarter-Final",
-      "team1": "Argentina",
-      "team2": "Brazil",
+      "team1": "TBD",
+      "team2": "TBD",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.47500531134076024,
-        "draw_prob": 0.2576032837209346,
-        "loss_prob": 0.26739140493830515,
-        "xG1": 1.509960949420929,
-        "xG2": 1.0649874806404114
+        "win_prob": 0.34574580434747654,
+        "draw_prob": 0.30850839130504687,
+        "loss_prob": 0.3457458043474765,
+        "xG1": 1.0,
+        "xG2": 1.0
       },
       "result": {
         "score1": null,
@@ -1844,17 +1844,17 @@
       }
     },
     {
-      "match_id": "qf_1_England_Portugal",
+      "match_id": "qf_1_TBD_TBD",
       "stage": "Quarter-Final",
-      "team1": "England",
-      "team2": "Portugal",
+      "team1": "TBD",
+      "team2": "TBD",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.42295723146842573,
-        "draw_prob": 0.2634060667736699,
-        "loss_prob": 0.31363670175790437,
-        "xG1": 1.4026234149932861,
-        "xG2": 1.1698530316352844
+        "win_prob": 0.34574580434747654,
+        "draw_prob": 0.30850839130504687,
+        "loss_prob": 0.3457458043474765,
+        "xG1": 1.0,
+        "xG2": 1.0
       },
       "result": {
         "score1": null,
@@ -1863,17 +1863,17 @@
       }
     },
     {
-      "match_id": "qf_2_Uruguay_Croatia",
+      "match_id": "qf_2_TBD_TBD",
       "stage": "Quarter-Final",
-      "team1": "Uruguay",
-      "team2": "Croatia",
+      "team1": "TBD",
+      "team2": "TBD",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.3551628011499438,
-        "draw_prob": 0.2651720331077788,
-        "loss_prob": 0.3796651657422774,
-        "xG1": 1.2625191807746887,
-        "xG2": 1.3146169781684875
+        "win_prob": 0.34574580434747654,
+        "draw_prob": 0.30850839130504687,
+        "loss_prob": 0.3457458043474765,
+        "xG1": 1.0,
+        "xG2": 1.0
       },
       "result": {
         "score1": null,
@@ -1882,17 +1882,17 @@
       }
     },
     {
-      "match_id": "qf_3_UnitedStates_Japan",
+      "match_id": "qf_3_TBD_TBD",
       "stage": "Quarter-Final",
-      "team1": "United States",
-      "team2": "Japan",
+      "team1": "TBD",
+      "team2": "TBD",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.44087845168621426,
-        "draw_prob": 0.25841762520805106,
-        "loss_prob": 0.3007039231057348,
-        "xG1": 1.4679123163223267,
-        "xG2": 1.1658952236175537
+        "win_prob": 0.34574580434747654,
+        "draw_prob": 0.30850839130504687,
+        "loss_prob": 0.3457458043474765,
+        "xG1": 1.0,
+        "xG2": 1.0
       },
       "result": {
         "score1": null,
@@ -1901,17 +1901,17 @@
       }
     },
     {
-      "match_id": "sf_0_Brazil_England",
+      "match_id": "sf_0_TBD_TBD",
       "stage": "Semi-Final",
-      "team1": "Brazil",
-      "team2": "England",
+      "team1": "TBD",
+      "team2": "TBD",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.3803925817264722,
-        "draw_prob": 0.2661337766959051,
-        "loss_prob": 0.3534736415776227,
-        "xG1": 1.3089743256568909,
-        "xG2": 1.2518947124481201
+        "win_prob": 0.34574580434747654,
+        "draw_prob": 0.30850839130504687,
+        "loss_prob": 0.3457458043474765,
+        "xG1": 1.0,
+        "xG2": 1.0
       },
       "result": {
         "score1": null,
@@ -1920,17 +1920,17 @@
       }
     },
     {
-      "match_id": "sf_1_Uruguay_Japan",
+      "match_id": "sf_1_TBD_TBD",
       "stage": "Semi-Final",
-      "team1": "Uruguay",
-      "team2": "Japan",
+      "team1": "TBD",
+      "team2": "TBD",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.43734909059659854,
-        "draw_prob": 0.26001117297334236,
-        "loss_prob": 0.302639736430059,
-        "xG1": 1.449997901916504,
-        "xG2": 1.1609492897987366
+        "win_prob": 0.34574580434747654,
+        "draw_prob": 0.30850839130504687,
+        "loss_prob": 0.3457458043474765,
+        "xG1": 1.0,
+        "xG2": 1.0
       },
       "result": {
         "score1": null,
@@ -1939,17 +1939,17 @@
       }
     },
     {
-      "match_id": "third_place_0_England_Japan",
+      "match_id": "third_place_0_TBD_TBD",
       "stage": "Third Place Play-off",
-      "team1": "England",
-      "team2": "Japan",
+      "team1": "TBD",
+      "team2": "TBD",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.6045424802266559,
-        "draw_prob": 0.2242430078625698,
-        "loss_prob": 0.17121451191077428,
-        "xG1": 1.8354394435882568,
-        "xG2": 0.8582543134689331
+        "win_prob": 0.34574580434747654,
+        "draw_prob": 0.30850839130504687,
+        "loss_prob": 0.3457458043474765,
+        "xG1": 1.0,
+        "xG2": 1.0
       },
       "result": {
         "score1": null,
@@ -1958,17 +1958,17 @@
       }
     },
     {
-      "match_id": "final_0_Brazil_Uruguay",
+      "match_id": "final_0_TBD_TBD",
       "stage": "Final",
-      "team1": "Brazil",
-      "team2": "Uruguay",
+      "team1": "TBD",
+      "team2": "TBD",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.5490936927428608,
-        "draw_prob": 0.24190159379269113,
-        "loss_prob": 0.2090047134644481,
-        "xG1": 1.6803696751594543,
-        "xG2": 0.9353555142879486
+        "win_prob": 0.34574580434747654,
+        "draw_prob": 0.30850839130504687,
+        "loss_prob": 0.3457458043474765,
+        "xG1": 1.0,
+        "xG2": 1.0
       },
       "result": {
         "score1": null,

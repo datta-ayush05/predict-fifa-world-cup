@@ -36,34 +36,34 @@ MATCHUPS_R32 = [
 ]
 
 MATCHUPS_R16 = [
-    ("Argentina", "France"),
-    ("Brazil", "Spain"),
-    ("England", "Germany"),
-    ("Portugal", "Netherlands"),
-    ("Uruguay", "Colombia"),
-    ("Croatia", "Senegal"),
-    ("Morocco", "United States"),
-    ("Japan", "South Korea"),
+    ("TBD", "TBD"),
+    ("TBD", "TBD"),
+    ("TBD", "TBD"),
+    ("TBD", "TBD"),
+    ("TBD", "TBD"),
+    ("TBD", "TBD"),
+    ("TBD", "TBD"),
+    ("TBD", "TBD"),
 ]
 
 MATCHUPS_QF = [
-    ("Argentina", "Brazil"),
-    ("England", "Portugal"),
-    ("Uruguay", "Croatia"),
-    ("United States", "Japan"),
+    ("TBD", "TBD"),
+    ("TBD", "TBD"),
+    ("TBD", "TBD"),
+    ("TBD", "TBD"),
 ]
 
 MATCHUPS_SF = [
-    ("Brazil", "England"),
-    ("Uruguay", "Japan"),
+    ("TBD", "TBD"),
+    ("TBD", "TBD"),
 ]
 
 MATCHUPS_FINAL = [
-    ("Brazil", "Uruguay")
+    ("TBD", "TBD")
 ]
 
 MATCHUPS_THIRD_PLACE = [
-    ("England", "Japan")
+    ("TBD", "TBD")
 ]
 
 MATCHUPS_BY_STAGE = {

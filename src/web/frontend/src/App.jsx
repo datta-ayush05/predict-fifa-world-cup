@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import './index.css';
 import predictionData from './data/predictions.json';
 import fixtureData from './data/fixtures.json';
@@ -6,6 +6,7 @@ import fixtureData from './data/fixtures.json';
 function App() {
   const [activeTab, setActiveTab] = useState('home');
   const [globalStats, setGlobalStats] = useState([]);
+  const [activeDate, setActiveDate] = useState(null);
 
   // Load static data on mount
   useEffect(() => {
@@ -27,7 +28,29 @@ function App() {
     }
   }, []);
 
-  // Unused state removed
+  const groupedFixtures = useMemo(() => {
+    if (!fixtureData.matches) return {};
+    return fixtureData.matches.reduce((acc, m) => {
+      const date = m.date || 'TBD';
+      if (!acc[date]) acc[date] = [];
+      acc[date].push(m);
+      return acc;
+    }, {});
+  }, []);
+
+  const sortedDates = useMemo(() => {
+    return Object.keys(groupedFixtures).sort((a, b) => {
+      if (a === 'TBD') return 1;
+      if (b === 'TBD') return -1;
+      return a.localeCompare(b);
+    });
+  }, [groupedFixtures]);
+
+  useEffect(() => {
+    if (activeTab === 'fixtures' && !activeDate && sortedDates.length > 0) {
+      setActiveDate(sortedDates[0]);
+    }
+  }, [activeTab, sortedDates, activeDate]);
 
   return (
     <div className="app-container">
@@ -52,6 +75,23 @@ function App() {
             }}
           >
             Dashboard
+          </button>
+          <button 
+            className={`tab-button ${activeTab === 'fixtures' ? 'active' : ''}`}
+            onClick={() => setActiveTab('fixtures')}
+            style={{
+              padding: '0.8rem 1.5rem', 
+              background: activeTab === 'fixtures' ? 'var(--accent)' : 'transparent',
+              color: activeTab === 'fixtures' ? '#fff' : 'var(--text-color)',
+              border: '2px solid var(--accent)',
+              borderRadius: '30px',
+              cursor: 'pointer',
+              fontWeight: '600',
+              transition: 'all 0.3s',
+              fontFamily: 'inherit'
+            }}
+          >
+            Fixtures
           </button>
           <button 
             className={`tab-button ${activeTab === 'about' ? 'active' : ''}`}
@@ -104,110 +144,120 @@ function App() {
               </div>
             </div>
           )}
+        </div>
+      )}
 
-          {fixtureData.matches && fixtureData.matches.length > 0 && (
-            <div className="matches-container">
-              <h3 style={{color: 'var(--text-color)', marginBottom: '1.5rem', textAlign: 'center'}}>Tournament Fixtures</h3>
-              
-              {(() => {
-                const groupedFixtures = fixtureData.matches.reduce((acc, m) => {
-                  const date = m.date || 'TBD';
-                  if (!acc[date]) acc[date] = [];
-                  acc[date].push(m);
-                  return acc;
-                }, {});
+      {activeTab === 'fixtures' && (
+        <div className="fixtures-view animation-fade-in" style={{animation: 'fadeIn 0.5s ease-out'}}>
+          <div className="date-tabs" style={{
+            display: 'flex', 
+            gap: '0.5rem', 
+            overflowX: 'auto', 
+            padding: '1rem 0 2rem 0',
+            scrollbarWidth: 'none',
+            justifyContent: 'flex-start'
+          }}>
+            {sortedDates.map(date => (
+              <button
+                key={date}
+                onClick={() => setActiveDate(date)}
+                style={{
+                  whiteSpace: 'nowrap',
+                  padding: '0.6rem 1.2rem',
+                  background: activeDate === date ? 'var(--accent)' : 'rgba(255, 255, 255, 0.4)',
+                  color: activeDate === date ? '#fff' : 'var(--text-main)',
+                  border: 'none',
+                  borderRadius: '20px',
+                  cursor: 'pointer',
+                  fontWeight: '600',
+                  boxShadow: activeDate === date ? '0 4px 10px var(--accent-glow)' : 'none',
+                  transition: 'all 0.2s'
+                }}
+              >
+                {date === 'TBD' ? 'TBD' : new Date(date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
+              </button>
+            ))}
+          </div>
 
-                const sortedDates = Object.keys(groupedFixtures).sort((a, b) => {
-                  if (a === 'TBD') return 1;
-                  if (b === 'TBD') return -1;
-                  return a.localeCompare(b);
-                });
-
-                return sortedDates.map(date => (
-                  <div key={date} style={{marginBottom: '2.5rem', textAlign: 'center'}}>
-                    <div style={{
-                      padding: '0.5rem 1.5rem', 
-                      background: 'rgba(255, 255, 255, 0.05)', 
-                      borderRadius: '20px', 
-                      marginBottom: '1rem',
-                      fontSize: '0.9rem',
-                      color: 'var(--text-muted)',
-                      display: 'inline-block',
-                      border: '1px solid rgba(255, 255, 255, 0.1)'
-                    }}>
-                      {date === 'TBD' ? 'To Be Determined' : new Date(date).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}
+          {activeDate && groupedFixtures[activeDate] && (
+            <div className="matches-grid" style={{display: 'flex', flexDirection: 'column', gap: '1rem', alignItems: 'center'}}>
+              <div style={{
+                  padding: '0.5rem 1.5rem', 
+                  background: 'rgba(255, 255, 255, 0.05)', 
+                  borderRadius: '20px', 
+                  marginBottom: '1rem',
+                  fontSize: '0.9rem',
+                  color: 'var(--text-muted)',
+                  display: 'inline-block',
+                  border: '1px solid rgba(255, 255, 255, 0.1)'
+              }}>
+                 {activeDate === 'TBD' ? 'To Be Determined' : new Date(activeDate).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}
+              </div>
+              {groupedFixtures[activeDate].map((m, idx) => (
+                <div key={idx} className="match-card glass" style={{
+                  display: 'flex', 
+                  flexDirection: 'column', 
+                  padding: '1.5rem', 
+                  borderRadius: '12px',
+                  width: '100%',
+                  maxWidth: '600px'
+                }}>
+                  <div style={{fontSize: '0.85rem', color: 'var(--accent)', fontWeight: 'bold', marginBottom: '1rem', textTransform: 'uppercase'}}>
+                    {m.stage}
+                  </div>
+                  
+                  <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
+                    {/* Team 1 Side */}
+                    <div style={{flex: 1, textAlign: 'right'}}>
+                      <div style={{fontSize: '1.3rem', fontWeight: 'bold', color: 'var(--text-main)'}}>
+                        {m.team1}
+                      </div>
+                      <div style={{fontSize: '0.9rem', color: 'var(--text-muted)', marginTop: '0.3rem'}}>
+                        xG: <span style={{color: 'var(--text-color)', fontWeight: 'bold'}}>{m.prediction.xG1.toFixed(2)}</span>
+                      </div>
                     </div>
-                    
-                    <div className="matches-grid" style={{display: 'flex', flexDirection: 'column', gap: '1rem', alignItems: 'center'}}>
-                      {groupedFixtures[date].map((m, idx) => (
-                        <div key={idx} className="match-card glass" style={{
-                          display: 'flex', 
-                          flexDirection: 'column', 
-                          padding: '1.5rem', 
-                          borderRadius: '12px',
-                          width: '100%',
-                          maxWidth: '600px'
-                        }}>
-                          <div style={{fontSize: '0.85rem', color: 'var(--accent)', fontWeight: 'bold', marginBottom: '1rem', textTransform: 'uppercase'}}>
-                            {m.stage}
-                          </div>
-                          
-                          <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
-                            {/* Team 1 Side */}
-                            <div style={{flex: 1, textAlign: 'right'}}>
-                              <div style={{fontSize: '1.3rem', fontWeight: 'bold', color: 'var(--text-main)'}}>
-                                {m.team1}
-                              </div>
-                              <div style={{fontSize: '0.9rem', color: 'var(--text-muted)', marginTop: '0.3rem'}}>
-                                xG: <span style={{color: 'var(--text-color)', fontWeight: 'bold'}}>{m.prediction.xG1.toFixed(2)}</span>
-                              </div>
-                            </div>
 
-                            {/* Center Score */}
-                            <div style={{flex: '0 0 100px', textAlign: 'center', fontSize: '1.8rem', fontWeight: 'bold', display: 'flex', justifyContent: 'center', gap: '0.5rem', background: 'var(--glass-border)', padding: '0.5rem', borderRadius: '8px', margin: '0 1.5rem'}}>
-                              {m.result.status === 'Finished' ? (
-                                <>
-                                  <span style={{color: 'var(--text-main)'}}>{m.result.score1}</span>
-                                  <span style={{color: 'var(--text-muted)'}}>-</span>
-                                  <span style={{color: 'var(--text-main)'}}>{m.result.score2}</span>
-                                </>
-                              ) : (
-                                <span style={{fontSize: '1.2rem', color: 'var(--text-muted)'}}>vs</span>
-                              )}
-                            </div>
+                    {/* Center Score */}
+                    <div style={{flex: '0 0 100px', textAlign: 'center', fontSize: '1.8rem', fontWeight: 'bold', display: 'flex', justifyContent: 'center', gap: '0.5rem', background: 'var(--glass-border)', padding: '0.5rem', borderRadius: '8px', margin: '0 1.5rem'}}>
+                      {m.result.status === 'Finished' ? (
+                        <>
+                          <span style={{color: 'var(--text-main)'}}>{m.result.score1}</span>
+                          <span style={{color: 'var(--text-muted)'}}>-</span>
+                          <span style={{color: 'var(--text-main)'}}>{m.result.score2}</span>
+                        </>
+                      ) : (
+                        <span style={{fontSize: '1.2rem', color: 'var(--text-muted)'}}>vs</span>
+                      )}
+                    </div>
 
-                            {/* Team 2 Side */}
-                            <div style={{flex: 1, textAlign: 'left'}}>
-                              <div style={{fontSize: '1.3rem', fontWeight: 'bold', color: 'var(--text-main)'}}>
-                                {m.team2}
-                              </div>
-                              <div style={{fontSize: '0.9rem', color: 'var(--text-muted)', marginTop: '0.3rem'}}>
-                                xG: <span style={{color: 'var(--text-color)', fontWeight: 'bold'}}>{m.prediction.xG2.toFixed(2)}</span>
-                              </div>
-                            </div>
-                          </div>
-                          
-                          {/* Prediction Footer */}
-                          <div style={{marginTop: '1.5rem', borderTop: '1px solid rgba(255,255,255,0.05)', paddingTop: '1rem', display: 'flex', justifyContent: 'center', gap: '2rem', fontSize: '0.85rem'}}>
-                             <div style={{display: 'flex', gap: '0.5rem'}}>
-                               <span style={{color: 'var(--text-muted)'}}>{m.team1}:</span>
-                               <span style={{color: 'var(--success)'}}>{(m.prediction.win_prob * 100).toFixed(0)}%</span>
-                             </div>
-                             <div style={{display: 'flex', gap: '0.5rem'}}>
-                               <span style={{color: 'var(--text-muted)'}}>Draw:</span>
-                               <span>{(m.prediction.draw_prob * 100).toFixed(0)}%</span>
-                             </div>
-                             <div style={{display: 'flex', gap: '0.5rem'}}>
-                               <span style={{color: 'var(--text-muted)'}}>{m.team2}:</span>
-                               <span style={{color: 'var(--danger)'}}>{(m.prediction.loss_prob * 100).toFixed(0)}%</span>
-                             </div>
-                          </div>
-                        </div>
-                      ))}
+                    {/* Team 2 Side */}
+                    <div style={{flex: 1, textAlign: 'left'}}>
+                      <div style={{fontSize: '1.3rem', fontWeight: 'bold', color: 'var(--text-main)'}}>
+                        {m.team2}
+                      </div>
+                      <div style={{fontSize: '0.9rem', color: 'var(--text-muted)', marginTop: '0.3rem'}}>
+                        xG: <span style={{color: 'var(--text-color)', fontWeight: 'bold'}}>{m.prediction.xG2.toFixed(2)}</span>
+                      </div>
                     </div>
                   </div>
-                ));
-              })()}
+                  
+                  {/* Prediction Footer */}
+                  <div style={{marginTop: '1.5rem', borderTop: '1px solid rgba(255,255,255,0.05)', paddingTop: '1rem', display: 'flex', justifyContent: 'center', gap: '2rem', fontSize: '0.85rem'}}>
+                     <div style={{display: 'flex', gap: '0.5rem'}}>
+                       <span style={{color: 'var(--text-muted)'}}>{m.team1}:</span>
+                       <span style={{color: 'var(--success)'}}>{(m.prediction.win_prob * 100).toFixed(0)}%</span>
+                     </div>
+                     <div style={{display: 'flex', gap: '0.5rem'}}>
+                       <span style={{color: 'var(--text-muted)'}}>Draw:</span>
+                       <span>{(m.prediction.draw_prob * 100).toFixed(0)}%</span>
+                     </div>
+                     <div style={{display: 'flex', gap: '0.5rem'}}>
+                       <span style={{color: 'var(--text-muted)'}}>{m.team2}:</span>
+                       <span style={{color: 'var(--danger)'}}>{(m.prediction.loss_prob * 100).toFixed(0)}%</span>
+                     </div>
+                  </div>
+                </div>
+              ))}
             </div>
           )}
         </div>
