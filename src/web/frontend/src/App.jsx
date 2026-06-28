@@ -1,39 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import './index.css';
 import predictionData from './data/predictions.json';
-
-// Utility to calculate Poisson match probabilities
-function calculateMatchProbs(lambdaH, lambdaA) {
-  let win = 0.0;
-  let draw = 0.0;
-  let loss = 0.0;
-  
-  const fact = (n) => (n === 0 || n === 1) ? 1 : n * fact(n - 1);
-  
-  for (let i = 0; i < 10; i++) {
-    for (let j = 0; j < 10; j++) {
-      const prob = (Math.exp(-lambdaH) * Math.pow(lambdaH, i) / fact(i)) *
-                   (Math.exp(-lambdaA) * Math.pow(lambdaA, j) / fact(j));
-      if (i > j) win += prob;
-      else if (i === j) draw += prob;
-      else loss += prob;
-    }
-  }
-  
-  const total = win + draw + loss;
-  return {
-    win: win / total,
-    draw: draw / total,
-    loss: loss / total
-  };
-}
+import fixtureData from './data/fixtures.json';
 
 function App() {
   const [activeTab, setActiveTab] = useState('home');
   const [teams, setTeams] = useState([]);
   const [selectedTeam, setSelectedTeam] = useState('');
   const [selectedTeam2, setSelectedTeam2] = useState('');
-  const [teamData, setTeamData] = useState(null);
+  const [teamStats, setTeamStats] = useState(null);
+  const [filteredFixtures, setFilteredFixtures] = useState([]);
   const [globalStats, setGlobalStats] = useState([]);
 
   // Load static data on mount
@@ -57,95 +33,29 @@ function App() {
     }
   }, []);
 
-  // Update specific team stats when selected
+  // Update specific team stats and fixtures when selected
   useEffect(() => {
     if (!selectedTeam) {
-      setTeamData(null);
+      setTeamStats(null);
+      setFilteredFixtures([]);
       setSelectedTeam2('');
       return;
     }
 
     const teamsObj = predictionData.teams || {};
-    const probMatrix = predictionData.prob_matrix || {};
     const stats = teamsObj[selectedTeam];
     
     if (!stats) return;
+    setTeamStats(stats);
 
-    const group = stats.group;
-    const matches = [];
-    let customMatch = null;
+    const matches = fixtureData.matches || [];
+    let relevantMatches = matches.filter(m => m.team1 === selectedTeam || m.team2 === selectedTeam);
 
-    // Head-to-Head logic for selectedTeam2
     if (selectedTeam2 && selectedTeam2 !== selectedTeam) {
-      const key1 = `${selectedTeam}::${selectedTeam2}`;
-      const key2 = `${selectedTeam2}::${selectedTeam}`;
-      let probs = null;
-      let xgFor = 0;
-      let xgAgainst = 0;
-      
-      if (probMatrix[key1]) {
-        probs = probMatrix[key1];
-        xgFor = probs[0];
-        xgAgainst = probs[1];
-      } else if (probMatrix[key2]) {
-        probs = probMatrix[key2];
-        xgFor = probs[1];
-        xgAgainst = probs[0];
-      }
-      
-      if (probs) {
-        const matchP = calculateMatchProbs(xgFor, xgAgainst);
-        customMatch = {
-          opponent: selectedTeam2,
-          xG_for: xgFor,
-          xG_against: xgAgainst,
-          win_prob: matchP.win,
-          draw_prob: matchP.draw,
-          loss_prob: matchP.loss
-        };
-      }
-    } else {
-      // Get probabilities against teams in same group
-      Object.keys(teamsObj).forEach(t2 => {
-        const t2Stats = teamsObj[t2];
-        if (t2 !== selectedTeam && t2Stats.group === group) {
-          const key1 = `${selectedTeam}::${t2}`;
-          const key2 = `${t2}::${selectedTeam}`;
-          
-          let probs = null;
-          let xgFor = 0;
-          let xgAgainst = 0;
-          
-          if (probMatrix[key1]) {
-            probs = probMatrix[key1];
-            xgFor = probs[0];
-            xgAgainst = probs[1];
-          } else if (probMatrix[key2]) {
-            probs = probMatrix[key2];
-            xgFor = probs[1]; // reversed
-            xgAgainst = probs[0];
-          }
-          
-          if (probs) {
-            const matchP = calculateMatchProbs(xgFor, xgAgainst);
-            matches.push({
-              opponent: t2,
-              xG_for: xgFor,
-              xG_against: xgAgainst,
-              win_prob: matchP.win,
-              draw_prob: matchP.draw,
-              loss_prob: matchP.loss
-            });
-          }
-        }
-      });
+      relevantMatches = relevantMatches.filter(m => m.team1 === selectedTeam2 || m.team2 === selectedTeam2);
     }
-
-    setTeamData({
-      stats: stats,
-      group_matches: matches,
-      custom_match: customMatch
-    });
+    
+    setFilteredFixtures(relevantMatches);
 
   }, [selectedTeam, selectedTeam2]);
 
@@ -213,91 +123,137 @@ function App() {
             )}
           </div>
 
-          {teamData && !selectedTeam2 && (
+          {teamStats && !selectedTeam2 && (
             <div className="dashboard">
               <div className="card glass">
                 <h3>Win Tournament</h3>
-                <div className="stat">{(teamData.stats.win_prob * 100).toFixed(1)}%</div>
+                <div className="stat">{(teamStats.win_prob * 100).toFixed(1)}%</div>
                 <div className="progress-bar-container">
-                  <div className="progress-bar" style={{ width: `${Math.min(teamData.stats.win_prob * 100, 100)}%` }}></div>
+                  <div className="progress-bar" style={{ width: `${Math.min(teamStats.win_prob * 100, 100)}%` }}></div>
                 </div>
               </div>
               
               <div className="card glass">
                 <h3>Reach Final</h3>
-                <div className="stat">{(teamData.stats.final_prob * 100).toFixed(1)}%</div>
+                <div className="stat">{(teamStats.final_prob * 100).toFixed(1)}%</div>
                 <div className="progress-bar-container">
-                  <div className="progress-bar" style={{ width: `${Math.min(teamData.stats.final_prob * 100, 100)}%` }}></div>
+                  <div className="progress-bar" style={{ width: `${Math.min(teamStats.final_prob * 100, 100)}%` }}></div>
                 </div>
               </div>
               
               <div className="card glass">
                 <h3>Advance from Group</h3>
-                <div className="stat">{(teamData.stats.group_adv_prob * 100).toFixed(1)}%</div>
+                <div className="stat">{(teamStats.group_adv_prob * 100).toFixed(1)}%</div>
                 <div className="progress-bar-container">
-                  <div className="progress-bar" style={{ width: `${Math.min(teamData.stats.group_adv_prob * 100, 100)}%` }}></div>
+                  <div className="progress-bar" style={{ width: `${Math.min(teamStats.group_adv_prob * 100, 100)}%` }}></div>
                 </div>
               </div>
-
-              {teamData.group_matches && teamData.group_matches.length > 0 && (
-                <div className="matches-container glass card">
-                  <h3>Group {teamData.stats.group} Match Probabilities</h3>
-                  <div className="matches-grid">
-                    {teamData.group_matches.map((m, idx) => (
-                      <div key={idx} className="match-card">
-                        <div className="match-opponent">vs {m.opponent}</div>
-                        <div className="match-stats">
-                          <div className="match-stat-col">
-                            <span>Win</span>
-                            <span style={{color: 'var(--success)'}}>{(m.win_prob * 100).toFixed(1)}%</span>
-                          </div>
-                          <div className="match-stat-col">
-                            <span>Draw</span>
-                            <span style={{color: 'var(--text-muted)'}}>{(m.draw_prob * 100).toFixed(1)}%</span>
-                          </div>
-                          <div className="match-stat-col">
-                            <span>Loss</span>
-                            <span style={{color: 'var(--danger)'}}>{(m.loss_prob * 100).toFixed(1)}%</span>
-                          </div>
-                        </div>
-                        <div style={{marginTop: '0.8rem', fontSize: '0.85rem', color: 'var(--text-muted)'}}>
-                          Expected Goals: {m.xG_for.toFixed(2)} - {m.xG_against.toFixed(2)}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
             </div>
           )}
 
-          {teamData && selectedTeam2 && teamData.custom_match && (
-            <div className="dashboard" style={{justifyContent: 'center', display: 'flex'}}>
-              <div className="matches-container glass card" style={{maxWidth: '500px', width: '100%'}}>
-                <h3 style={{textAlign: 'center', marginBottom: '2rem'}}>Head-to-Head Prediction</h3>
-                <div className="match-card" style={{border: 'none', background: 'transparent', boxShadow: 'none'}}>
-                  <div className="match-opponent" style={{fontSize: '1.5rem', marginBottom: '2rem'}}>
-                    {selectedTeam} <span style={{color: 'var(--accent)'}}>vs</span> {selectedTeam2}
-                  </div>
-                  <div className="match-stats" style={{marginBottom: '2rem'}}>
-                    <div className="match-stat-col">
-                      <span>{selectedTeam} Win</span>
-                      <span style={{color: 'var(--success)', fontSize: '2rem'}}>{(teamData.custom_match.win_prob * 100).toFixed(1)}%</span>
+          {selectedTeam && filteredFixtures.length > 0 && (
+            <div className="matches-container" style={{marginTop: '2rem'}}>
+              <h3 style={{color: 'var(--text-color)', marginBottom: '1.5rem', textAlign: 'center'}}>{selectedTeam2 ? "Head-to-Head Fixtures" : `${selectedTeam} Fixtures`}</h3>
+              
+              {(() => {
+                const groupedFixtures = filteredFixtures.reduce((acc, m) => {
+                  const date = m.date || 'TBD';
+                  if (!acc[date]) acc[date] = [];
+                  acc[date].push(m);
+                  return acc;
+                }, {});
+
+                const sortedDates = Object.keys(groupedFixtures).sort((a, b) => {
+                  if (a === 'TBD') return 1;
+                  if (b === 'TBD') return -1;
+                  return a.localeCompare(b);
+                });
+
+                return sortedDates.map(date => (
+                  <div key={date} style={{marginBottom: '2.5rem', textAlign: 'center'}}>
+                    <div style={{
+                      padding: '0.5rem 1.5rem', 
+                      background: 'rgba(255, 255, 255, 0.05)', 
+                      borderRadius: '20px', 
+                      marginBottom: '1rem',
+                      fontSize: '0.9rem',
+                      color: 'var(--text-muted)',
+                      display: 'inline-block',
+                      border: '1px solid rgba(255, 255, 255, 0.1)'
+                    }}>
+                      {date === 'TBD' ? 'To Be Determined' : new Date(date).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}
                     </div>
-                    <div className="match-stat-col">
-                      <span>Draw</span>
-                      <span style={{color: 'var(--text-muted)', fontSize: '2rem'}}>{(teamData.custom_match.draw_prob * 100).toFixed(1)}%</span>
-                    </div>
-                    <div className="match-stat-col">
-                      <span>{selectedTeam2} Win</span>
-                      <span style={{color: 'var(--danger)', fontSize: '2rem'}}>{(teamData.custom_match.loss_prob * 100).toFixed(1)}%</span>
+                    
+                    <div className="matches-grid" style={{display: 'flex', flexDirection: 'column', gap: '1rem', alignItems: 'center'}}>
+                      {groupedFixtures[date].map((m, idx) => (
+                        <div key={idx} className="match-card glass" style={{
+                          display: 'flex', 
+                          flexDirection: 'column', 
+                          padding: '1.5rem', 
+                          borderRadius: '12px',
+                          width: '100%',
+                          maxWidth: '600px'
+                        }}>
+                          <div style={{fontSize: '0.85rem', color: 'var(--accent)', fontWeight: 'bold', marginBottom: '1rem', textTransform: 'uppercase'}}>
+                            {m.stage}
+                          </div>
+                          
+                          <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
+                            {/* Team 1 Side */}
+                            <div style={{flex: 1, textAlign: 'right'}}>
+                              <div style={{fontSize: '1.3rem', fontWeight: m.team1 === selectedTeam ? 'bold' : 'normal', color: m.team1 === selectedTeam ? '#fff' : 'var(--text-muted)'}}>
+                                {m.team1}
+                              </div>
+                              <div style={{fontSize: '0.9rem', color: 'var(--text-muted)', marginTop: '0.3rem'}}>
+                                xG: <span style={{color: 'var(--text-color)', fontWeight: 'bold'}}>{m.prediction.xG1.toFixed(2)}</span>
+                              </div>
+                            </div>
+
+                            {/* Center Score */}
+                            <div style={{flex: '0 0 100px', textAlign: 'center', fontSize: '1.8rem', fontWeight: 'bold', display: 'flex', justifyContent: 'center', gap: '0.5rem', background: 'rgba(0,0,0,0.3)', padding: '0.5rem', borderRadius: '8px', margin: '0 1.5rem'}}>
+                              {m.result.status === 'Finished' ? (
+                                <>
+                                  <span style={{color: '#fff'}}>{m.result.score1}</span>
+                                  <span style={{color: 'rgba(255,255,255,0.3)'}}>-</span>
+                                  <span style={{color: '#fff'}}>{m.result.score2}</span>
+                                </>
+                              ) : (
+                                <span style={{fontSize: '1.2rem', color: 'rgba(255,255,255,0.5)'}}>vs</span>
+                              )}
+                            </div>
+
+                            {/* Team 2 Side */}
+                            <div style={{flex: 1, textAlign: 'left'}}>
+                              <div style={{fontSize: '1.3rem', fontWeight: m.team2 === selectedTeam ? 'bold' : 'normal', color: m.team2 === selectedTeam ? '#fff' : 'var(--text-muted)'}}>
+                                {m.team2}
+                              </div>
+                              <div style={{fontSize: '0.9rem', color: 'var(--text-muted)', marginTop: '0.3rem'}}>
+                                xG: <span style={{color: 'var(--text-color)', fontWeight: 'bold'}}>{m.prediction.xG2.toFixed(2)}</span>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          {/* Prediction Footer */}
+                          <div style={{marginTop: '1.5rem', borderTop: '1px solid rgba(255,255,255,0.05)', paddingTop: '1rem', display: 'flex', justifyContent: 'center', gap: '2rem', fontSize: '0.85rem'}}>
+                             <div style={{display: 'flex', gap: '0.5rem'}}>
+                               <span style={{color: 'var(--text-muted)'}}>{m.team1}:</span>
+                               <span style={{color: 'var(--success)'}}>{(m.prediction.win_prob * 100).toFixed(0)}%</span>
+                             </div>
+                             <div style={{display: 'flex', gap: '0.5rem'}}>
+                               <span style={{color: 'var(--text-muted)'}}>Draw:</span>
+                               <span>{(m.prediction.draw_prob * 100).toFixed(0)}%</span>
+                             </div>
+                             <div style={{display: 'flex', gap: '0.5rem'}}>
+                               <span style={{color: 'var(--text-muted)'}}>{m.team2}:</span>
+                               <span style={{color: 'var(--danger)'}}>{(m.prediction.loss_prob * 100).toFixed(0)}%</span>
+                             </div>
+                          </div>
+                        </div>
+                      ))}
                     </div>
                   </div>
-                  <div style={{fontSize: '1rem', color: 'var(--text-muted)'}}>
-                    Expected Goals: {teamData.custom_match.xG_for.toFixed(2)} - {teamData.custom_match.xG_against.toFixed(2)}
-                  </div>
-                </div>
-              </div>
+                ));
+              })()}
             </div>
           )}
 

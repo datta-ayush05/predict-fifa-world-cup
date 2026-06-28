@@ -62,11 +62,16 @@ MATCHUPS_FINAL = [
     ("Brazil", "Uruguay")
 ]
 
+MATCHUPS_THIRD_PLACE = [
+    ("England", "Japan")
+]
+
 MATCHUPS_BY_STAGE = {
     "r32": MATCHUPS_R32,
     "r16": MATCHUPS_R16,
     "qf": MATCHUPS_QF,
     "sf": MATCHUPS_SF,
+    "third_place": MATCHUPS_THIRD_PLACE,
     "final": MATCHUPS_FINAL,
 }
 

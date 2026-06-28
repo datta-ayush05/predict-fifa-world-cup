@@ -1,0 +1,1980 @@
+{
+  "matches": [
+    {
+      "match_id": "group_2026-06-11_Mexico_SouthAfrica",
+      "stage": "Group Stage",
+      "team1": "Mexico",
+      "team2": "South Africa",
+      "date": "2026-06-11",
+      "prediction": {
+        "win_prob": 0.7489894849187319,
+        "draw_prob": 0.1671888079130459,
+        "loss_prob": 0.08382170716822239,
+        "xG1": 2.245025157928467,
+        "xG2": 0.6008594334125519
+      },
+      "result": {
+        "score1": 2,
+        "score2": 0,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-11_SouthKorea_CzechRepublic",
+      "stage": "Group Stage",
+      "team1": "South Korea",
+      "team2": "Czech Republic",
+      "date": "2026-06-11",
+      "prediction": {
+        "win_prob": 0.33391636825889326,
+        "draw_prob": 0.2626910085168764,
+        "loss_prob": 0.40339262322423025,
+        "xG1": 1.2287474870681763,
+        "xG2": 1.3773140907287598
+      },
+      "result": {
+        "score1": 2,
+        "score2": 1,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-12_Canada_BosniaandHerzegovina",
+      "stage": "Group Stage",
+      "team1": "Canada",
+      "team2": "Bosnia and Herzegovina",
+      "date": "2026-06-12",
+      "prediction": {
+        "win_prob": 0.5728791170278917,
+        "draw_prob": 0.2331369787660802,
+        "loss_prob": 0.19398390420602793,
+        "xG1": 1.763161063194275,
+        "xG2": 0.9187693893909454
+      },
+      "result": {
+        "score1": 1,
+        "score2": 1,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-12_UnitedStates_Paraguay",
+      "stage": "Group Stage",
+      "team1": "United States",
+      "team2": "Paraguay",
+      "date": "2026-06-12",
+      "prediction": {
+        "win_prob": 0.38940469426245145,
+        "draw_prob": 0.2638209785686601,
+        "loss_prob": 0.3467743271688885,
+        "xG1": 1.3435187339782715,
+        "xG2": 1.252564787864685
+      },
+      "result": {
+        "score1": 4,
+        "score2": 1,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-13_Qatar_Switzerland",
+      "stage": "Group Stage",
+      "team1": "Qatar",
+      "team2": "Switzerland",
+      "date": "2026-06-13",
+      "prediction": {
+        "win_prob": 0.03744371765063195,
+        "draw_prob": 0.10964378339487166,
+        "loss_prob": 0.8529124989544964,
+        "xG1": 0.42120207846164703,
+        "xG2": 2.7110447883605957
+      },
+      "result": {
+        "score1": 1,
+        "score2": 1,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-13_Brazil_Morocco",
+      "stage": "Group Stage",
+      "team1": "Brazil",
+      "team2": "Morocco",
+      "date": "2026-06-13",
+      "prediction": {
+        "win_prob": 0.5349005537585519,
+        "draw_prob": 0.24621456605976977,
+        "loss_prob": 0.2188848801816783,
+        "xG1": 1.6391680240631104,
+        "xG2": 0.9520602226257324
+      },
+      "result": {
+        "score1": 1,
+        "score2": 1,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-13_Haiti_Scotland",
+      "stage": "Group Stage",
+      "team1": "Haiti",
+      "team2": "Scotland",
+      "date": "2026-06-13",
+      "prediction": {
+        "win_prob": 0.08500779267703945,
+        "draw_prob": 0.16332123516346178,
+        "loss_prob": 0.7516709721594987,
+        "xG1": 0.6317287087440491,
+        "xG2": 2.3057740926742554
+      },
+      "result": {
+        "score1": 0,
+        "score2": 1,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-13_Australia_Turkey",
+      "stage": "Group Stage",
+      "team1": "Australia",
+      "team2": "Turkey",
+      "date": "2026-06-13",
+      "prediction": {
+        "win_prob": 0.22667482528901914,
+        "draw_prob": 0.2429067871473597,
+        "loss_prob": 0.5304183875636211,
+        "xG1": 1.0036308765411377,
+        "xG2": 1.6725026965141296
+      },
+      "result": {
+        "score1": 2,
+        "score2": 0,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-14_Germany_Cura\u00e7ao",
+      "stage": "Group Stage",
+      "team1": "Germany",
+      "team2": "Cura\u00e7ao",
+      "date": "2026-06-14",
+      "prediction": {
+        "win_prob": 0.0,
+        "draw_prob": 1.0,
+        "loss_prob": 0.0,
+        "xG1": 0.0,
+        "xG2": 0.0
+      },
+      "result": {
+        "score1": 7,
+        "score2": 1,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-14_IvoryCoast_Ecuador",
+      "stage": "Group Stage",
+      "team1": "Ivory Coast",
+      "team2": "Ecuador",
+      "date": "2026-06-14",
+      "prediction": {
+        "win_prob": 0.16779666780224736,
+        "draw_prob": 0.22639596311256396,
+        "loss_prob": 0.6058073690851886,
+        "xG1": 0.828951358795166,
+        "xG2": 1.8082035183906555
+      },
+      "result": {
+        "score1": 1,
+        "score2": 0,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-14_Netherlands_Japan",
+      "stage": "Group Stage",
+      "team1": "Netherlands",
+      "team2": "Japan",
+      "date": "2026-06-14",
+      "prediction": {
+        "win_prob": 0.5386163108479989,
+        "draw_prob": 0.24220282359728335,
+        "loss_prob": 0.2191808655547178,
+        "xG1": 1.679276704788208,
+        "xG2": 0.9767607748508453
+      },
+      "result": {
+        "score1": 2,
+        "score2": 2,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-14_Sweden_Tunisia",
+      "stage": "Group Stage",
+      "team1": "Sweden",
+      "team2": "Tunisia",
+      "date": "2026-06-14",
+      "prediction": {
+        "win_prob": 0.5749717217465619,
+        "draw_prob": 0.23509486605103241,
+        "loss_prob": 0.1899334122024057,
+        "xG1": 1.7400305271148682,
+        "xG2": 0.8887301087379456
+      },
+      "result": {
+        "score1": 5,
+        "score2": 1,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-15_Belgium_Egypt",
+      "stage": "Group Stage",
+      "team1": "Belgium",
+      "team2": "Egypt",
+      "date": "2026-06-15",
+      "prediction": {
+        "win_prob": 0.5599326381069027,
+        "draw_prob": 0.23909599199712403,
+        "loss_prob": 0.20097136989597325,
+        "xG1": 1.7057138085365295,
+        "xG2": 0.9162984192371368
+      },
+      "result": {
+        "score1": 1,
+        "score2": 1,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-15_Iran_NewZealand",
+      "stage": "Group Stage",
+      "team1": "Iran",
+      "team2": "New Zealand",
+      "date": "2026-06-15",
+      "prediction": {
+        "win_prob": 0.5829517865535734,
+        "draw_prob": 0.228349836509051,
+        "loss_prob": 0.18869837693737562,
+        "xG1": 1.810220181941986,
+        "xG2": 0.9219286739826202
+      },
+      "result": {
+        "score1": 2,
+        "score2": 2,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-15_Spain_CapeVerde",
+      "stage": "Group Stage",
+      "team1": "Spain",
+      "team2": "Cape Verde",
+      "date": "2026-06-15",
+      "prediction": {
+        "win_prob": 0.8697685075422636,
+        "draw_prob": 0.09990822995608749,
+        "loss_prob": 0.03032326250164893,
+        "xG1": 2.7794216871261597,
+        "xG2": 0.3716963678598404
+      },
+      "result": {
+        "score1": 0,
+        "score2": 0,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-15_SaudiArabia_Uruguay",
+      "stage": "Group Stage",
+      "team1": "Saudi Arabia",
+      "team2": "Uruguay",
+      "date": "2026-06-15",
+      "prediction": {
+        "win_prob": 0.10437172522716653,
+        "draw_prob": 0.18376220522106615,
+        "loss_prob": 0.7118660695517673,
+        "xG1": 0.6728204488754272,
+        "xG2": 2.1333571672439575
+      },
+      "result": {
+        "score1": 1,
+        "score2": 1,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-16_France_Senegal",
+      "stage": "Group Stage",
+      "team1": "France",
+      "team2": "Senegal",
+      "date": "2026-06-16",
+      "prediction": {
+        "win_prob": 0.7237532362417664,
+        "draw_prob": 0.17999269277852378,
+        "loss_prob": 0.09625407097970988,
+        "xG1": 2.144361972808838,
+        "xG2": 0.6327451169490814
+      },
+      "result": {
+        "score1": 3,
+        "score2": 1,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-16_Iraq_Norway",
+      "stage": "Group Stage",
+      "team1": "Iraq",
+      "team2": "Norway",
+      "date": "2026-06-16",
+      "prediction": {
+        "win_prob": 0.06854251373959058,
+        "draw_prob": 0.14972287432380488,
+        "loss_prob": 0.7817346119366045,
+        "xG1": 0.5571278631687164,
+        "xG2": 2.386867880821228
+      },
+      "result": {
+        "score1": 1,
+        "score2": 4,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-16_Argentina_Algeria",
+      "stage": "Group Stage",
+      "team1": "Argentina",
+      "team2": "Algeria",
+      "date": "2026-06-16",
+      "prediction": {
+        "win_prob": 0.7510223621556694,
+        "draw_prob": 0.16693943958520227,
+        "loss_prob": 0.08203819825912824,
+        "xG1": 2.237833619117737,
+        "xG2": 0.5874365866184235
+      },
+      "result": {
+        "score1": 3,
+        "score2": 0,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-16_Austria_Jordan",
+      "stage": "Group Stage",
+      "team1": "Austria",
+      "team2": "Jordan",
+      "date": "2026-06-16",
+      "prediction": {
+        "win_prob": 0.7238953363674441,
+        "draw_prob": 0.17810677352056412,
+        "loss_prob": 0.09799789011199188,
+        "xG1": 2.1765891313552856,
+        "xG2": 0.655655711889267
+      },
+      "result": {
+        "score1": 3,
+        "score2": 1,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-17_Portugal_DRCongo",
+      "stage": "Group Stage",
+      "team1": "Portugal",
+      "team2": "DR Congo",
+      "date": "2026-06-17",
+      "prediction": {
+        "win_prob": 0.7087789178113812,
+        "draw_prob": 0.18674051491747318,
+        "loss_prob": 0.10448056727114557,
+        "xG1": 2.0969916582107544,
+        "xG2": 0.658107340335846
+      },
+      "result": {
+        "score1": 1,
+        "score2": 1,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-17_Uzbekistan_Colombia",
+      "stage": "Group Stage",
+      "team1": "Uzbekistan",
+      "team2": "Colombia",
+      "date": "2026-06-17",
+      "prediction": {
+        "win_prob": 0.040030829703691685,
+        "draw_prob": 0.11353290658329965,
+        "loss_prob": 0.8464362637130086,
+        "xG1": 0.4347515106201172,
+        "xG2": 2.6774386167526245
+      },
+      "result": {
+        "score1": 1,
+        "score2": 3,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-17_England_Croatia",
+      "stage": "Group Stage",
+      "team1": "England",
+      "team2": "Croatia",
+      "date": "2026-06-17",
+      "prediction": {
+        "win_prob": 0.5231398176425673,
+        "draw_prob": 0.24739142594415967,
+        "loss_prob": 0.229468756413273,
+        "xG1": 1.6270794868469238,
+        "xG2": 0.987797886133194
+      },
+      "result": {
+        "score1": 4,
+        "score2": 2,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-17_Ghana_Panama",
+      "stage": "Group Stage",
+      "team1": "Ghana",
+      "team2": "Panama",
+      "date": "2026-06-17",
+      "prediction": {
+        "win_prob": 0.3254087411839888,
+        "draw_prob": 0.26199402445735687,
+        "loss_prob": 0.41259723435865425,
+        "xG1": 1.211400032043457,
+        "xG2": 1.3980490565299988
+      },
+      "result": {
+        "score1": 1,
+        "score2": 0,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-18_CzechRepublic_SouthAfrica",
+      "stage": "Group Stage",
+      "team1": "Czech Republic",
+      "team2": "South Africa",
+      "date": "2026-06-18",
+      "prediction": {
+        "win_prob": 0.4802043757979562,
+        "draw_prob": 0.256675665340925,
+        "loss_prob": 0.26311995886111883,
+        "xG1": 1.5220662951469421,
+        "xG2": 1.0561606287956238
+      },
+      "result": {
+        "score1": 1,
+        "score2": 1,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-18_Mexico_SouthKorea",
+      "stage": "Group Stage",
+      "team1": "Mexico",
+      "team2": "South Korea",
+      "date": "2026-06-18",
+      "prediction": {
+        "win_prob": 0.6904976011776058,
+        "draw_prob": 0.19211900300135237,
+        "loss_prob": 0.11738339582104178,
+        "xG1": 2.080522656440735,
+        "xG2": 0.7190853953361511
+      },
+      "result": {
+        "score1": 1,
+        "score2": 0,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-18_Switzerland_BosniaandHerzegovina",
+      "stage": "Group Stage",
+      "team1": "Switzerland",
+      "team2": "Bosnia and Herzegovina",
+      "date": "2026-06-18",
+      "prediction": {
+        "win_prob": 0.6733567363099796,
+        "draw_prob": 0.20036706055963108,
+        "loss_prob": 0.1262762031303893,
+        "xG1": 2.010695457458496,
+        "xG2": 0.7328773438930511
+      },
+      "result": {
+        "score1": 4,
+        "score2": 1,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-18_Canada_Qatar",
+      "stage": "Group Stage",
+      "team1": "Canada",
+      "team2": "Qatar",
+      "date": "2026-06-18",
+      "prediction": {
+        "win_prob": 0.7941926476697219,
+        "draw_prob": 0.14264722053555137,
+        "loss_prob": 0.06316013179472664,
+        "xG1": 2.4490950107574463,
+        "xG2": 0.542307585477829
+      },
+      "result": {
+        "score1": 6,
+        "score2": 0,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-19_Scotland_Morocco",
+      "stage": "Group Stage",
+      "team1": "Scotland",
+      "team2": "Morocco",
+      "date": "2026-06-19",
+      "prediction": {
+        "win_prob": 0.2570264656854376,
+        "draw_prob": 0.2554037709903988,
+        "loss_prob": 0.48756976332416374,
+        "xG1": 1.0427502989768982,
+        "xG2": 1.5383855104446411
+      },
+      "result": {
+        "score1": 0,
+        "score2": 1,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-19_Brazil_Haiti",
+      "stage": "Group Stage",
+      "team1": "Brazil",
+      "team2": "Haiti",
+      "date": "2026-06-19",
+      "prediction": {
+        "win_prob": 0.8949546765936494,
+        "draw_prob": 0.0820874303317537,
+        "loss_prob": 0.02295789307459697,
+        "xG1": 3.0094255208969116,
+        "xG2": 0.34757736325263977
+      },
+      "result": {
+        "score1": 3,
+        "score2": 0,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-19_UnitedStates_Australia",
+      "stage": "Group Stage",
+      "team1": "United States",
+      "team2": "Australia",
+      "date": "2026-06-19",
+      "prediction": {
+        "win_prob": 0.5708276142774625,
+        "draw_prob": 0.2321866637252365,
+        "loss_prob": 0.196985721997301,
+        "xG1": 1.7753441333770752,
+        "xG2": 0.9384822845458984
+      },
+      "result": {
+        "score1": 2,
+        "score2": 0,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-19_Turkey_Paraguay",
+      "stage": "Group Stage",
+      "team1": "Turkey",
+      "team2": "Paraguay",
+      "date": "2026-06-19",
+      "prediction": {
+        "win_prob": 0.34968036981811834,
+        "draw_prob": 0.26486096953959026,
+        "loss_prob": 0.38545866064229134,
+        "xG1": 1.252077341079712,
+        "xG2": 1.328200876712799
+      },
+      "result": {
+        "score1": 0,
+        "score2": 1,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-20_Germany_IvoryCoast",
+      "stage": "Group Stage",
+      "team1": "Germany",
+      "team2": "Ivory Coast",
+      "date": "2026-06-20",
+      "prediction": {
+        "win_prob": 0.577556461072148,
+        "draw_prob": 0.23473927032655417,
+        "loss_prob": 0.18770426860129788,
+        "xG1": 1.7420529127120972,
+        "xG2": 0.8803408443927765
+      },
+      "result": {
+        "score1": 2,
+        "score2": 1,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-20_Ecuador_Cura\u00e7ao",
+      "stage": "Group Stage",
+      "team1": "Ecuador",
+      "team2": "Cura\u00e7ao",
+      "date": "2026-06-20",
+      "prediction": {
+        "win_prob": 0.0,
+        "draw_prob": 1.0,
+        "loss_prob": 0.0,
+        "xG1": 0.0,
+        "xG2": 0.0
+      },
+      "result": {
+        "score1": 0,
+        "score2": 0,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-20_Netherlands_Sweden",
+      "stage": "Group Stage",
+      "team1": "Netherlands",
+      "team2": "Sweden",
+      "date": "2026-06-20",
+      "prediction": {
+        "win_prob": 0.6012119047050877,
+        "draw_prob": 0.22626237770907578,
+        "loss_prob": 0.17252571758583654,
+        "xG1": 1.815466046333313,
+        "xG2": 0.8536142110824585
+      },
+      "result": {
+        "score1": 5,
+        "score2": 1,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-20_Tunisia_Japan",
+      "stage": "Group Stage",
+      "team1": "Tunisia",
+      "team2": "Japan",
+      "date": "2026-06-20",
+      "prediction": {
+        "win_prob": 0.1489305231696835,
+        "draw_prob": 0.21380550033913584,
+        "loss_prob": 0.6372639764911806,
+        "xG1": 0.7960511744022369,
+        "xG2": 1.9132753014564514
+      },
+      "result": {
+        "score1": 0,
+        "score2": 4,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-21_Belgium_Iran",
+      "stage": "Group Stage",
+      "team1": "Belgium",
+      "team2": "Iran",
+      "date": "2026-06-21",
+      "prediction": {
+        "win_prob": 0.5902410180259027,
+        "draw_prob": 0.22860471993990866,
+        "loss_prob": 0.18115426203418863,
+        "xG1": 1.8001679182052612,
+        "xG2": 0.8834331929683685
+      },
+      "result": {
+        "score1": 0,
+        "score2": 0,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-21_NewZealand_Egypt",
+      "stage": "Group Stage",
+      "team1": "New Zealand",
+      "team2": "Egypt",
+      "date": "2026-06-21",
+      "prediction": {
+        "win_prob": 0.167984846750565,
+        "draw_prob": 0.22181618094771985,
+        "loss_prob": 0.610198972301715,
+        "xG1": 0.855257660150528,
+        "xG2": 1.857433021068573
+      },
+      "result": {
+        "score1": 1,
+        "score2": 3,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-21_Spain_SaudiArabia",
+      "stage": "Group Stage",
+      "team1": "Spain",
+      "team2": "Saudi Arabia",
+      "date": "2026-06-21",
+      "prediction": {
+        "win_prob": 0.8756423867323385,
+        "draw_prob": 0.09552440787100933,
+        "loss_prob": 0.028833205396652187,
+        "xG1": 2.840343475341797,
+        "xG2": 0.3720352053642273
+      },
+      "result": {
+        "score1": 4,
+        "score2": 0,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-21_Uruguay_CapeVerde",
+      "stage": "Group Stage",
+      "team1": "Uruguay",
+      "team2": "Cape Verde",
+      "date": "2026-06-21",
+      "prediction": {
+        "win_prob": 0.7027341304776274,
+        "draw_prob": 0.18926459815078192,
+        "loss_prob": 0.1080012713715906,
+        "xG1": 2.0803980827331543,
+        "xG2": 0.6698355674743652
+      },
+      "result": {
+        "score1": 2,
+        "score2": 2,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-22_France_Iraq",
+      "stage": "Group Stage",
+      "team1": "France",
+      "team2": "Iraq",
+      "date": "2026-06-22",
+      "prediction": {
+        "win_prob": 0.8913153990123714,
+        "draw_prob": 0.08510890788735086,
+        "loss_prob": 0.023575693100277666,
+        "xG1": 2.9534515142440796,
+        "xG2": 0.34164658188819885
+      },
+      "result": {
+        "score1": 3,
+        "score2": 0,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-22_Norway_Senegal",
+      "stage": "Group Stage",
+      "team1": "Norway",
+      "team2": "Senegal",
+      "date": "2026-06-22",
+      "prediction": {
+        "win_prob": 0.5058706689374476,
+        "draw_prob": 0.25200429081389764,
+        "loss_prob": 0.2421250402486548,
+        "xG1": 1.5787007212638855,
+        "xG2": 1.0091466307640076
+      },
+      "result": {
+        "score1": 3,
+        "score2": 2,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-22_Argentina_Austria",
+      "stage": "Group Stage",
+      "team1": "Argentina",
+      "team2": "Austria",
+      "date": "2026-06-22",
+      "prediction": {
+        "win_prob": 0.6733526983860327,
+        "draw_prob": 0.20107214882618107,
+        "loss_prob": 0.1255751527877862,
+        "xG1": 2.0004329085350037,
+        "xG2": 0.7247104048728943
+      },
+      "result": {
+        "score1": 2,
+        "score2": 0,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-22_Jordan_Algeria",
+      "stage": "Group Stage",
+      "team1": "Jordan",
+      "team2": "Algeria",
+      "date": "2026-06-22",
+      "prediction": {
+        "win_prob": 0.14704523082160928,
+        "draw_prob": 0.2127394655767476,
+        "loss_prob": 0.6402153036016431,
+        "xG1": 0.7911473512649536,
+        "xG2": 1.9213122725486755
+      },
+      "result": {
+        "score1": 1,
+        "score2": 2,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-23_Portugal_Uzbekistan",
+      "stage": "Group Stage",
+      "team1": "Portugal",
+      "team2": "Uzbekistan",
+      "date": "2026-06-23",
+      "prediction": {
+        "win_prob": 0.8200403524503747,
+        "draw_prob": 0.12895176915776171,
+        "loss_prob": 0.051007878391863645,
+        "xG1": 2.547753691673279,
+        "xG2": 0.4857790917158127
+      },
+      "result": {
+        "score1": 5,
+        "score2": 0,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-23_Colombia_DRCongo",
+      "stage": "Group Stage",
+      "team1": "Colombia",
+      "team2": "DR Congo",
+      "date": "2026-06-23",
+      "prediction": {
+        "win_prob": 0.74881976267755,
+        "draw_prob": 0.16814487048879553,
+        "loss_prob": 0.08303536683365444,
+        "xG1": 2.227726697921753,
+        "xG2": 0.5895484685897827
+      },
+      "result": {
+        "score1": 1,
+        "score2": 0,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-23_England_Ghana",
+      "stage": "Group Stage",
+      "team1": "England",
+      "team2": "Ghana",
+      "date": "2026-06-23",
+      "prediction": {
+        "win_prob": 0.8149158369699965,
+        "draw_prob": 0.13294618305487416,
+        "loss_prob": 0.05213797997512931,
+        "xG1": 2.494924306869507,
+        "xG2": 0.47760528326034546
+      },
+      "result": {
+        "score1": 0,
+        "score2": 0,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-23_Panama_Croatia",
+      "stage": "Group Stage",
+      "team1": "Panama",
+      "team2": "Croatia",
+      "date": "2026-06-23",
+      "prediction": {
+        "win_prob": 0.12749122239271035,
+        "draw_prob": 0.19846337932321031,
+        "loss_prob": 0.6740453982840794,
+        "xG1": 0.7510324120521545,
+        "xG2": 2.036931872367859
+      },
+      "result": {
+        "score1": 0,
+        "score2": 1,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-24_Mexico_CzechRepublic",
+      "stage": "Group Stage",
+      "team1": "Mexico",
+      "team2": "Czech Republic",
+      "date": "2026-06-24",
+      "prediction": {
+        "win_prob": 0.6590106143280239,
+        "draw_prob": 0.20537719620964356,
+        "loss_prob": 0.1356121894623325,
+        "xG1": 1.9783616065979004,
+        "xG2": 0.7638692557811737
+      },
+      "result": {
+        "score1": 3,
+        "score2": 0,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-24_SouthAfrica_SouthKorea",
+      "stage": "Group Stage",
+      "team1": "South Africa",
+      "team2": "South Korea",
+      "date": "2026-06-24",
+      "prediction": {
+        "win_prob": 0.2948063387636814,
+        "draw_prob": 0.26052587939772515,
+        "loss_prob": 0.4446677818385934,
+        "xG1": 1.1341484189033508,
+        "xG2": 1.4547911286354065
+      },
+      "result": {
+        "score1": 1,
+        "score2": 0,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-24_Canada_Switzerland",
+      "stage": "Group Stage",
+      "team1": "Canada",
+      "team2": "Switzerland",
+      "date": "2026-06-24",
+      "prediction": {
+        "win_prob": 0.26764657985021717,
+        "draw_prob": 0.2541067115938998,
+        "loss_prob": 0.4782467085558831,
+        "xG1": 1.0877558588981628,
+        "xG2": 1.543559491634369
+      },
+      "result": {
+        "score1": 1,
+        "score2": 2,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-24_BosniaandHerzegovina_Qatar",
+      "stage": "Group Stage",
+      "team1": "Bosnia and Herzegovina",
+      "team2": "Qatar",
+      "date": "2026-06-24",
+      "prediction": {
+        "win_prob": 0.6361323999708125,
+        "draw_prob": 0.21331392607746566,
+        "loss_prob": 0.1505536739517218,
+        "xG1": 1.922048270702362,
+        "xG2": 0.8079787194728851
+      },
+      "result": {
+        "score1": 3,
+        "score2": 1,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-24_Scotland_Brazil",
+      "stage": "Group Stage",
+      "team1": "Scotland",
+      "team2": "Brazil",
+      "date": "2026-06-24",
+      "prediction": {
+        "win_prob": 0.13967912420568673,
+        "draw_prob": 0.20979888552015624,
+        "loss_prob": 0.650521990274157,
+        "xG1": 0.7643444836139679,
+        "xG2": 1.938035249710083
+      },
+      "result": {
+        "score1": 0,
+        "score2": 3,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-24_Morocco_Haiti",
+      "stage": "Group Stage",
+      "team1": "Morocco",
+      "team2": "Haiti",
+      "date": "2026-06-24",
+      "prediction": {
+        "win_prob": 0.8270658838700898,
+        "draw_prob": 0.12422477617151671,
+        "loss_prob": 0.04870933995839354,
+        "xG1": 2.6015273332595825,
+        "xG2": 0.48470720648765564
+      },
+      "result": {
+        "score1": 4,
+        "score2": 2,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-25_UnitedStates_Turkey",
+      "stage": "Group Stage",
+      "team1": "United States",
+      "team2": "Turkey",
+      "date": "2026-06-25",
+      "prediction": {
+        "win_prob": 0.4078097940334319,
+        "draw_prob": 0.2626208671920744,
+        "loss_prob": 0.3295693387744936,
+        "xG1": 1.3852912783622742,
+        "xG2": 1.2180185914039612
+      },
+      "result": {
+        "score1": 2,
+        "score2": 3,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-25_Paraguay_Australia",
+      "stage": "Group Stage",
+      "team1": "Paraguay",
+      "team2": "Australia",
+      "date": "2026-06-25",
+      "prediction": {
+        "win_prob": 0.5485820878139261,
+        "draw_prob": 0.2388723335041295,
+        "loss_prob": 0.21254557868194435,
+        "xG1": 1.712239921092987,
+        "xG2": 0.9684531092643738
+      },
+      "result": {
+        "score1": 0,
+        "score2": 0,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-25_Cura\u00e7ao_IvoryCoast",
+      "stage": "Group Stage",
+      "team1": "Cura\u00e7ao",
+      "team2": "Ivory Coast",
+      "date": "2026-06-25",
+      "prediction": {
+        "win_prob": 0.0,
+        "draw_prob": 1.0,
+        "loss_prob": 0.0,
+        "xG1": 0.0,
+        "xG2": 0.0
+      },
+      "result": {
+        "score1": 0,
+        "score2": 2,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-25_Ecuador_Germany",
+      "stage": "Group Stage",
+      "team1": "Ecuador",
+      "team2": "Germany",
+      "date": "2026-06-25",
+      "prediction": {
+        "win_prob": 0.3964821217946355,
+        "draw_prob": 0.26500103157260024,
+        "loss_prob": 0.3385168466327643,
+        "xG1": 1.347464382648468,
+        "xG2": 1.224263608455658
+      },
+      "result": {
+        "score1": 2,
+        "score2": 1,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-25_Japan_Sweden",
+      "stage": "Group Stage",
+      "team1": "Japan",
+      "team2": "Sweden",
+      "date": "2026-06-25",
+      "prediction": {
+        "win_prob": 0.43276615021956044,
+        "draw_prob": 0.26038057767661527,
+        "loss_prob": 0.3068532721038244,
+        "xG1": 1.4408856630325317,
+        "xG2": 1.1708000898361206
+      },
+      "result": {
+        "score1": 1,
+        "score2": 1,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-25_Tunisia_Netherlands",
+      "stage": "Group Stage",
+      "team1": "Tunisia",
+      "team2": "Netherlands",
+      "date": "2026-06-25",
+      "prediction": {
+        "win_prob": 0.0720416043297425,
+        "draw_prob": 0.15596317033461582,
+        "loss_prob": 0.7719952253356417,
+        "xG1": 0.5570172965526581,
+        "xG2": 2.32291579246521
+      },
+      "result": {
+        "score1": 1,
+        "score2": 3,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-26_Egypt_Iran",
+      "stage": "Group Stage",
+      "team1": "Egypt",
+      "team2": "Iran",
+      "date": "2026-06-26",
+      "prediction": {
+        "win_prob": 0.3969271961342294,
+        "draw_prob": 0.26400968567826383,
+        "loss_prob": 0.33906311818750673,
+        "xG1": 1.3558111190795898,
+        "xG2": 1.2324806451797485
+      },
+      "result": {
+        "score1": 1,
+        "score2": 1,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-26_NewZealand_Belgium",
+      "stage": "Group Stage",
+      "team1": "New Zealand",
+      "team2": "Belgium",
+      "date": "2026-06-26",
+      "prediction": {
+        "win_prob": 0.07516549632914343,
+        "draw_prob": 0.15567885134744544,
+        "loss_prob": 0.7691556523234112,
+        "xG1": 0.586808443069458,
+        "xG2": 2.349444031715393
+      },
+      "result": {
+        "score1": 1,
+        "score2": 5,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-26_CapeVerde_SaudiArabia",
+      "stage": "Group Stage",
+      "team1": "Cape Verde",
+      "team2": "Saudi Arabia",
+      "date": "2026-06-26",
+      "prediction": {
+        "win_prob": 0.3760681464174895,
+        "draw_prob": 0.2656286368996615,
+        "loss_prob": 0.35830321668284904,
+        "xG1": 1.3040709495544434,
+        "xG2": 1.266343593597412
+      },
+      "result": {
+        "score1": 0,
+        "score2": 0,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-26_Uruguay_Spain",
+      "stage": "Group Stage",
+      "team1": "Uruguay",
+      "team2": "Spain",
+      "date": "2026-06-26",
+      "prediction": {
+        "win_prob": 0.14290052441350676,
+        "draw_prob": 0.2115120339656427,
+        "loss_prob": 0.6455874416208506,
+        "xG1": 0.7739556133747101,
+        "xG2": 1.9261556267738342
+      },
+      "result": {
+        "score1": 0,
+        "score2": 1,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-26_Norway_France",
+      "stage": "Group Stage",
+      "team1": "Norway",
+      "team2": "France",
+      "date": "2026-06-26",
+      "prediction": {
+        "win_prob": 0.17011665651001515,
+        "draw_prob": 0.22498534510935148,
+        "loss_prob": 0.6048979983806334,
+        "xG1": 0.8484637141227722,
+        "xG2": 1.826050579547882
+      },
+      "result": {
+        "score1": 1,
+        "score2": 4,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-26_Senegal_Iraq",
+      "stage": "Group Stage",
+      "team1": "Senegal",
+      "team2": "Iraq",
+      "date": "2026-06-26",
+      "prediction": {
+        "win_prob": 0.6757815010000244,
+        "draw_prob": 0.19967078454083328,
+        "loss_prob": 0.12454771445914235,
+        "xG1": 2.0136544704437256,
+        "xG2": 0.725582629442215
+      },
+      "result": {
+        "score1": 5,
+        "score2": 0,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-27_Algeria_Austria",
+      "stage": "Group Stage",
+      "team1": "Algeria",
+      "team2": "Austria",
+      "date": "2026-06-27",
+      "prediction": {
+        "win_prob": 0.2751474755414304,
+        "draw_prob": 0.25955118967397006,
+        "loss_prob": 0.4653013347845995,
+        "xG1": 1.0786488056182861,
+        "xG2": 1.4848435521125793
+      },
+      "result": {
+        "score1": 3,
+        "score2": 3,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-27_Jordan_Argentina",
+      "stage": "Group Stage",
+      "team1": "Jordan",
+      "team2": "Argentina",
+      "date": "2026-06-27",
+      "prediction": {
+        "win_prob": 0.023965027241798036,
+        "draw_prob": 0.08582221795672923,
+        "loss_prob": 0.8902127548014728,
+        "xG1": 0.3445390313863754,
+        "xG2": 2.946462869644165
+      },
+      "result": {
+        "score1": 1,
+        "score2": 3,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-27_Colombia_Portugal",
+      "stage": "Group Stage",
+      "team1": "Colombia",
+      "team2": "Portugal",
+      "date": "2026-06-27",
+      "prediction": {
+        "win_prob": 0.4194648927760645,
+        "draw_prob": 0.2639418703467508,
+        "loss_prob": 0.31659323687718466,
+        "xG1": 1.3932417631149292,
+        "xG2": 1.1744393110275269
+      },
+      "result": {
+        "score1": 0,
+        "score2": 0,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-27_DRCongo_Uzbekistan",
+      "stage": "Group Stage",
+      "team1": "DR Congo",
+      "team2": "Uzbekistan",
+      "date": "2026-06-27",
+      "prediction": {
+        "win_prob": 0.5297060387638083,
+        "draw_prob": 0.2453535604518674,
+        "loss_prob": 0.22494040078432426,
+        "xG1": 1.6477059721946716,
+        "xG2": 0.9817219972610474
+      },
+      "result": {
+        "score1": 3,
+        "score2": 1,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-27_Panama_England",
+      "stage": "Group Stage",
+      "team1": "Panama",
+      "team2": "England",
+      "date": "2026-06-27",
+      "prediction": {
+        "win_prob": 0.06448233655791163,
+        "draw_prob": 0.14482708423507704,
+        "loss_prob": 0.7906905792070114,
+        "xG1": 0.5437979996204376,
+        "xG2": 2.427048683166504
+      },
+      "result": {
+        "score1": 0,
+        "score2": 2,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-27_Croatia_Ghana",
+      "stage": "Group Stage",
+      "team1": "Croatia",
+      "team2": "Ghana",
+      "date": "2026-06-27",
+      "prediction": {
+        "win_prob": 0.7093841329905022,
+        "draw_prob": 0.1859557869446161,
+        "loss_prob": 0.10466008006488169,
+        "xG1": 2.1073076725006104,
+        "xG2": 0.6633982360363007
+      },
+      "result": {
+        "score1": 2,
+        "score2": 1,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "r32_0_SouthAfrica_Canada",
+      "stage": "Round of 32",
+      "team1": "South Africa",
+      "team2": "Canada",
+      "date": "TBD",
+      "prediction": {
+        "win_prob": 0.17304637831483652,
+        "draw_prob": 0.22598511468266835,
+        "loss_prob": 0.6009685070024952,
+        "xG1": 0.8577944338321686,
+        "xG2": 1.8190464973449707
+      },
+      "result": {
+        "score1": null,
+        "score2": null,
+        "status": "Upcoming"
+      }
+    },
+    {
+      "match_id": "r32_1_Netherlands_Morocco",
+      "stage": "Round of 32",
+      "team1": "Netherlands",
+      "team2": "Morocco",
+      "date": "TBD",
+      "prediction": {
+        "win_prob": 0.4529883606666766,
+        "draw_prob": 0.26054572863907577,
+        "loss_prob": 0.28646591069424765,
+        "xG1": 1.4640942215919495,
+        "xG2": 1.1084251999855042
+      },
+      "result": {
+        "score1": null,
+        "score2": null,
+        "status": "Upcoming"
+      }
+    },
+    {
+      "match_id": "r32_2_Germany_Paraguay",
+      "stage": "Round of 32",
+      "team1": "Germany",
+      "team2": "Paraguay",
+      "date": "TBD",
+      "prediction": {
+        "win_prob": 0.43763611878506675,
+        "draw_prob": 0.2614628941658752,
+        "loss_prob": 0.30090098704905804,
+        "xG1": 1.4383655190467834,
+        "xG2": 1.146238386631012
+      },
+      "result": {
+        "score1": null,
+        "score2": null,
+        "status": "Upcoming"
+      }
+    },
+    {
+      "match_id": "r32_3_France_Sweden",
+      "stage": "Round of 32",
+      "team1": "France",
+      "team2": "Sweden",
+      "date": "TBD",
+      "prediction": {
+        "win_prob": 0.7323061445094758,
+        "draw_prob": 0.1752081720851044,
+        "loss_prob": 0.09248568340541985,
+        "xG1": 2.186847448348999,
+        "xG2": 0.6286249160766602
+      },
+      "result": {
+        "score1": null,
+        "score2": null,
+        "status": "Upcoming"
+      }
+    },
+    {
+      "match_id": "r32_4_Belgium_Senegal",
+      "stage": "Round of 32",
+      "team1": "Belgium",
+      "team2": "Senegal",
+      "date": "TBD",
+      "prediction": {
+        "win_prob": 0.5075984321717341,
+        "draw_prob": 0.25211583276201915,
+        "loss_prob": 0.24028573506624673,
+        "xG1": 1.578313410282135,
+        "xG2": 1.0016124248504639
+      },
+      "result": {
+        "score1": null,
+        "score2": null,
+        "status": "Upcoming"
+      }
+    },
+    {
+      "match_id": "r32_5_UnitedStates_BosniaandHerzegovina",
+      "stage": "Round of 32",
+      "team1": "United States",
+      "team2": "Bosnia and Herzegovina",
+      "date": "TBD",
+      "prediction": {
+        "win_prob": 0.6383242881032553,
+        "draw_prob": 0.21293378530451648,
+        "loss_prob": 0.1487419265922283,
+        "xG1": 1.9226427674293518,
+        "xG2": 0.7997712790966034
+      },
+      "result": {
+        "score1": null,
+        "score2": null,
+        "status": "Upcoming"
+      }
+    },
+    {
+      "match_id": "r32_6_Spain_Austria",
+      "stage": "Round of 32",
+      "team1": "Spain",
+      "team2": "Austria",
+      "date": "TBD",
+      "prediction": {
+        "win_prob": 0.6674152248975981,
+        "draw_prob": 0.20332652986547428,
+        "loss_prob": 0.12925824523692758,
+        "xG1": 1.9849697947502136,
+        "xG2": 0.735858142375946
+      },
+      "result": {
+        "score1": null,
+        "score2": null,
+        "status": "Upcoming"
+      }
+    },
+    {
+      "match_id": "r32_7_Portugal_Croatia",
+      "stage": "Round of 32",
+      "team1": "Portugal",
+      "team2": "Croatia",
+      "date": "TBD",
+      "prediction": {
+        "win_prob": 0.46602551510906515,
+        "draw_prob": 0.257992948775782,
+        "loss_prob": 0.2759815361151529,
+        "xG1": 1.4988512992858887,
+        "xG2": 1.091066300868988
+      },
+      "result": {
+        "score1": null,
+        "score2": null,
+        "status": "Upcoming"
+      }
+    },
+    {
+      "match_id": "r32_8_Brazil_Japan",
+      "stage": "Round of 32",
+      "team1": "Brazil",
+      "team2": "Japan",
+      "date": "TBD",
+      "prediction": {
+        "win_prob": 0.617289600567607,
+        "draw_prob": 0.22042858743831972,
+        "loss_prob": 0.16228181199407335,
+        "xG1": 1.8640694618225098,
+        "xG2": 0.8328889012336731
+      },
+      "result": {
+        "score1": null,
+        "score2": null,
+        "status": "Upcoming"
+      }
+    },
+    {
+      "match_id": "r32_9_IvoryCoast_Norway",
+      "stage": "Round of 32",
+      "team1": "Ivory Coast",
+      "team2": "Norway",
+      "date": "TBD",
+      "prediction": {
+        "win_prob": 0.21538838917765182,
+        "draw_prob": 0.24430655511751506,
+        "loss_prob": 0.5403050557048331,
+        "xG1": 0.9485578536987305,
+        "xG2": 1.65767502784729
+      },
+      "result": {
+        "score1": null,
+        "score2": null,
+        "status": "Upcoming"
+      }
+    },
+    {
+      "match_id": "r32_10_Mexico_Ecuador",
+      "stage": "Round of 32",
+      "team1": "Mexico",
+      "team2": "Ecuador",
+      "date": "TBD",
+      "prediction": {
+        "win_prob": 0.39504821474471397,
+        "draw_prob": 0.26391861049227205,
+        "loss_prob": 0.3410331747630139,
+        "xG1": 1.3531453013420105,
+        "xG2": 1.2379733324050903
+      },
+      "result": {
+        "score1": null,
+        "score2": null,
+        "status": "Upcoming"
+      }
+    },
+    {
+      "match_id": "r32_11_England_DRCongo",
+      "stage": "Round of 32",
+      "team1": "England",
+      "team2": "DR Congo",
+      "date": "TBD",
+      "prediction": {
+        "win_prob": 0.7514785968050812,
+        "draw_prob": 0.16673317374363764,
+        "loss_prob": 0.08178822945128125,
+        "xG1": 2.2390921115875244,
+        "xG2": 0.58641517162323
+      },
+      "result": {
+        "score1": null,
+        "score2": null,
+        "status": "Upcoming"
+      }
+    },
+    {
+      "match_id": "r32_12_Switzerland_Algeria",
+      "stage": "Round of 32",
+      "team1": "Switzerland",
+      "team2": "Algeria",
+      "date": "TBD",
+      "prediction": {
+        "win_prob": 0.5339231561024357,
+        "draw_prob": 0.24598384024697986,
+        "loss_prob": 0.22009300365058446,
+        "xG1": 1.641467034816742,
+        "xG2": 0.9583119750022888
+      },
+      "result": {
+        "score1": null,
+        "score2": null,
+        "status": "Upcoming"
+      }
+    },
+    {
+      "match_id": "r32_13_Colombia_Ghana",
+      "stage": "Round of 32",
+      "team1": "Colombia",
+      "team2": "Ghana",
+      "date": "TBD",
+      "prediction": {
+        "win_prob": 0.8126757396518194,
+        "draw_prob": 0.13429156775624865,
+        "loss_prob": 0.05303269259193194,
+        "xG1": 2.482890486717224,
+        "xG2": 0.4804736524820328
+      },
+      "result": {
+        "score1": null,
+        "score2": null,
+        "status": "Upcoming"
+      }
+    },
+    {
+      "match_id": "r32_14_Australia_Egypt",
+      "stage": "Round of 32",
+      "team1": "Australia",
+      "team2": "Egypt",
+      "date": "TBD",
+      "prediction": {
+        "win_prob": 0.348159878882394,
+        "draw_prob": 0.2627383130010475,
+        "loss_prob": 0.3891018081165585,
+        "xG1": 1.263619065284729,
+        "xG2": 1.3512439131736755
+      },
+      "result": {
+        "score1": null,
+        "score2": null,
+        "status": "Upcoming"
+      }
+    },
+    {
+      "match_id": "r32_15_Argentina_CapeVerde",
+      "stage": "Round of 32",
+      "team1": "Argentina",
+      "team2": "Cape Verde",
+      "date": "TBD",
+      "prediction": {
+        "win_prob": 0.8720076741489016,
+        "draw_prob": 0.09849784671668406,
+        "loss_prob": 0.029494479134414414,
+        "xG1": 2.7921870946884155,
+        "xG2": 0.36659902334213257
+      },
+      "result": {
+        "score1": null,
+        "score2": null,
+        "status": "Upcoming"
+      }
+    },
+    {
+      "match_id": "r16_0_Argentina_France",
+      "stage": "Round of 16",
+      "team1": "Argentina",
+      "team2": "France",
+      "date": "TBD",
+      "prediction": {
+        "win_prob": 0.4042999504008362,
+        "draw_prob": 0.26498903869349916,
+        "loss_prob": 0.3307110109056646,
+        "xG1": 1.3610520958900452,
+        "xG2": 1.2047396898269653
+      },
+      "result": {
+        "score1": null,
+        "score2": null,
+        "status": "Upcoming"
+      }
+    },
+    {
+      "match_id": "r16_1_Brazil_Spain",
+      "stage": "Round of 16",
+      "team1": "Brazil",
+      "team2": "Spain",
+      "date": "TBD",
+      "prediction": {
+        "win_prob": 0.2734285192333382,
+        "draw_prob": 0.2585235511287323,
+        "loss_prob": 0.4680479296379295,
+        "xG1": 1.0793845653533936,
+        "xG2": 1.496112048625946
+      },
+      "result": {
+        "score1": null,
+        "score2": null,
+        "status": "Upcoming"
+      }
+    },
+    {
+      "match_id": "r16_2_England_Germany",
+      "stage": "Round of 16",
+      "team1": "England",
+      "team2": "Germany",
+      "date": "TBD",
+      "prediction": {
+        "win_prob": 0.4836190383977082,
+        "draw_prob": 0.25520984762611687,
+        "loss_prob": 0.26117111397617493,
+        "xG1": 1.5375033617019653,
+        "xG2": 1.0584232211112976
+      },
+      "result": {
+        "score1": null,
+        "score2": null,
+        "status": "Upcoming"
+      }
+    },
+    {
+      "match_id": "r16_3_Portugal_Netherlands",
+      "stage": "Round of 16",
+      "team1": "Portugal",
+      "team2": "Netherlands",
+      "date": "TBD",
+      "prediction": {
+        "win_prob": 0.3783789442513011,
+        "draw_prob": 0.2653250098707458,
+        "loss_prob": 0.356296045877953,
+        "xG1": 1.3109335899353027,
+        "xG2": 1.2639986872673035
+      },
+      "result": {
+        "score1": null,
+        "score2": null,
+        "status": "Upcoming"
+      }
+    },
+    {
+      "match_id": "r16_4_Uruguay_Colombia",
+      "stage": "Round of 16",
+      "team1": "Uruguay",
+      "team2": "Colombia",
+      "date": "TBD",
+      "prediction": {
+        "win_prob": 0.2220669098492615,
+        "draw_prob": 0.24583720647759155,
+        "loss_prob": 0.532095883673147,
+        "xG1": 0.9672015309333801,
+        "xG2": 1.6429367661476135
+      },
+      "result": {
+        "score1": null,
+        "score2": null,
+        "status": "Upcoming"
+      }
+    },
+    {
+      "match_id": "r16_5_Croatia_Senegal",
+      "stage": "Round of 16",
+      "team1": "Croatia",
+      "team2": "Senegal",
+      "date": "TBD",
+      "prediction": {
+        "win_prob": 0.5046988492167745,
+        "draw_prob": 0.2525780290136465,
+        "loss_prob": 0.2427231217695788,
+        "xG1": 1.5729347467422485,
+        "xG2": 1.0079779624938965
+      },
+      "result": {
+        "score1": null,
+        "score2": null,
+        "status": "Upcoming"
+      }
+    },
+    {
+      "match_id": "r16_6_Morocco_UnitedStates",
+      "stage": "Round of 16",
+      "team1": "Morocco",
+      "team2": "United States",
+      "date": "TBD",
+      "prediction": {
+        "win_prob": 0.37792300954114866,
+        "draw_prob": 0.2652440285317449,
+        "loss_prob": 0.35683296192710645,
+        "xG1": 1.3106201887130737,
+        "xG2": 1.2657846808433533
+      },
+      "result": {
+        "score1": null,
+        "score2": null,
+        "status": "Upcoming"
+      }
+    },
+    {
+      "match_id": "r16_7_Japan_SouthKorea",
+      "stage": "Round of 16",
+      "team1": "Japan",
+      "team2": "South Korea",
+      "date": "TBD",
+      "prediction": {
+        "win_prob": 0.5234000360095356,
+        "draw_prob": 0.24466131060020954,
+        "loss_prob": 0.23193865339025496,
+        "xG1": 1.6542155146598816,
+        "xG2": 1.0141924023628235
+      },
+      "result": {
+        "score1": null,
+        "score2": null,
+        "status": "Upcoming"
+      }
+    },
+    {
+      "match_id": "qf_0_Argentina_Brazil",
+      "stage": "Quarter-Final",
+      "team1": "Argentina",
+      "team2": "Brazil",
+      "date": "TBD",
+      "prediction": {
+        "win_prob": 0.47500531134076024,
+        "draw_prob": 0.2576032837209346,
+        "loss_prob": 0.26739140493830515,
+        "xG1": 1.509960949420929,
+        "xG2": 1.0649874806404114
+      },
+      "result": {
+        "score1": null,
+        "score2": null,
+        "status": "Upcoming"
+      }
+    },
+    {
+      "match_id": "qf_1_England_Portugal",
+      "stage": "Quarter-Final",
+      "team1": "England",
+      "team2": "Portugal",
+      "date": "TBD",
+      "prediction": {
+        "win_prob": 0.42295723146842573,
+        "draw_prob": 0.2634060667736699,
+        "loss_prob": 0.31363670175790437,
+        "xG1": 1.4026234149932861,
+        "xG2": 1.1698530316352844
+      },
+      "result": {
+        "score1": null,
+        "score2": null,
+        "status": "Upcoming"
+      }
+    },
+    {
+      "match_id": "qf_2_Uruguay_Croatia",
+      "stage": "Quarter-Final",
+      "team1": "Uruguay",
+      "team2": "Croatia",
+      "date": "TBD",
+      "prediction": {
+        "win_prob": 0.3551628011499438,
+        "draw_prob": 0.2651720331077788,
+        "loss_prob": 0.3796651657422774,
+        "xG1": 1.2625191807746887,
+        "xG2": 1.3146169781684875
+      },
+      "result": {
+        "score1": null,
+        "score2": null,
+        "status": "Upcoming"
+      }
+    },
+    {
+      "match_id": "qf_3_UnitedStates_Japan",
+      "stage": "Quarter-Final",
+      "team1": "United States",
+      "team2": "Japan",
+      "date": "TBD",
+      "prediction": {
+        "win_prob": 0.44087845168621426,
+        "draw_prob": 0.25841762520805106,
+        "loss_prob": 0.3007039231057348,
+        "xG1": 1.4679123163223267,
+        "xG2": 1.1658952236175537
+      },
+      "result": {
+        "score1": null,
+        "score2": null,
+        "status": "Upcoming"
+      }
+    },
+    {
+      "match_id": "sf_0_Brazil_England",
+      "stage": "Semi-Final",
+      "team1": "Brazil",
+      "team2": "England",
+      "date": "TBD",
+      "prediction": {
+        "win_prob": 0.3803925817264722,
+        "draw_prob": 0.2661337766959051,
+        "loss_prob": 0.3534736415776227,
+        "xG1": 1.3089743256568909,
+        "xG2": 1.2518947124481201
+      },
+      "result": {
+        "score1": null,
+        "score2": null,
+        "status": "Upcoming"
+      }
+    },
+    {
+      "match_id": "sf_1_Uruguay_Japan",
+      "stage": "Semi-Final",
+      "team1": "Uruguay",
+      "team2": "Japan",
+      "date": "TBD",
+      "prediction": {
+        "win_prob": 0.43734909059659854,
+        "draw_prob": 0.26001117297334236,
+        "loss_prob": 0.302639736430059,
+        "xG1": 1.449997901916504,
+        "xG2": 1.1609492897987366
+      },
+      "result": {
+        "score1": null,
+        "score2": null,
+        "status": "Upcoming"
+      }
+    },
+    {
+      "match_id": "third_place_0_England_Japan",
+      "stage": "Third Place Play-off",
+      "team1": "England",
+      "team2": "Japan",
+      "date": "TBD",
+      "prediction": {
+        "win_prob": 0.6045424802266559,
+        "draw_prob": 0.2242430078625698,
+        "loss_prob": 0.17121451191077428,
+        "xG1": 1.8354394435882568,
+        "xG2": 0.8582543134689331
+      },
+      "result": {
+        "score1": null,
+        "score2": null,
+        "status": "Upcoming"
+      }
+    },
+    {
+      "match_id": "final_0_Brazil_Uruguay",
+      "stage": "Final",
+      "team1": "Brazil",
+      "team2": "Uruguay",
+      "date": "TBD",
+      "prediction": {
+        "win_prob": 0.5490936927428608,
+        "draw_prob": 0.24190159379269113,
+        "loss_prob": 0.2090047134644481,
+        "xG1": 1.6803696751594543,
+        "xG2": 0.9353555142879486
+      },
+      "result": {
+        "score1": null,
+        "score2": null,
+        "status": "Upcoming"
+      }
+    }
+  ]
+}
