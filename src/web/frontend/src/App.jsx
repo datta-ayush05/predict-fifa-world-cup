@@ -5,11 +5,6 @@ import fixtureData from './data/fixtures.json';
 
 function App() {
   const [activeTab, setActiveTab] = useState('home');
-  const [teams, setTeams] = useState([]);
-  const [selectedTeam, setSelectedTeam] = useState('');
-  const [selectedTeam2, setSelectedTeam2] = useState('');
-  const [teamStats, setTeamStats] = useState(null);
-  const [filteredFixtures, setFilteredFixtures] = useState([]);
   const [globalStats, setGlobalStats] = useState([]);
 
   // Load static data on mount
@@ -17,7 +12,6 @@ function App() {
     try {
       const teamsObj = predictionData.teams || {};
       const teamNames = Object.keys(teamsObj).sort();
-      setTeams(teamNames);
 
       const teamList = teamNames.map(name => ({
         name: name,
@@ -33,31 +27,7 @@ function App() {
     }
   }, []);
 
-  // Update specific team stats and fixtures when selected
-  useEffect(() => {
-    if (!selectedTeam) {
-      setTeamStats(null);
-      setFilteredFixtures([]);
-      setSelectedTeam2('');
-      return;
-    }
-
-    const teamsObj = predictionData.teams || {};
-    const stats = teamsObj[selectedTeam];
-    
-    if (!stats) return;
-    setTeamStats(stats);
-
-    const matches = fixtureData.matches || [];
-    let relevantMatches = matches.filter(m => m.team1 === selectedTeam || m.team2 === selectedTeam);
-
-    if (selectedTeam2 && selectedTeam2 !== selectedTeam) {
-      relevantMatches = relevantMatches.filter(m => m.team1 === selectedTeam2 || m.team2 === selectedTeam2);
-    }
-    
-    setFilteredFixtures(relevantMatches);
-
-  }, [selectedTeam, selectedTeam2]);
+  // Unused state removed
 
   return (
     <div className="app-container">
@@ -104,59 +74,43 @@ function App() {
       </header>
 
       {activeTab === 'home' && (
-        <div className="home-view" style={{animation: 'fadeIn 0.5s ease-out'}}>
-          <div className="selector-container">
-            <select value={selectedTeam} onChange={(e) => setSelectedTeam(e.target.value)}>
-              <option value="">-- Select Team 1 --</option>
-              {teams.map(t => (
-                <option key={t} value={t}>{t}</option>
-              ))}
-            </select>
-            
-            {selectedTeam && (
-              <select value={selectedTeam2} onChange={(e) => setSelectedTeam2(e.target.value)} style={{marginLeft: '1rem'}}>
-                <option value="">-- Any Opponent (Optional) --</option>
-                {teams.filter(t => t !== selectedTeam).map(t => (
-                  <option key={t} value={t}>{t}</option>
-                ))}
-              </select>
-            )}
-          </div>
-
-          {teamStats && !selectedTeam2 && (
-            <div className="dashboard">
-              <div className="card glass">
-                <h3>Win Tournament</h3>
-                <div className="stat">{(teamStats.win_prob * 100).toFixed(1)}%</div>
-                <div className="progress-bar-container">
-                  <div className="progress-bar" style={{ width: `${Math.min(teamStats.win_prob * 100, 100)}%` }}></div>
-                </div>
-              </div>
-              
-              <div className="card glass">
-                <h3>Reach Final</h3>
-                <div className="stat">{(teamStats.final_prob * 100).toFixed(1)}%</div>
-                <div className="progress-bar-container">
-                  <div className="progress-bar" style={{ width: `${Math.min(teamStats.final_prob * 100, 100)}%` }}></div>
-                </div>
-              </div>
-              
-              <div className="card glass">
-                <h3>Advance from Group</h3>
-                <div className="stat">{(teamStats.group_adv_prob * 100).toFixed(1)}%</div>
-                <div className="progress-bar-container">
-                  <div className="progress-bar" style={{ width: `${Math.min(teamStats.group_adv_prob * 100, 100)}%` }}></div>
-                </div>
+        <div className="matches-view animation-fade-in" style={{animation: 'fadeIn 0.5s ease-out'}}>
+          {globalStats.length > 0 && (
+            <div className="table-container glass card" style={{marginBottom: '3rem'}}>
+              <h3>Global Tournament Predictions</h3>
+              <div className="table-wrapper">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Rank</th>
+                      <th>Team</th>
+                      <th>Win %</th>
+                      <th>Final %</th>
+                      <th>Semi-Final %</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {globalStats.map((team, index) => (
+                      <tr key={team.name}>
+                        <td>{index + 1}</td>
+                        <td style={{fontWeight: '600'}}>{team.name}</td>
+                        <td>{(team.win_prob * 100).toFixed(1)}%</td>
+                        <td>{(team.final_prob * 100).toFixed(1)}%</td>
+                        <td>{(team.sf_prob * 100).toFixed(1)}%</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
               </div>
             </div>
           )}
 
-          {selectedTeam && filteredFixtures.length > 0 && (
-            <div className="matches-container" style={{marginTop: '2rem'}}>
-              <h3 style={{color: 'var(--text-color)', marginBottom: '1.5rem', textAlign: 'center'}}>{selectedTeam2 ? "Head-to-Head Fixtures" : `${selectedTeam} Fixtures`}</h3>
+          {fixtureData.matches && fixtureData.matches.length > 0 && (
+            <div className="matches-container">
+              <h3 style={{color: 'var(--text-color)', marginBottom: '1.5rem', textAlign: 'center'}}>Tournament Fixtures</h3>
               
               {(() => {
-                const groupedFixtures = filteredFixtures.reduce((acc, m) => {
+                const groupedFixtures = fixtureData.matches.reduce((acc, m) => {
                   const date = m.date || 'TBD';
                   if (!acc[date]) acc[date] = [];
                   acc[date].push(m);
@@ -201,7 +155,7 @@ function App() {
                           <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
                             {/* Team 1 Side */}
                             <div style={{flex: 1, textAlign: 'right'}}>
-                              <div style={{fontSize: '1.3rem', fontWeight: m.team1 === selectedTeam ? 'bold' : 'normal', color: m.team1 === selectedTeam ? '#fff' : 'var(--text-muted)'}}>
+                              <div style={{fontSize: '1.3rem', fontWeight: 'bold', color: '#fff'}}>
                                 {m.team1}
                               </div>
                               <div style={{fontSize: '0.9rem', color: 'var(--text-muted)', marginTop: '0.3rem'}}>
@@ -224,7 +178,7 @@ function App() {
 
                             {/* Team 2 Side */}
                             <div style={{flex: 1, textAlign: 'left'}}>
-                              <div style={{fontSize: '1.3rem', fontWeight: m.team2 === selectedTeam ? 'bold' : 'normal', color: m.team2 === selectedTeam ? '#fff' : 'var(--text-muted)'}}>
+                              <div style={{fontSize: '1.3rem', fontWeight: 'bold', color: '#fff'}}>
                                 {m.team2}
                               </div>
                               <div style={{fontSize: '0.9rem', color: 'var(--text-muted)', marginTop: '0.3rem'}}>
@@ -254,36 +208,6 @@ function App() {
                   </div>
                 ));
               })()}
-            </div>
-          )}
-
-          {!selectedTeam && globalStats.length > 0 && (
-            <div className="table-container glass card">
-              <h3>Global Tournament Predictions</h3>
-              <div className="table-wrapper">
-                <table>
-                  <thead>
-                    <tr>
-                      <th>Rank</th>
-                      <th>Team</th>
-                      <th>Win %</th>
-                      <th>Final %</th>
-                      <th>Semi-Final %</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {globalStats.map((team, index) => (
-                      <tr key={team.name}>
-                        <td>{index + 1}</td>
-                        <td style={{fontWeight: '600'}}>{team.name}</td>
-                        <td>{(team.win_prob * 100).toFixed(1)}%</td>
-                        <td>{(team.final_prob * 100).toFixed(1)}%</td>
-                        <td>{(team.sf_prob * 100).toFixed(1)}%</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
             </div>
           )}
         </div>
