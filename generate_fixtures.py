@@ -44,14 +44,19 @@ if os.path.exists(out_path):
 
 fixtures = []
 
+def normalize_name(name):
+    if name == "USA": return "United States"
+    if name == "Curaçao": return "Curacao"
+    return name
+
 # 1. Parse Group Stage from results.csv
 results_csv_path = os.path.join("data", "results.csv")
 with open(results_csv_path, "r", encoding="utf-8") as f:
     reader = csv.DictReader(f)
     for row in reader:
         if row["date"].startswith("2026") and row["tournament"] == "FIFA World Cup":
-            t1 = row["home_team"]
-            t2 = row["away_team"]
+            t1 = normalize_name(row["home_team"])
+            t2 = normalize_name(row["away_team"])
             score1 = int(row["home_score"]) if row["home_score"] else None
             score2 = int(row["away_score"]) if row["away_score"] else None
             
@@ -113,11 +118,6 @@ stage_names = {
     "third_place": "Third Place Play-off",
     "final": "Final"
 }
-
-# Map USA back to United States if needed, checking prob_matrix keys
-def normalize_name(name):
-    if name == "USA": return "United States"
-    return name
 
 for stage_key, matchups in MATCHUPS_BY_STAGE.items():
     stage_name = stage_names.get(stage_key, stage_key.upper())
