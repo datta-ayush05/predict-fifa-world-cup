@@ -153,17 +153,17 @@
       }
     },
     {
-      "match_id": "group_2026-06-14_Germany_Cura\u00e7ao",
+      "match_id": "group_2026-06-14_Germany_Curacao",
       "stage": "Group Stage",
       "team1": "Germany",
-      "team2": "Cura\u00e7ao",
+      "team2": "Curacao",
       "date": "2026-06-14",
       "prediction": {
-        "win_prob": 0.0,
-        "draw_prob": 1.0,
-        "loss_prob": 0.0,
-        "xG1": 0.0,
-        "xG2": 0.0
+        "win_prob": 0.8906744279627189,
+        "draw_prob": 0.0846164549581216,
+        "loss_prob": 0.024709117079159584,
+        "xG1": 2.9930285215377808,
+        "xG2": 0.3645981550216675
       },
       "result": {
         "score1": 7,
@@ -628,17 +628,17 @@
       }
     },
     {
-      "match_id": "group_2026-06-20_Ecuador_Cura\u00e7ao",
+      "match_id": "group_2026-06-20_Ecuador_Curacao",
       "stage": "Group Stage",
       "team1": "Ecuador",
-      "team2": "Cura\u00e7ao",
+      "team2": "Curacao",
       "date": "2026-06-20",
       "prediction": {
-        "win_prob": 0.0,
-        "draw_prob": 1.0,
-        "loss_prob": 0.0,
-        "xG1": 0.0,
-        "xG2": 0.0
+        "win_prob": 0.8985852831451662,
+        "draw_prob": 0.0794292765638433,
+        "loss_prob": 0.02198544029099054,
+        "xG1": 3.0490700006484985,
+        "xG2": 0.3449605852365494
       },
       "result": {
         "score1": 0,
@@ -1065,17 +1065,17 @@
       }
     },
     {
-      "match_id": "group_2026-06-25_Cura\u00e7ao_IvoryCoast",
+      "match_id": "group_2026-06-25_Curacao_IvoryCoast",
       "stage": "Group Stage",
-      "team1": "Cura\u00e7ao",
+      "team1": "Curacao",
       "team2": "Ivory Coast",
       "date": "2026-06-25",
       "prediction": {
-        "win_prob": 0.0,
-        "draw_prob": 1.0,
-        "loss_prob": 0.0,
-        "xG1": 0.0,
-        "xG2": 0.0
+        "win_prob": 0.06473163804507462,
+        "draw_prob": 0.14339820977197415,
+        "loss_prob": 0.7918701521829512,
+        "xG1": 0.5541111826896667,
+        "xG2": 2.4514166116714478
       },
       "result": {
         "score1": 0,
