@@ -167,7 +167,8 @@ function App() {
               borderRadius: '30px',
               cursor: 'pointer',
               fontWeight: '600',
-              transition: 'all 0.3s'
+              transition: 'all 0.3s',
+              fontFamily: 'inherit'
             }}
           >
             Dashboard
@@ -183,7 +184,8 @@ function App() {
               borderRadius: '30px',
               cursor: 'pointer',
               fontWeight: '600',
-              transition: 'all 0.3s'
+              transition: 'all 0.3s',
+              fontFamily: 'inherit'
             }}
           >
             About Methodology

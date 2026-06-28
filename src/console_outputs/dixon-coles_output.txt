@@ -3,40 +3,40 @@ Loading results.csv …
 ==================================================
 ▶ Training Full Inference Model
 ==================================================
-  Epoch    1 | train_loss: 1.9259 | Home Adv: 0.210 | Rho: 0.010
-  Epoch  240 | train_loss: 1.3298 | Home Adv: 0.252 | Rho: -0.048
-  Epoch  480 | train_loss: 1.3217 | Home Adv: 0.245 | Rho: -0.050
-  Epoch  720 | train_loss: 1.3210 | Home Adv: 0.244 | Rho: -0.050
-  Epoch  960 | train_loss: 1.3207 | Home Adv: 0.244 | Rho: -0.050
-  Epoch 1200 | train_loss: 1.3205 | Home Adv: 0.244 | Rho: -0.051
+  Epoch    1 | train_loss: 1.9258 | Home Adv: 0.210 | Rho: 0.010
+  Epoch  240 | train_loss: 1.3303 | Home Adv: 0.252 | Rho: -0.048
+  Epoch  480 | train_loss: 1.3223 | Home Adv: 0.244 | Rho: -0.051
+  Epoch  720 | train_loss: 1.3215 | Home Adv: 0.244 | Rho: -0.051
+  Epoch  960 | train_loss: 1.3212 | Home Adv: 0.244 | Rho: -0.051
+  Epoch 1200 | train_loss: 1.3210 | Home Adv: 0.244 | Rho: -0.051
 
 Top 10 Teams by Attack (higher is better):
-  1. Spain                1.671
-  2. Germany              1.645
+  1. Spain                1.670
+  2. Germany              1.643
   3. Brazil               1.584
-  4. Portugal             1.578
-  5. France               1.571
-  6. Netherlands          1.570
-  7. Argentina            1.542
-  8. England              1.480
-  9. Belgium              1.467
-  10. Colombia             1.427
+  4. France               1.569
+  5. Netherlands          1.566
+  6. Portugal             1.559
+  7. Argentina            1.543
+  8. England              1.473
+  9. Belgium              1.465
+  10. Norway               1.408
 
 Top 10 Teams by Defense (lower is better, meaning fewer goals conceded):
   1. Maule Sur            -3.129
-  2. Argentina            -1.692
+  2. Argentina            -1.658
   3. Kurdistan            -1.580
-  4. Spain                -1.538
-  5. England              -1.513
-  6. Brazil               -1.488
-  7. Canary Islands       -1.472
-  8. Morocco              -1.465
-  9. Ecuador              -1.431
-  10. France               -1.397
+  4. Spain                -1.535
+  5. England              -1.531
+  6. Brazil               -1.484
+  7. Canary Islands       -1.473
+  8. Morocco              -1.468
+  9. Ecuador              -1.427
+  10. France               -1.395
 Precomputing expected goals matrix...
 
 Running 10000 Monte Carlo simulations ...
-100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 10000/10000 [00:18<00:00, 554.88it/s]
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 10000/10000 [00:08<00:00, 1167.46it/s]
 
 ============================================================
   MONTE CARLO RESULTS  (n=10000 simulations)
@@ -44,46 +44,44 @@ Running 10000 Monte Carlo simulations ...
 
   Team                              Win%   Final%    SF%
   ──────────────────────────────────────────────────────
-  Spain                            14.2%    23.1%   36.0%
-  Argentina                        13.5%    21.7%   34.2%
-  Brazil                           10.3%    18.2%   30.6%
-  England                           9.0%    15.8%   27.0%
-  France                            8.1%    15.3%   26.6%
-  Portugal                          7.4%    13.4%   23.7%
-  Germany                           5.1%    10.3%   20.4%
-  Netherlands                       4.7%     9.4%   18.9%
-  Colombia                          4.6%     9.2%   18.0%
-  Belgium                           4.2%     9.1%   18.7%
-  Morocco                           2.9%     6.8%   13.7%
-  Switzerland                       1.8%     4.8%   11.6%
-  Uruguay                           1.7%     4.4%   10.5%
-  Ecuador                           1.6%     4.1%    9.8%
-  Mexico                            1.4%     3.8%    9.5%
-  Croatia                           1.4%     4.1%   10.0%
-  Japan                             1.1%     3.2%    8.2%
-  Norway                            1.1%     3.0%    8.3%
-  Senegal                           0.7%     1.9%    5.4%
-  Austria                           0.7%     2.3%    6.2%
-  United States                     0.6%     1.5%    4.5%
-  Ivory Coast                       0.5%     1.6%    4.8%
-  Canada                            0.4%     1.7%    5.9%
-  Australia                         0.4%     1.4%    3.8%
-  Turkey                            0.4%     1.2%    3.8%
-  Egypt                             0.3%     1.0%    3.6%
-  Sweden                            0.3%     1.3%    3.7%
-  Scotland                          0.3%     0.9%    2.6%
-  Algeria                           0.2%     1.1%    3.1%
-  Iran                              0.2%     1.2%    3.5%
-  Paraguay                          0.2%     0.9%    2.9%
-  Czech Republic                    0.2%     0.6%    2.3%
-  South Korea                       0.1%     0.5%    2.4%
-  DR Congo                          0.1%     0.3%    1.2%
-  Bosnia and Herzegovina            0.0%     0.2%    0.8%
-  South Africa                      0.0%     0.1%    0.7%
-  Panama                            0.0%     0.1%    0.3%
-  Ghana                             0.0%     0.2%    1.0%
-  Cape Verde                        0.0%     0.1%    0.3%
-  Uzbekistan                        0.0%     0.1%    0.4%
-  Saudi Arabia                      0.0%     0.0%    0.2%
+  Spain                            14.3%    22.9%   36.0%
+  Argentina                        13.0%    21.5%   34.0%
+  Brazil                           10.5%    18.0%   30.2%
+  England                           8.5%    15.1%   26.9%
+  France                            8.3%    15.5%   27.2%
+  Portugal                          7.5%    13.8%   24.6%
+  Germany                           5.0%    10.4%   20.1%
+  Colombia                          4.3%     8.7%   17.2%
+  Netherlands                       4.0%     9.0%   17.9%
+  Belgium                           4.0%     9.2%   18.9%
+  Morocco                           3.3%     7.6%   15.1%
+  Switzerland                       2.1%     5.1%   12.2%
+  Uruguay                           1.8%     4.3%    9.9%
+  Ecuador                           1.7%     4.3%   10.2%
+  Croatia                           1.6%     4.2%   10.1%
+  Mexico                            1.4%     3.3%    9.1%
+  Japan                             1.3%     3.3%    8.2%
+  Norway                            1.0%     3.1%    7.8%
+  Austria                           0.8%     2.1%    5.6%
+  Senegal                           0.7%     2.1%    5.8%
+  Ivory Coast                       0.6%     1.6%    4.9%
+  Canada                            0.6%     1.8%    5.9%
+  United States                     0.5%     1.6%    4.8%
+  Algeria                           0.4%     1.3%    3.7%
+  Sweden                            0.4%     1.2%    3.8%
+  Egypt                             0.4%     1.0%    3.8%
+  Australia                         0.4%     1.1%    3.7%
+  Paraguay                          0.3%     1.0%    2.8%
+  Turkey                            0.3%     1.2%    3.6%
+  Iran                              0.3%     1.1%    3.1%
+  South Korea                       0.2%     0.7%    2.3%
+  Scotland                          0.2%     0.6%    2.4%
+  Czech Republic                    0.1%     0.5%    2.2%
+  DR Congo                          0.1%     0.5%    1.7%
+  Ghana                             0.1%     0.3%    0.9%
+  Tunisia                           0.1%     0.2%    0.6%
+  Cape Verde                        0.0%     0.1%    0.4%
+  Bosnia and Herzegovina            0.0%     0.1%    0.7%
+  South Africa                      0.0%     0.1%    0.6%
 
 Saved predictions to C:\Users\AKHIL DATTA\Desktop\predict_wc\src\predict_wc\..\..\data\predictions_dc.json
