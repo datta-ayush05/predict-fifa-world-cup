@@ -155,7 +155,7 @@ function App() {
                           <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
                             {/* Team 1 Side */}
                             <div style={{flex: 1, textAlign: 'right'}}>
-                              <div style={{fontSize: '1.3rem', fontWeight: 'bold', color: '#fff'}}>
+                              <div style={{fontSize: '1.3rem', fontWeight: 'bold', color: 'var(--text-main)'}}>
                                 {m.team1}
                               </div>
                               <div style={{fontSize: '0.9rem', color: 'var(--text-muted)', marginTop: '0.3rem'}}>
@@ -164,21 +164,21 @@ function App() {
                             </div>
 
                             {/* Center Score */}
-                            <div style={{flex: '0 0 100px', textAlign: 'center', fontSize: '1.8rem', fontWeight: 'bold', display: 'flex', justifyContent: 'center', gap: '0.5rem', background: 'rgba(0,0,0,0.3)', padding: '0.5rem', borderRadius: '8px', margin: '0 1.5rem'}}>
+                            <div style={{flex: '0 0 100px', textAlign: 'center', fontSize: '1.8rem', fontWeight: 'bold', display: 'flex', justifyContent: 'center', gap: '0.5rem', background: 'var(--glass-border)', padding: '0.5rem', borderRadius: '8px', margin: '0 1.5rem'}}>
                               {m.result.status === 'Finished' ? (
                                 <>
-                                  <span style={{color: '#fff'}}>{m.result.score1}</span>
-                                  <span style={{color: 'rgba(255,255,255,0.3)'}}>-</span>
-                                  <span style={{color: '#fff'}}>{m.result.score2}</span>
+                                  <span style={{color: 'var(--text-main)'}}>{m.result.score1}</span>
+                                  <span style={{color: 'var(--text-muted)'}}>-</span>
+                                  <span style={{color: 'var(--text-main)'}}>{m.result.score2}</span>
                                 </>
                               ) : (
-                                <span style={{fontSize: '1.2rem', color: 'rgba(255,255,255,0.5)'}}>vs</span>
+                                <span style={{fontSize: '1.2rem', color: 'var(--text-muted)'}}>vs</span>
                               )}
                             </div>
 
                             {/* Team 2 Side */}
                             <div style={{flex: 1, textAlign: 'left'}}>
-                              <div style={{fontSize: '1.3rem', fontWeight: 'bold', color: '#fff'}}>
+                              <div style={{fontSize: '1.3rem', fontWeight: 'bold', color: 'var(--text-main)'}}>
                                 {m.team2}
                               </div>
                               <div style={{fontSize: '0.9rem', color: 'var(--text-muted)', marginTop: '0.3rem'}}>
