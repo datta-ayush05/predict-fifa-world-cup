@@ -149,6 +149,19 @@ function App() {
 
       {activeTab === 'fixtures' && (
         <div className="fixtures-view animation-fade-in" style={{animation: 'fadeIn 0.5s ease-out'}}>
+          <div style={{
+            background: 'rgba(210, 140, 90, 0.1)',
+            borderLeft: '4px solid var(--accent)',
+            padding: '1rem 1.5rem',
+            marginTop: '1rem',
+            marginBottom: '1rem',
+            borderRadius: '0 8px 8px 0',
+            fontSize: '0.95rem',
+            color: 'var(--text-main)',
+            lineHeight: '1.5'
+          }}>
+            <strong>Note:</strong> The xG shown represents the <em>projected expected goals</em>. All win percentages and projected xG are calculated strictly using pre-match data.
+          </div>
           <div className="date-tabs" style={{
             display: 'flex', 
             gap: '0.5rem', 
