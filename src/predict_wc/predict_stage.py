@@ -136,8 +136,8 @@ def simulate_from_stage(
                 final_counts[current_matchups[0][0]] += 1
                 final_counts[current_matchups[0][1]] += 1
             else:
-                # Pair the winners for the next round
-                current_matchups = wc_predict_gnn.pair_winners(next_winners)
+                # Pair the winners for the next round (adjacent pairs)
+                current_matchups = [(next_winners[i], next_winners[i+1]) for i in range(0, len(next_winners), 2)]
 
     return win_counts, final_counts, sf_counts, prob_matrix
 

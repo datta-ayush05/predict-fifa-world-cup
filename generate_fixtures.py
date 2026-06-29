@@ -62,7 +62,7 @@ with open(results_csv_path, "r", encoding="utf-8") as f:
             
             match_id = f"group_{row['date']}_{t1}_{t2}".replace(" ", "")
             
-            if match_id in existing_fixtures:
+            if match_id in existing_fixtures and existing_fixtures[match_id]["result"].get("status") != "Upcoming":
                 fixture = existing_fixtures[match_id]
                 fixture["result"]["score1"] = score1
                 fixture["result"]["score2"] = score2
@@ -127,7 +127,8 @@ for stage_key, matchups in MATCHUPS_BY_STAGE.items():
         t2 = normalize_name(t2)
         match_id = f"{stage_key}_{i}_{t1}_{t2}".replace(" ", "")
         
-        if match_id in existing_fixtures:
+        # If the match already exists and is NOT upcoming (i.e. played), preserve its prediction
+        if match_id in existing_fixtures and existing_fixtures[match_id]["result"].get("status") != "Upcoming":
             fixtures.append(existing_fixtures[match_id])
         else:
             key1 = f"{t1}::{t2}"
