@@ -7,16 +7,17 @@
       "team2": "South Africa",
       "date": "2026-06-11",
       "prediction": {
-        "win_prob": 0.7489894849187319,
-        "draw_prob": 0.1671888079130459,
-        "loss_prob": 0.08382170716822239,
-        "xG1": 2.245025157928467,
-        "xG2": 0.6008594334125519
+        "win_prob": 0.7648501539053707,
+        "draw_prob": 0.15934027166653722,
+        "loss_prob": 0.0758095744280921,
+        "xG1": 2.301782250404358,
+        "xG2": 0.5731955766677856
       },
       "result": {
         "score1": 2,
         "score2": 0,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -26,16 +27,17 @@
       "team2": "Czech Republic",
       "date": "2026-06-11",
       "prediction": {
-        "win_prob": 0.33391636825889326,
-        "draw_prob": 0.2626910085168764,
-        "loss_prob": 0.40339262322423025,
-        "xG1": 1.2287474870681763,
-        "xG2": 1.3773140907287598
+        "win_prob": 0.3311894898398171,
+        "draw_prob": 0.2627760545154675,
+        "loss_prob": 0.40603445564471535,
+        "xG1": 1.221146047115326,
+        "xG2": 1.3811150193214417
       },
       "result": {
         "score1": 2,
         "score2": 1,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -45,16 +47,17 @@
       "team2": "Bosnia and Herzegovina",
       "date": "2026-06-12",
       "prediction": {
-        "win_prob": 0.5728791170278917,
-        "draw_prob": 0.2331369787660802,
-        "loss_prob": 0.19398390420602793,
-        "xG1": 1.763161063194275,
-        "xG2": 0.9187693893909454
+        "win_prob": 0.5948731277085366,
+        "draw_prob": 0.2268092254204968,
+        "loss_prob": 0.17831764687096666,
+        "xG1": 1.816354751586914,
+        "xG2": 0.87965127825737
       },
       "result": {
         "score1": 1,
         "score2": 1,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -64,16 +67,17 @@
       "team2": "Paraguay",
       "date": "2026-06-12",
       "prediction": {
-        "win_prob": 0.38940469426245145,
-        "draw_prob": 0.2638209785686601,
-        "loss_prob": 0.3467743271688885,
-        "xG1": 1.3435187339782715,
-        "xG2": 1.252564787864685
+        "win_prob": 0.38230994797474865,
+        "draw_prob": 0.2641866265618905,
+        "loss_prob": 0.35350342546336083,
+        "xG1": 1.3271647095680237,
+        "xG2": 1.2657491564750671
       },
       "result": {
         "score1": 4,
         "score2": 1,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -83,16 +87,17 @@
       "team2": "Switzerland",
       "date": "2026-06-13",
       "prediction": {
-        "win_prob": 0.03744371765063195,
-        "draw_prob": 0.10964378339487166,
-        "loss_prob": 0.8529124989544964,
-        "xG1": 0.42120207846164703,
-        "xG2": 2.7110447883605957
+        "win_prob": 0.037858378039490666,
+        "draw_prob": 0.11021456641030757,
+        "loss_prob": 0.8519270555502019,
+        "xG1": 0.4237411916255951,
+        "xG2": 2.706697463989258
       },
       "result": {
         "score1": 1,
         "score2": 1,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -102,16 +107,17 @@
       "team2": "Morocco",
       "date": "2026-06-13",
       "prediction": {
-        "win_prob": 0.5349005537585519,
-        "draw_prob": 0.24621456605976977,
-        "loss_prob": 0.2188848801816783,
-        "xG1": 1.6391680240631104,
-        "xG2": 0.9520602226257324
+        "win_prob": 0.553689525636432,
+        "draw_prob": 0.2415611497566085,
+        "loss_prob": 0.20474932460695947,
+        "xG1": 1.682498574256897,
+        "xG2": 0.9189606308937073
       },
       "result": {
         "score1": 1,
         "score2": 1,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -121,16 +127,17 @@
       "team2": "Scotland",
       "date": "2026-06-13",
       "prediction": {
-        "win_prob": 0.08500779267703945,
-        "draw_prob": 0.16332123516346178,
-        "loss_prob": 0.7516709721594987,
-        "xG1": 0.6317287087440491,
-        "xG2": 2.3057740926742554
+        "win_prob": 0.08381509152827374,
+        "draw_prob": 0.16224537325735372,
+        "loss_prob": 0.7539395352143726,
+        "xG1": 0.6274654269218445,
+        "xG2": 2.31355082988739
       },
       "result": {
         "score1": 0,
         "score2": 1,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -140,16 +147,17 @@
       "team2": "Turkey",
       "date": "2026-06-13",
       "prediction": {
-        "win_prob": 0.22667482528901914,
-        "draw_prob": 0.2429067871473597,
-        "loss_prob": 0.5304183875636211,
-        "xG1": 1.0036308765411377,
-        "xG2": 1.6725026965141296
+        "win_prob": 0.22251251261141217,
+        "draw_prob": 0.24179527871146736,
+        "loss_prob": 0.5356922086771204,
+        "xG1": 0.9931980967521667,
+        "xG2": 1.6837915182113647
       },
       "result": {
         "score1": 2,
         "score2": 0,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -159,16 +167,17 @@
       "team2": "Curacao",
       "date": "2026-06-14",
       "prediction": {
-        "win_prob": 0.8906744279627189,
-        "draw_prob": 0.0846164549581216,
-        "loss_prob": 0.024709117079159584,
-        "xG1": 2.9930285215377808,
-        "xG2": 0.3645981550216675
+        "win_prob": 0.8869211732882877,
+        "draw_prob": 0.08701343703148366,
+        "loss_prob": 0.02606538968022872,
+        "xG1": 2.9690881967544556,
+        "xG2": 0.3744085878133774
       },
       "result": {
         "score1": 7,
         "score2": 1,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -178,16 +187,17 @@
       "team2": "Ecuador",
       "date": "2026-06-14",
       "prediction": {
-        "win_prob": 0.16779666780224736,
-        "draw_prob": 0.22639596311256396,
-        "loss_prob": 0.6058073690851886,
-        "xG1": 0.828951358795166,
-        "xG2": 1.8082035183906555
+        "win_prob": 0.16829483270477172,
+        "draw_prob": 0.22663554219777657,
+        "loss_prob": 0.6050696250974517,
+        "xG1": 0.8301881849765778,
+        "xG2": 1.8063324689865112
       },
       "result": {
         "score1": 1,
         "score2": 0,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -197,16 +207,17 @@
       "team2": "Japan",
       "date": "2026-06-14",
       "prediction": {
-        "win_prob": 0.5386163108479989,
-        "draw_prob": 0.24220282359728335,
-        "loss_prob": 0.2191808655547178,
-        "xG1": 1.679276704788208,
-        "xG2": 0.9767607748508453
+        "win_prob": 0.5587921041640008,
+        "draw_prob": 0.23725559083878442,
+        "loss_prob": 0.20395230499721484,
+        "xG1": 1.7258532643318176,
+        "xG2": 0.9401833117008209
       },
       "result": {
         "score1": 2,
         "score2": 2,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -216,16 +227,17 @@
       "team2": "Tunisia",
       "date": "2026-06-14",
       "prediction": {
-        "win_prob": 0.5749717217465619,
-        "draw_prob": 0.23509486605103241,
-        "loss_prob": 0.1899334122024057,
-        "xG1": 1.7400305271148682,
-        "xG2": 0.8887301087379456
+        "win_prob": 0.5737801590620193,
+        "draw_prob": 0.23547400444638955,
+        "loss_prob": 0.1907458364915912,
+        "xG1": 1.7367236614227295,
+        "xG2": 0.8903769552707672
       },
       "result": {
         "score1": 5,
         "score2": 1,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -235,16 +247,17 @@
       "team2": "Egypt",
       "date": "2026-06-15",
       "prediction": {
-        "win_prob": 0.5599326381069027,
-        "draw_prob": 0.23909599199712403,
-        "loss_prob": 0.20097136989597325,
-        "xG1": 1.7057138085365295,
-        "xG2": 0.9162984192371368
+        "win_prob": 0.5579578638320065,
+        "draw_prob": 0.23967209514793816,
+        "loss_prob": 0.20237004102005543,
+        "xG1": 1.7005042433738708,
+        "xG2": 0.9192157685756683
       },
       "result": {
         "score1": 1,
         "score2": 1,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -254,16 +267,17 @@
       "team2": "New Zealand",
       "date": "2026-06-15",
       "prediction": {
-        "win_prob": 0.5829517865535734,
-        "draw_prob": 0.228349836509051,
-        "loss_prob": 0.18869837693737562,
-        "xG1": 1.810220181941986,
-        "xG2": 0.9219286739826202
+        "win_prob": 0.5812675295357138,
+        "draw_prob": 0.22893878499837444,
+        "loss_prob": 0.1897936854659118,
+        "xG1": 1.8047899007797241,
+        "xG2": 0.9237173795700073
       },
       "result": {
         "score1": 2,
         "score2": 2,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -273,16 +287,17 @@
       "team2": "Cape Verde",
       "date": "2026-06-15",
       "prediction": {
-        "win_prob": 0.8697685075422636,
-        "draw_prob": 0.09990822995608749,
-        "loss_prob": 0.03032326250164893,
-        "xG1": 2.7794216871261597,
-        "xG2": 0.3716963678598404
+        "win_prob": 0.8676602684121831,
+        "draw_prob": 0.10120039537501659,
+        "loss_prob": 0.031139336212800305,
+        "xG1": 2.7686623334884644,
+        "xG2": 0.3770352751016617
       },
       "result": {
         "score1": 0,
         "score2": 0,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -292,16 +307,17 @@
       "team2": "Uruguay",
       "date": "2026-06-15",
       "prediction": {
-        "win_prob": 0.10437172522716653,
-        "draw_prob": 0.18376220522106615,
-        "loss_prob": 0.7118660695517673,
-        "xG1": 0.6728204488754272,
-        "xG2": 2.1333571672439575
+        "win_prob": 0.10366407551750165,
+        "draw_prob": 0.18319439231425372,
+        "loss_prob": 0.7131415321682446,
+        "xG1": 0.6706939935684204,
+        "xG2": 2.1374553442001343
       },
       "result": {
         "score1": 1,
         "score2": 1,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -311,16 +327,17 @@
       "team2": "Senegal",
       "date": "2026-06-16",
       "prediction": {
-        "win_prob": 0.7237532362417664,
-        "draw_prob": 0.17999269277852378,
-        "loss_prob": 0.09625407097970988,
-        "xG1": 2.144361972808838,
-        "xG2": 0.6327451169490814
+        "win_prob": 0.7208666910078254,
+        "draw_prob": 0.18131698275744176,
+        "loss_prob": 0.09781632623473278,
+        "xG1": 2.1350239515304565,
+        "xG2": 0.6376021206378937
       },
       "result": {
         "score1": 3,
         "score2": 1,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -330,16 +347,17 @@
       "team2": "Norway",
       "date": "2026-06-16",
       "prediction": {
-        "win_prob": 0.06854251373959058,
-        "draw_prob": 0.14972287432380488,
-        "loss_prob": 0.7817346119366045,
-        "xG1": 0.5571278631687164,
-        "xG2": 2.386867880821228
+        "win_prob": 0.06903508040576485,
+        "draw_prob": 0.15027032304470586,
+        "loss_prob": 0.7806945965495292,
+        "xG1": 0.5588963627815247,
+        "xG2": 2.3826441764831543
       },
       "result": {
         "score1": 1,
         "score2": 4,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -349,16 +367,17 @@
       "team2": "Algeria",
       "date": "2026-06-16",
       "prediction": {
-        "win_prob": 0.7510223621556694,
-        "draw_prob": 0.16693943958520227,
-        "loss_prob": 0.08203819825912824,
-        "xG1": 2.237833619117737,
-        "xG2": 0.5874365866184235
+        "win_prob": 0.7489401157846367,
+        "draw_prob": 0.16795328486491398,
+        "loss_prob": 0.08310659935044931,
+        "xG1": 2.2306665182113647,
+        "xG2": 0.5910922288894653
       },
       "result": {
         "score1": 3,
         "score2": 0,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -368,16 +387,17 @@
       "team2": "Jordan",
       "date": "2026-06-16",
       "prediction": {
-        "win_prob": 0.7238953363674441,
-        "draw_prob": 0.17810677352056412,
-        "loss_prob": 0.09799789011199188,
-        "xG1": 2.1765891313552856,
-        "xG2": 0.655655711889267
+        "win_prob": 0.7246565450103833,
+        "draw_prob": 0.17778185059872464,
+        "loss_prob": 0.09756160439089187,
+        "xG1": 2.178696870803833,
+        "xG2": 0.654073029756546
       },
       "result": {
         "score1": 3,
         "score2": 1,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -387,16 +407,17 @@
       "team2": "DR Congo",
       "date": "2026-06-17",
       "prediction": {
-        "win_prob": 0.7087789178113812,
-        "draw_prob": 0.18674051491747318,
-        "loss_prob": 0.10448056727114557,
-        "xG1": 2.0969916582107544,
-        "xG2": 0.658107340335846
+        "win_prob": 0.7066482993534804,
+        "draw_prob": 0.18770225622175568,
+        "loss_prob": 0.10564944442476396,
+        "xG1": 2.090037703514099,
+        "xG2": 0.6614327132701874
       },
       "result": {
         "score1": 1,
         "score2": 1,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -406,16 +427,17 @@
       "team2": "Colombia",
       "date": "2026-06-17",
       "prediction": {
-        "win_prob": 0.040030829703691685,
-        "draw_prob": 0.11353290658329965,
-        "loss_prob": 0.8464362637130086,
-        "xG1": 0.4347515106201172,
-        "xG2": 2.6774386167526245
+        "win_prob": 0.04008674157330105,
+        "draw_prob": 0.11348845505421541,
+        "loss_prob": 0.8464248033724836,
+        "xG1": 0.4357200413942337,
+        "xG2": 2.6790759563446045
       },
       "result": {
         "score1": 1,
         "score2": 3,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -425,16 +447,17 @@
       "team2": "Croatia",
       "date": "2026-06-17",
       "prediction": {
-        "win_prob": 0.5231398176425673,
-        "draw_prob": 0.24739142594415967,
-        "loss_prob": 0.229468756413273,
-        "xG1": 1.6270794868469238,
-        "xG2": 0.987797886133194
+        "win_prob": 0.5223373890082329,
+        "draw_prob": 0.2476749737816669,
+        "loss_prob": 0.2299876372101002,
+        "xG1": 1.6242075562477112,
+        "xG2": 0.9881731271743774
       },
       "result": {
         "score1": 4,
         "score2": 2,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -444,16 +467,17 @@
       "team2": "Panama",
       "date": "2026-06-17",
       "prediction": {
-        "win_prob": 0.3254087411839888,
-        "draw_prob": 0.26199402445735687,
-        "loss_prob": 0.41259723435865425,
-        "xG1": 1.211400032043457,
-        "xG2": 1.3980490565299988
+        "win_prob": 0.3277129051298474,
+        "draw_prob": 0.26251633200977936,
+        "loss_prob": 0.4097707628603732,
+        "xG1": 1.213883638381958,
+        "xG2": 1.3893359303474426
       },
       "result": {
         "score1": 1,
         "score2": 0,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -463,16 +487,17 @@
       "team2": "South Africa",
       "date": "2026-06-18",
       "prediction": {
-        "win_prob": 0.4802043757979562,
-        "draw_prob": 0.256675665340925,
-        "loss_prob": 0.26311995886111883,
-        "xG1": 1.5220662951469421,
-        "xG2": 1.0561606287956238
+        "win_prob": 0.5045846603885338,
+        "draw_prob": 0.2523646142294359,
+        "loss_prob": 0.24305072538203035,
+        "xG1": 1.5748576521873474,
+        "xG2": 1.0104568600654602
       },
       "result": {
         "score1": 1,
         "score2": 1,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -482,16 +507,17 @@
       "team2": "South Korea",
       "date": "2026-06-18",
       "prediction": {
-        "win_prob": 0.6904976011776058,
-        "draw_prob": 0.19211900300135237,
-        "loss_prob": 0.11738339582104178,
-        "xG1": 2.080522656440735,
-        "xG2": 0.7190853953361511
+        "win_prob": 0.6910201635078871,
+        "draw_prob": 0.1919324165123181,
+        "loss_prob": 0.11704741997979479,
+        "xG1": 2.0816112756729126,
+        "xG2": 0.7178210318088531
       },
       "result": {
         "score1": 1,
         "score2": 0,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -501,16 +527,17 @@
       "team2": "Bosnia and Herzegovina",
       "date": "2026-06-18",
       "prediction": {
-        "win_prob": 0.6733567363099796,
-        "draw_prob": 0.20036706055963108,
-        "loss_prob": 0.1262762031303893,
-        "xG1": 2.010695457458496,
-        "xG2": 0.7328773438930511
+        "win_prob": 0.670666524986392,
+        "draw_prob": 0.2014158865599568,
+        "loss_prob": 0.12791758845365112,
+        "xG1": 2.003262162208557,
+        "xG2": 0.7376424074172974
       },
       "result": {
         "score1": 4,
         "score2": 1,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -520,16 +547,17 @@
       "team2": "Qatar",
       "date": "2026-06-18",
       "prediction": {
-        "win_prob": 0.7941926476697219,
-        "draw_prob": 0.14264722053555137,
-        "loss_prob": 0.06316013179472664,
-        "xG1": 2.4490950107574463,
-        "xG2": 0.542307585477829
+        "win_prob": 0.8070720960313068,
+        "draw_prob": 0.13566348311163637,
+        "loss_prob": 0.05726442085705681,
+        "xG1": 2.5040323734283447,
+        "xG2": 0.5187475085258484
       },
       "result": {
         "score1": 6,
         "score2": 0,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -539,16 +567,17 @@
       "team2": "Morocco",
       "date": "2026-06-19",
       "prediction": {
-        "win_prob": 0.2570264656854376,
-        "draw_prob": 0.2554037709903988,
-        "loss_prob": 0.48756976332416374,
-        "xG1": 1.0427502989768982,
-        "xG2": 1.5383855104446411
+        "win_prob": 0.25716959866927447,
+        "draw_prob": 0.25572138919989673,
+        "loss_prob": 0.48710901213082886,
+        "xG1": 1.0413331389427185,
+        "xG2": 1.5352601408958435
       },
       "result": {
         "score1": 0,
         "score2": 1,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -558,16 +587,17 @@
       "team2": "Haiti",
       "date": "2026-06-19",
       "prediction": {
-        "win_prob": 0.8949546765936494,
-        "draw_prob": 0.0820874303317537,
-        "loss_prob": 0.02295789307459697,
-        "xG1": 3.0094255208969116,
-        "xG2": 0.34757736325263977
+        "win_prob": 0.8997891190755744,
+        "draw_prob": 0.07876930465523131,
+        "loss_prob": 0.021441576269194306,
+        "xG1": 3.050560712814331,
+        "xG2": 0.33843518793582916
       },
       "result": {
         "score1": 3,
         "score2": 0,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -577,16 +607,17 @@
       "team2": "Australia",
       "date": "2026-06-19",
       "prediction": {
-        "win_prob": 0.5708276142774625,
-        "draw_prob": 0.2321866637252365,
-        "loss_prob": 0.196985721997301,
-        "xG1": 1.7753441333770752,
-        "xG2": 0.9384822845458984
+        "win_prob": 0.5768019259595228,
+        "draw_prob": 0.23061273502661217,
+        "loss_prob": 0.19258533901386504,
+        "xG1": 1.78900808095932,
+        "xG2": 0.9271095097064972
       },
       "result": {
         "score1": 2,
         "score2": 0,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -596,16 +627,17 @@
       "team2": "Paraguay",
       "date": "2026-06-19",
       "prediction": {
-        "win_prob": 0.34968036981811834,
-        "draw_prob": 0.26486096953959026,
-        "loss_prob": 0.38545866064229134,
-        "xG1": 1.252077341079712,
-        "xG2": 1.328200876712799
+        "win_prob": 0.3418294274081034,
+        "draw_prob": 0.26476681860248613,
+        "loss_prob": 0.3934037539894105,
+        "xG1": 1.2339994311332703,
+        "xG2": 1.3437130451202393
       },
       "result": {
         "score1": 0,
         "score2": 1,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -615,16 +647,17 @@
       "team2": "Ivory Coast",
       "date": "2026-06-20",
       "prediction": {
-        "win_prob": 0.577556461072148,
-        "draw_prob": 0.23473927032655417,
-        "loss_prob": 0.18770426860129788,
-        "xG1": 1.7420529127120972,
-        "xG2": 0.8803408443927765
+        "win_prob": 0.5679158089050262,
+        "draw_prob": 0.23751602579540912,
+        "loss_prob": 0.1945681652995647,
+        "xG1": 1.7184104919433594,
+        "xG2": 0.8964874148368835
       },
       "result": {
         "score1": 2,
         "score2": 1,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -634,16 +667,17 @@
       "team2": "Curacao",
       "date": "2026-06-20",
       "prediction": {
-        "win_prob": 0.8985852831451662,
-        "draw_prob": 0.0794292765638433,
-        "loss_prob": 0.02198544029099054,
-        "xG1": 3.0490700006484985,
-        "xG2": 0.3449605852365494
+        "win_prob": 0.8979215029327916,
+        "draw_prob": 0.07980698668794226,
+        "loss_prob": 0.022271510379266134,
+        "xG1": 3.0474523305892944,
+        "xG2": 0.3481694757938385
       },
       "result": {
         "score1": 0,
         "score2": 0,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -653,16 +687,17 @@
       "team2": "Sweden",
       "date": "2026-06-20",
       "prediction": {
-        "win_prob": 0.6012119047050877,
-        "draw_prob": 0.22626237770907578,
-        "loss_prob": 0.17252571758583654,
-        "xG1": 1.815466046333313,
-        "xG2": 0.8536142110824585
+        "win_prob": 0.5960389573733375,
+        "draw_prob": 0.22787880613299197,
+        "loss_prob": 0.17608223649367064,
+        "xG1": 1.802477478981018,
+        "xG2": 0.8624425530433655
       },
       "result": {
         "score1": 5,
         "score2": 1,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -672,16 +707,17 @@
       "team2": "Japan",
       "date": "2026-06-20",
       "prediction": {
-        "win_prob": 0.1489305231696835,
-        "draw_prob": 0.21380550033913584,
-        "loss_prob": 0.6372639764911806,
-        "xG1": 0.7960511744022369,
-        "xG2": 1.9132753014564514
+        "win_prob": 0.1652054878539723,
+        "draw_prob": 0.22238923408739877,
+        "loss_prob": 0.612405278058629,
+        "xG1": 0.8374493420124054,
+        "xG2": 1.8471986651420593
       },
       "result": {
         "score1": 0,
         "score2": 4,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -691,16 +727,17 @@
       "team2": "Iran",
       "date": "2026-06-21",
       "prediction": {
-        "win_prob": 0.5902410180259027,
-        "draw_prob": 0.22860471993990866,
-        "loss_prob": 0.18115426203418863,
-        "xG1": 1.8001679182052612,
-        "xG2": 0.8834331929683685
+        "win_prob": 0.5914037708222017,
+        "draw_prob": 0.22827280330284053,
+        "loss_prob": 0.18032342587495775,
+        "xG1": 1.802848994731903,
+        "xG2": 0.8812357187271118
       },
       "result": {
         "score1": 0,
         "score2": 0,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -710,16 +747,17 @@
       "team2": "Egypt",
       "date": "2026-06-21",
       "prediction": {
-        "win_prob": 0.167984846750565,
-        "draw_prob": 0.22181618094771985,
-        "loss_prob": 0.610198972301715,
-        "xG1": 0.855257660150528,
-        "xG2": 1.857433021068573
+        "win_prob": 0.16706085154612813,
+        "draw_prob": 0.221426180605263,
+        "loss_prob": 0.6115129678486089,
+        "xG1": 0.852617472410202,
+        "xG2": 1.8603743314743042
       },
       "result": {
         "score1": 1,
         "score2": 3,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -729,16 +767,17 @@
       "team2": "Saudi Arabia",
       "date": "2026-06-21",
       "prediction": {
-        "win_prob": 0.8756423867323385,
-        "draw_prob": 0.09552440787100933,
-        "loss_prob": 0.028833205396652187,
-        "xG1": 2.840343475341797,
-        "xG2": 0.3720352053642273
+        "win_prob": 0.874629934628372,
+        "draw_prob": 0.09612633373320702,
+        "loss_prob": 0.029243731638420974,
+        "xG1": 2.835900902748108,
+        "xG2": 0.3751818388700485
       },
       "result": {
         "score1": 4,
         "score2": 0,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -748,16 +787,17 @@
       "team2": "Cape Verde",
       "date": "2026-06-21",
       "prediction": {
-        "win_prob": 0.7027341304776274,
-        "draw_prob": 0.18926459815078192,
-        "loss_prob": 0.1080012713715906,
-        "xG1": 2.0803980827331543,
-        "xG2": 0.6698355674743652
+        "win_prob": 0.7013532948501611,
+        "draw_prob": 0.1898715231510501,
+        "loss_prob": 0.10877518199878888,
+        "xG1": 2.076062321662903,
+        "xG2": 0.6720732748508453
       },
       "result": {
         "score1": 2,
         "score2": 2,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -767,16 +807,17 @@
       "team2": "Iraq",
       "date": "2026-06-22",
       "prediction": {
-        "win_prob": 0.8913153990123714,
-        "draw_prob": 0.08510890788735086,
-        "loss_prob": 0.023575693100277666,
-        "xG1": 2.9534515142440796,
-        "xG2": 0.34164658188819885
+        "win_prob": 0.8898952104750932,
+        "draw_prob": 0.08599905520857244,
+        "loss_prob": 0.02410573431633426,
+        "xG1": 2.9457839727401733,
+        "xG2": 0.34601449966430664
       },
       "result": {
         "score1": 3,
         "score2": 0,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -786,16 +827,17 @@
       "team2": "Senegal",
       "date": "2026-06-22",
       "prediction": {
-        "win_prob": 0.5058706689374476,
-        "draw_prob": 0.25200429081389764,
-        "loss_prob": 0.2421250402486548,
-        "xG1": 1.5787007212638855,
-        "xG2": 1.0091466307640076
+        "win_prob": 0.5035607124486956,
+        "draw_prob": 0.25264918943561054,
+        "loss_prob": 0.24379009811569385,
+        "xG1": 1.5718119740486145,
+        "xG2": 1.011511504650116
       },
       "result": {
         "score1": 3,
         "score2": 2,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -805,16 +847,17 @@
       "team2": "Austria",
       "date": "2026-06-22",
       "prediction": {
-        "win_prob": 0.6733526983860327,
-        "draw_prob": 0.20107214882618107,
-        "loss_prob": 0.1255751527877862,
-        "xG1": 2.0004329085350037,
-        "xG2": 0.7247104048728943
+        "win_prob": 0.6705482932426361,
+        "draw_prob": 0.20215978985850075,
+        "loss_prob": 0.1272919168988631,
+        "xG1": 1.9928534626960754,
+        "xG2": 0.7297734022140503
       },
       "result": {
         "score1": 2,
         "score2": 0,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -824,16 +867,17 @@
       "team2": "Algeria",
       "date": "2026-06-22",
       "prediction": {
-        "win_prob": 0.14704523082160928,
-        "draw_prob": 0.2127394655767476,
-        "loss_prob": 0.6402153036016431,
-        "xG1": 0.7911473512649536,
-        "xG2": 1.9213122725486755
+        "win_prob": 0.14661127796178294,
+        "draw_prob": 0.21262491402427622,
+        "loss_prob": 0.6407638080139408,
+        "xG1": 0.789289653301239,
+        "xG2": 1.9216866493225098
       },
       "result": {
         "score1": 1,
         "score2": 2,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -843,16 +887,17 @@
       "team2": "Uzbekistan",
       "date": "2026-06-23",
       "prediction": {
-        "win_prob": 0.8200403524503747,
-        "draw_prob": 0.12895176915776171,
-        "loss_prob": 0.051007878391863645,
-        "xG1": 2.547753691673279,
-        "xG2": 0.4857790917158127
+        "win_prob": 0.8200590068464273,
+        "draw_prob": 0.12891986134925812,
+        "loss_prob": 0.05102113180431464,
+        "xG1": 2.548436403274536,
+        "xG2": 0.4860997200012207
       },
       "result": {
         "score1": 5,
         "score2": 0,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -862,16 +907,17 @@
       "team2": "DR Congo",
       "date": "2026-06-23",
       "prediction": {
-        "win_prob": 0.74881976267755,
-        "draw_prob": 0.16814487048879553,
-        "loss_prob": 0.08303536683365444,
-        "xG1": 2.227726697921753,
-        "xG2": 0.5895484685897827
+        "win_prob": 0.7470221275581198,
+        "draw_prob": 0.1690161136755651,
+        "loss_prob": 0.08396175876631513,
+        "xG1": 2.221591353416443,
+        "xG2": 0.5927028656005859
       },
       "result": {
         "score1": 1,
         "score2": 0,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -881,16 +927,17 @@
       "team2": "Ghana",
       "date": "2026-06-23",
       "prediction": {
-        "win_prob": 0.8149158369699965,
-        "draw_prob": 0.13294618305487416,
-        "loss_prob": 0.05213797997512931,
-        "xG1": 2.494924306869507,
-        "xG2": 0.47760528326034546
+        "win_prob": 0.8128607748096941,
+        "draw_prob": 0.13410154689135834,
+        "loss_prob": 0.05303767829894759,
+        "xG1": 2.48594069480896,
+        "xG2": 0.4814843088388443
       },
       "result": {
         "score1": 0,
         "score2": 0,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -900,16 +947,17 @@
       "team2": "Croatia",
       "date": "2026-06-23",
       "prediction": {
-        "win_prob": 0.12749122239271035,
-        "draw_prob": 0.19846337932321031,
-        "loss_prob": 0.6740453982840794,
-        "xG1": 0.7510324120521545,
-        "xG2": 2.036931872367859
+        "win_prob": 0.1280661326077919,
+        "draw_prob": 0.19884507349265018,
+        "loss_prob": 0.6730887938995579,
+        "xG1": 0.7526154220104218,
+        "xG2": 2.034100651741028
       },
       "result": {
         "score1": 0,
         "score2": 1,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -919,16 +967,17 @@
       "team2": "Czech Republic",
       "date": "2026-06-24",
       "prediction": {
-        "win_prob": 0.6590106143280239,
-        "draw_prob": 0.20537719620964356,
-        "loss_prob": 0.1356121894623325,
-        "xG1": 1.9783616065979004,
-        "xG2": 0.7638692557811737
+        "win_prob": 0.6571412701351335,
+        "draw_prob": 0.20610755428030705,
+        "loss_prob": 0.13675117558455943,
+        "xG1": 1.9728534817695618,
+        "xG2": 0.7667986750602722
       },
       "result": {
         "score1": 3,
         "score2": 0,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -938,16 +987,17 @@
       "team2": "South Korea",
       "date": "2026-06-24",
       "prediction": {
-        "win_prob": 0.2948063387636814,
-        "draw_prob": 0.26052587939772515,
-        "loss_prob": 0.4446677818385934,
-        "xG1": 1.1341484189033508,
-        "xG2": 1.4547911286354065
+        "win_prob": 0.27573814995605467,
+        "draw_prob": 0.25797151715227956,
+        "loss_prob": 0.46629033289166577,
+        "xG1": 1.0904046297073364,
+        "xG2": 1.4992796778678894
       },
       "result": {
         "score1": 1,
         "score2": 0,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -957,16 +1007,17 @@
       "team2": "Switzerland",
       "date": "2026-06-24",
       "prediction": {
-        "win_prob": 0.26764657985021717,
-        "draw_prob": 0.2541067115938998,
-        "loss_prob": 0.4782467085558831,
-        "xG1": 1.0877558588981628,
-        "xG2": 1.543559491634369
+        "win_prob": 0.29000794846683975,
+        "draw_prob": 0.2580624170674704,
+        "loss_prob": 0.45192963446568984,
+        "xG1": 1.135486364364624,
+        "xG2": 1.4839764833450317
       },
       "result": {
         "score1": 1,
         "score2": 2,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -976,16 +1027,17 @@
       "team2": "Qatar",
       "date": "2026-06-24",
       "prediction": {
-        "win_prob": 0.6361323999708125,
-        "draw_prob": 0.21331392607746566,
-        "loss_prob": 0.1505536739517218,
-        "xG1": 1.922048270702362,
-        "xG2": 0.8079787194728851
+        "win_prob": 0.6362533960719582,
+        "draw_prob": 0.21330591485164085,
+        "loss_prob": 0.15044068907640099,
+        "xG1": 1.9219110012054443,
+        "xG2": 0.8073810636997223
       },
       "result": {
         "score1": 3,
         "score2": 1,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -995,16 +1047,17 @@
       "team2": "Brazil",
       "date": "2026-06-24",
       "prediction": {
-        "win_prob": 0.13967912420568673,
-        "draw_prob": 0.20979888552015624,
-        "loss_prob": 0.650521990274157,
-        "xG1": 0.7643444836139679,
-        "xG2": 1.938035249710083
+        "win_prob": 0.12963560113937322,
+        "draw_prob": 0.20348129378576726,
+        "loss_prob": 0.6668831050748595,
+        "xG1": 0.7373754978179932,
+        "xG2": 1.9842358827590942
       },
       "result": {
         "score1": 0,
         "score2": 3,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -1014,16 +1067,17 @@
       "team2": "Haiti",
       "date": "2026-06-24",
       "prediction": {
-        "win_prob": 0.8270658838700898,
-        "draw_prob": 0.12422477617151671,
-        "loss_prob": 0.04870933995839354,
-        "xG1": 2.6015273332595825,
-        "xG2": 0.48470720648765564
+        "win_prob": 0.827633776065561,
+        "draw_prob": 0.12389687271233085,
+        "loss_prob": 0.04846935122210822,
+        "xG1": 2.604318857192993,
+        "xG2": 0.48365549743175507
       },
       "result": {
         "score1": 4,
         "score2": 2,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -1033,16 +1087,17 @@
       "team2": "Turkey",
       "date": "2026-06-25",
       "prediction": {
-        "win_prob": 0.4078097940334319,
-        "draw_prob": 0.2626208671920744,
-        "loss_prob": 0.3295693387744936,
-        "xG1": 1.3852912783622742,
-        "xG2": 1.2180185914039612
+        "win_prob": 0.40875443235551795,
+        "draw_prob": 0.26275789356983215,
+        "loss_prob": 0.3284876740746499,
+        "xG1": 1.3857660293579102,
+        "xG2": 1.214245617389679
       },
       "result": {
         "score1": 2,
         "score2": 3,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -1052,16 +1107,17 @@
       "team2": "Australia",
       "date": "2026-06-25",
       "prediction": {
-        "win_prob": 0.5485820878139261,
-        "draw_prob": 0.2388723335041295,
-        "loss_prob": 0.21254557868194435,
-        "xG1": 1.712239921092987,
-        "xG2": 0.9684531092643738
+        "win_prob": 0.5617925129021097,
+        "draw_prob": 0.23550779310215236,
+        "loss_prob": 0.20269969399573795,
+        "xG1": 1.7434919476509094,
+        "xG2": 0.944908857345581
       },
       "result": {
         "score1": 0,
         "score2": 0,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -1071,16 +1127,17 @@
       "team2": "Ivory Coast",
       "date": "2026-06-25",
       "prediction": {
-        "win_prob": 0.06473163804507462,
-        "draw_prob": 0.14339820977197415,
-        "loss_prob": 0.7918701521829512,
-        "xG1": 0.5541111826896667,
-        "xG2": 2.4514166116714478
+        "win_prob": 0.06447930590849696,
+        "draw_prob": 0.1431689416912095,
+        "loss_prob": 0.7923517524002934,
+        "xG1": 0.5528270900249481,
+        "xG2": 2.4527652263641357
       },
       "result": {
         "score1": 0,
         "score2": 2,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -1090,16 +1147,17 @@
       "team2": "Germany",
       "date": "2026-06-25",
       "prediction": {
-        "win_prob": 0.3964821217946355,
-        "draw_prob": 0.26500103157260024,
-        "loss_prob": 0.3385168466327643,
-        "xG1": 1.347464382648468,
-        "xG2": 1.224263608455658
+        "win_prob": 0.4054368380846359,
+        "draw_prob": 0.26468385375451636,
+        "loss_prob": 0.3298793081608477,
+        "xG1": 1.365291714668274,
+        "xG2": 1.204674780368805
       },
       "result": {
         "score1": 2,
         "score2": 1,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -1109,16 +1167,17 @@
       "team2": "Sweden",
       "date": "2026-06-25",
       "prediction": {
-        "win_prob": 0.43276615021956044,
-        "draw_prob": 0.26038057767661527,
-        "loss_prob": 0.3068532721038244,
-        "xG1": 1.4408856630325317,
-        "xG2": 1.1708000898361206
+        "win_prob": 0.40690411095500606,
+        "draw_prob": 0.26272605597565063,
+        "loss_prob": 0.3303698330693433,
+        "xG1": 1.382960021495819,
+        "xG2": 1.2193703651428223
       },
       "result": {
         "score1": 1,
         "score2": 1,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -1128,16 +1187,17 @@
       "team2": "Netherlands",
       "date": "2026-06-25",
       "prediction": {
-        "win_prob": 0.0720416043297425,
-        "draw_prob": 0.15596317033461582,
-        "loss_prob": 0.7719952253356417,
-        "xG1": 0.5570172965526581,
-        "xG2": 2.32291579246521
+        "win_prob": 0.0741309240163127,
+        "draw_prob": 0.15815334499800096,
+        "loss_prob": 0.7677157309856864,
+        "xG1": 0.5644918382167816,
+        "xG2": 2.306872844696045
       },
       "result": {
         "score1": 1,
         "score2": 3,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -1147,16 +1207,17 @@
       "team2": "Iran",
       "date": "2026-06-26",
       "prediction": {
-        "win_prob": 0.3969271961342294,
-        "draw_prob": 0.26400968567826383,
-        "loss_prob": 0.33906311818750673,
-        "xG1": 1.3558111190795898,
-        "xG2": 1.2324806451797485
+        "win_prob": 0.4000171673029055,
+        "draw_prob": 0.26418104595475095,
+        "loss_prob": 0.33580178674234357,
+        "xG1": 1.3599284887313843,
+        "xG2": 1.2231605648994446
       },
       "result": {
         "score1": 1,
         "score2": 1,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -1166,16 +1227,17 @@
       "team2": "Belgium",
       "date": "2026-06-26",
       "prediction": {
-        "win_prob": 0.07516549632914343,
-        "draw_prob": 0.15567885134744544,
-        "loss_prob": 0.7691556523234112,
-        "xG1": 0.586808443069458,
-        "xG2": 2.349444031715393
+        "win_prob": 0.075284089134918,
+        "draw_prob": 0.15575753533316603,
+        "loss_prob": 0.7689583755319159,
+        "xG1": 0.5874615013599396,
+        "xG2": 2.3491533994674683
       },
       "result": {
         "score1": 1,
         "score2": 5,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -1185,16 +1247,17 @@
       "team2": "Saudi Arabia",
       "date": "2026-06-26",
       "prediction": {
-        "win_prob": 0.3760681464174895,
-        "draw_prob": 0.2656286368996615,
-        "loss_prob": 0.35830321668284904,
-        "xG1": 1.3040709495544434,
-        "xG2": 1.266343593597412
+        "win_prob": 0.3791818115373353,
+        "draw_prob": 0.26593476762853796,
+        "loss_prob": 0.3548834208341266,
+        "xG1": 1.3080482482910156,
+        "xG2": 1.2564944624900818
       },
       "result": {
         "score1": 0,
         "score2": 0,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -1204,16 +1267,17 @@
       "team2": "Spain",
       "date": "2026-06-26",
       "prediction": {
-        "win_prob": 0.14290052441350676,
-        "draw_prob": 0.2115120339656427,
-        "loss_prob": 0.6455874416208506,
-        "xG1": 0.7739556133747101,
-        "xG2": 1.9261556267738342
+        "win_prob": 0.14537554455730256,
+        "draw_prob": 0.2129001110521172,
+        "loss_prob": 0.6417243443905802,
+        "xG1": 0.780735433101654,
+        "xG2": 1.9160359501838684
       },
       "result": {
         "score1": 0,
         "score2": 1,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -1223,16 +1287,17 @@
       "team2": "France",
       "date": "2026-06-26",
       "prediction": {
-        "win_prob": 0.17011665651001515,
-        "draw_prob": 0.22498534510935148,
-        "loss_prob": 0.6048979983806334,
-        "xG1": 0.8484637141227722,
-        "xG2": 1.826050579547882
+        "win_prob": 0.17117753227580076,
+        "draw_prob": 0.22544345785625333,
+        "loss_prob": 0.6033790098679459,
+        "xG1": 0.8513302206993103,
+        "xG2": 1.8225136399269104
       },
       "result": {
         "score1": 1,
         "score2": 4,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -1242,16 +1307,17 @@
       "team2": "Iraq",
       "date": "2026-06-26",
       "prediction": {
-        "win_prob": 0.6757815010000244,
-        "draw_prob": 0.19967078454083328,
-        "loss_prob": 0.12454771445914235,
-        "xG1": 2.0136544704437256,
-        "xG2": 0.725582629442215
+        "win_prob": 0.6763525975113097,
+        "draw_prob": 0.19950993977535533,
+        "loss_prob": 0.12413746271333503,
+        "xG1": 2.014289379119873,
+        "xG2": 0.723814845085144
       },
       "result": {
         "score1": 5,
         "score2": 0,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -1261,16 +1327,17 @@
       "team2": "Austria",
       "date": "2026-06-27",
       "prediction": {
-        "win_prob": 0.2751474755414304,
-        "draw_prob": 0.25955118967397006,
-        "loss_prob": 0.4653013347845995,
-        "xG1": 1.0786488056182861,
-        "xG2": 1.4848435521125793
+        "win_prob": 0.2746622225080678,
+        "draw_prob": 0.2597342182075553,
+        "loss_prob": 0.46560355928437674,
+        "xG1": 1.0759482979774475,
+        "xG2": 1.483572781085968
       },
       "result": {
         "score1": 3,
         "score2": 3,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -1280,16 +1347,17 @@
       "team2": "Argentina",
       "date": "2026-06-27",
       "prediction": {
-        "win_prob": 0.023965027241798036,
-        "draw_prob": 0.08582221795672923,
-        "loss_prob": 0.8902127548014728,
-        "xG1": 0.3445390313863754,
-        "xG2": 2.946462869644165
+        "win_prob": 0.02443490371949837,
+        "draw_prob": 0.08658451051451226,
+        "loss_prob": 0.8889805857659894,
+        "xG1": 0.3484957367181778,
+        "xG2": 2.940233588218689
       },
       "result": {
         "score1": 1,
         "score2": 3,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -1299,16 +1367,17 @@
       "team2": "Portugal",
       "date": "2026-06-27",
       "prediction": {
-        "win_prob": 0.4194648927760645,
-        "draw_prob": 0.2639418703467508,
-        "loss_prob": 0.31659323687718466,
-        "xG1": 1.3932417631149292,
-        "xG2": 1.1744393110275269
+        "win_prob": 0.4195470526832527,
+        "draw_prob": 0.264107256666034,
+        "loss_prob": 0.31634569065071316,
+        "xG1": 1.392067015171051,
+        "xG2": 1.1726702451705933
       },
       "result": {
         "score1": 0,
         "score2": 0,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -1318,16 +1387,17 @@
       "team2": "Uzbekistan",
       "date": "2026-06-27",
       "prediction": {
-        "win_prob": 0.5297060387638083,
-        "draw_prob": 0.2453535604518674,
-        "loss_prob": 0.22494040078432426,
-        "xG1": 1.6477059721946716,
-        "xG2": 0.9817219972610474
+        "win_prob": 0.5328001664660297,
+        "draw_prob": 0.24487795968427367,
+        "loss_prob": 0.2223218738496966,
+        "xG1": 1.652476191520691,
+        "xG2": 0.9738639891147614
       },
       "result": {
         "score1": 3,
         "score2": 1,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -1337,16 +1407,17 @@
       "team2": "England",
       "date": "2026-06-27",
       "prediction": {
-        "win_prob": 0.06448233655791163,
-        "draw_prob": 0.14482708423507704,
-        "loss_prob": 0.7906905792070114,
-        "xG1": 0.5437979996204376,
-        "xG2": 2.427048683166504
+        "win_prob": 0.0650458708035261,
+        "draw_prob": 0.1454451172600854,
+        "loss_prob": 0.7895090119363884,
+        "xG1": 0.5460659265518188,
+        "xG2": 2.422448992729187
       },
       "result": {
         "score1": 0,
         "score2": 2,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -1356,16 +1427,17 @@
       "team2": "Ghana",
       "date": "2026-06-27",
       "prediction": {
-        "win_prob": 0.7093841329905022,
-        "draw_prob": 0.1859557869446161,
-        "loss_prob": 0.10466008006488169,
-        "xG1": 2.1073076725006104,
-        "xG2": 0.6633982360363007
+        "win_prob": 0.7063367598956231,
+        "draw_prob": 0.18730695224492985,
+        "loss_prob": 0.10635628785944706,
+        "xG1": 2.0976641178131104,
+        "xG2": 0.6684196591377258
       },
       "result": {
         "score1": 2,
         "score2": 1,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -1375,16 +1447,17 @@
       "team2": "Canada",
       "date": "2026-06-28",
       "prediction": {
-        "win_prob": 0.14380761096649677,
-        "draw_prob": 0.21100774654236856,
-        "loss_prob": 0.6451846424911347,
-        "xG1": 0.781930536031723,
-        "xG2": 1.9337912797927856
+        "win_prob": 0.143815634257277,
+        "draw_prob": 0.21101126967030398,
+        "loss_prob": 0.645173096072419,
+        "xG1": 0.7819579541683197,
+        "xG2": 1.9337693452835083
       },
       "result": {
         "score1": 0,
         "score2": 1,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -1394,16 +1467,17 @@
       "team2": "Morocco",
       "date": "2026-06-29",
       "prediction": {
-        "win_prob": 0.4481059172360239,
-        "draw_prob": 0.2613982506537721,
-        "loss_prob": 0.29049583211020397,
-        "xG1": 1.4515808820724487,
-        "xG2": 1.1154529452323914
+        "win_prob": 0.4480960822048903,
+        "draw_prob": 0.2613981798034174,
+        "loss_prob": 0.2905057379916923,
+        "xG1": 1.451570212841034,
+        "xG2": 1.1154836416244507
       },
       "result": {
         "score1": 1,
         "score2": 1,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": "2-3"
       }
     },
     {
@@ -1413,16 +1487,17 @@
       "team2": "Paraguay",
       "date": "2026-06-30",
       "prediction": {
-        "win_prob": 0.42082623578140393,
-        "draw_prob": 0.26323485030726385,
-        "loss_prob": 0.3159389139113322,
-        "xG1": 1.4008489847183228,
-        "xG2": 1.1773428320884705
+        "win_prob": 0.4208385998458246,
+        "draw_prob": 0.26323232247374867,
+        "loss_prob": 0.31592907768042666,
+        "xG1": 1.400887370109558,
+        "xG2": 1.1773326396942139
       },
       "result": {
         "score1": 1,
         "score2": 1,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": "3-4"
       }
     },
     {
@@ -1432,16 +1507,17 @@
       "team2": "Japan",
       "date": "2026-06-29",
       "prediction": {
-        "win_prob": 0.6575135974698681,
-        "draw_prob": 0.20609293577339455,
-        "loss_prob": 0.13639346675673736,
-        "xG1": 1.97211492061615,
-        "xG2": 0.7647132575511932
+        "win_prob": 0.6575043048560181,
+        "draw_prob": 0.2060954906943639,
+        "loss_prob": 0.13640020444961798,
+        "xG1": 1.9721026420593262,
+        "xG2": 0.7647401392459869
       },
       "result": {
         "score1": 2,
         "score2": 1,
-        "status": "Finished"
+        "status": "Finished",
+        "shootout_score": null
       }
     },
     {
@@ -1451,11 +1527,11 @@
       "team2": "Sweden",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.7288616923129777,
-        "draw_prob": 0.1767821587463861,
-        "loss_prob": 0.09435614894063625,
-        "xG1": 2.175940990447998,
-        "xG2": 0.6348682045936584
+        "win_prob": 0.7288525160625337,
+        "draw_prob": 0.17678583304814102,
+        "loss_prob": 0.09436165088932541,
+        "xG1": 2.1759209632873535,
+        "xG2": 0.6348912417888641
       },
       "result": {
         "score1": null,
@@ -1472,11 +1548,11 @@
       "team2": "Senegal",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.5055139807463359,
-        "draw_prob": 0.2527025818796902,
-        "loss_prob": 0.24178343737397398,
-        "xG1": 1.5721124410629272,
-        "xG2": 1.0037543177604675
+        "win_prob": 0.5055148258196018,
+        "draw_prob": 0.2527014772315932,
+        "loss_prob": 0.24178369694880505,
+        "xG1": 1.5721229314804077,
+        "xG2": 1.0037617683410645
       },
       "result": {
         "score1": null,
@@ -1493,11 +1569,11 @@
       "team2": "Bosnia and Herzegovina",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.6365866610302461,
-        "draw_prob": 0.21358605630528033,
-        "loss_prob": 0.14982728266447365,
-        "xG1": 1.9175291657447815,
-        "xG2": 0.8023415207862854
+        "win_prob": 0.6365696038848514,
+        "draw_prob": 0.21359128470957955,
+        "loss_prob": 0.149839111405569,
+        "xG1": 1.9174943566322327,
+        "xG2": 0.8023797273635864
       },
       "result": {
         "score1": null,
@@ -1514,11 +1590,11 @@
       "team2": "Austria",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.6649960418217945,
-        "draw_prob": 0.20426108635605336,
-        "loss_prob": 0.1307428718221521,
-        "xG1": 1.9783247709274292,
-        "xG2": 0.7400788068771362
+        "win_prob": 0.6649784342302285,
+        "draw_prob": 0.20426733857747975,
+        "loss_prob": 0.13075422719229168,
+        "xG1": 1.978283941745758,
+        "xG2": 0.7401155233383179
       },
       "result": {
         "score1": null,
@@ -1535,11 +1611,11 @@
       "team2": "Croatia",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.46618319776763617,
-        "draw_prob": 0.2581545088412346,
-        "loss_prob": 0.2756622933911293,
-        "xG1": 1.4976012110710144,
-        "xG2": 1.0890072584152222
+        "win_prob": 0.4661731763875278,
+        "draw_prob": 0.2581550390769178,
+        "loss_prob": 0.2756717845355545,
+        "xG1": 1.4975874423980713,
+        "xG2": 1.0890349745750427
       },
       "result": {
         "score1": null,
@@ -1556,11 +1632,11 @@
       "team2": "Norway",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.21722632462252559,
-        "draw_prob": 0.24503094380588294,
-        "loss_prob": 0.5377427315715915,
-        "xG1": 0.9520233869552612,
-        "xG2": 1.6507033109664917
+        "win_prob": 0.2172393323322731,
+        "draw_prob": 0.24503395138683093,
+        "loss_prob": 0.537726716280896,
+        "xG1": 0.9520598351955414,
+        "xG2": 1.6506747007369995
       },
       "result": {
         "score1": null,
@@ -1577,11 +1653,11 @@
       "team2": "Ecuador",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.39441681820708263,
-        "draw_prob": 0.26411930168744846,
-        "loss_prob": 0.34146388010546896,
-        "xG1": 1.3504706025123596,
-        "xG2": 1.2376233339309692
+        "win_prob": 0.3944309973997514,
+        "draw_prob": 0.2641168909042154,
+        "loss_prob": 0.34145211169603323,
+        "xG1": 1.3505146503448486,
+        "xG2": 1.2376114130020142
       },
       "result": {
         "score1": null,
@@ -1598,11 +1674,11 @@
       "team2": "DR Congo",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.7489003975454005,
-        "draw_prob": 0.16800789493403168,
-        "loss_prob": 0.08309170752056781,
-        "xG1": 2.2298589944839478,
-        "xG2": 0.5906957983970642
+        "win_prob": 0.7488986743388361,
+        "draw_prob": 0.1680082765499415,
+        "loss_prob": 0.08309304911122241,
+        "xG1": 2.2298617362976074,
+        "xG2": 0.5907048285007477
       },
       "result": {
         "score1": null,
@@ -1619,11 +1695,11 @@
       "team2": "Algeria",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.5329815121367611,
-        "draw_prob": 0.24631457519811228,
-        "loss_prob": 0.2207039126651265,
-        "xG1": 1.6382272243499756,
-        "xG2": 0.9588969945907593
+        "win_prob": 0.532976002682721,
+        "draw_prob": 0.24631493788886036,
+        "loss_prob": 0.2207090594284186,
+        "xG1": 1.6382237076759338,
+        "xG2": 0.9589158296585083
       },
       "result": {
         "score1": null,
@@ -1640,11 +1716,11 @@
       "team2": "Ghana",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.811366755338465,
-        "draw_prob": 0.13500942913115582,
-        "loss_prob": 0.05362381553037922,
-        "xG1": 2.4776188135147095,
-        "xG2": 0.4831782579421997
+        "win_prob": 0.8113405979866483,
+        "draw_prob": 0.13502370899388227,
+        "loss_prob": 0.05363569301946943,
+        "xG1": 2.477514863014221,
+        "xG2": 0.48323291540145874
       },
       "result": {
         "score1": null,
@@ -1661,11 +1737,11 @@
       "team2": "Egypt",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.34224627548766856,
-        "draw_prob": 0.2627886779461357,
-        "loss_prob": 0.3949650465661958,
-        "xG1": 1.2489330172538757,
-        "xG2": 1.3617073893547058
+        "win_prob": 0.34224216738398233,
+        "draw_prob": 0.26278735230706257,
+        "loss_prob": 0.3949704803089551,
+        "xG1": 1.2489323616027832,
+        "xG2": 1.36172753572464
       },
       "result": {
         "score1": null,
@@ -1682,11 +1758,11 @@
       "team2": "Cape Verde",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.8697260640199873,
-        "draw_prob": 0.09990128347042551,
-        "loss_prob": 0.030372652509587185,
-        "xG1": 2.7804640531539917,
-        "xG2": 0.37245839834213257
+        "win_prob": 0.8697203943485531,
+        "draw_prob": 0.09990476829671861,
+        "loss_prob": 0.03037483735472829,
+        "xG1": 2.7804348468780518,
+        "xG2": 0.37247276306152344
       },
       "result": {
         "score1": null,
