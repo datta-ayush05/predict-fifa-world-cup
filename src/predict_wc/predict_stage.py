@@ -17,15 +17,15 @@ import wc_predict_gnn
 # ==============================================================================
 
 MATCHUPS_R32 = [
-    ("South Africa", "Canada"),
-    ("Netherlands", "Morocco"),
-    ("Germany", "Paraguay"),
+    ("South Africa", "Canada", "Canada"),
+    ("Netherlands", "Morocco", "Morocco"),
+    ("Germany", "Paraguay", "Paraguay"),
     ("France", "Sweden"),
     ("Belgium", "Senegal"),
     ("USA", "Bosnia and Herzegovina"),
     ("Spain", "Austria"),
     ("Portugal", "Croatia"),
-    ("Brazil", "Japan"),
+    ("Brazil", "Japan", "Brazil"),
     ("Ivory Coast", "Norway"),
     ("Mexico", "Ecuador"),
     ("England", "DR Congo"),
@@ -117,17 +117,26 @@ def simulate_from_stage(
             stage_name = stages[i]
             next_winners = []
             
-            for ta, tb in current_matchups:
+            for match in current_matchups:
+                ta = match[0]
+                tb = match[1]
+                locked_winner = None
+                if len(match) > 2 and match[2] not in [None, "TBD", ""]:
+                    locked_winner = match[2]
+
                 # If we are in SF, keep track of who played for reporting
                 if stage_name == "sf":
                     sf_counts[ta] += 1
                     sf_counts[tb] += 1
                 
-                winner, res = wc_predict_gnn.simulate_match(
-                    model, embeddings, ta, tb, team_idx, current_elos,
-                    "neutral", knockout=True, prob_matrix=prob_matrix
-                )
-                next_winners.append(winner)
+                if locked_winner:
+                    next_winners.append(locked_winner)
+                else:
+                    winner, res = wc_predict_gnn.simulate_match(
+                        model, embeddings, ta, tb, team_idx, current_elos,
+                        "neutral", knockout=True, prob_matrix=prob_matrix
+                    )
+                    next_winners.append(winner)
 
             if stage_name == "final":
                 # The winner of the final is the tournament winner
@@ -161,10 +170,17 @@ def main():
     
     # Map country names to canonical names
     mapped_matchups = []
-    for ta, tb in matchups:
+    for match in matchups:
+        ta = match[0]
+        tb = match[1]
         ta_mapped = wc_predict_gnn.NAME_MAP.get(ta, ta)
         tb_mapped = wc_predict_gnn.NAME_MAP.get(tb, tb)
-        mapped_matchups.append((ta_mapped, tb_mapped))
+        
+        if len(match) > 2 and match[2] not in [None, "TBD", ""]:
+            winner_mapped = wc_predict_gnn.NAME_MAP.get(match[2], match[2])
+            mapped_matchups.append((ta_mapped, tb_mapped, winner_mapped))
+        else:
+            mapped_matchups.append((ta_mapped, tb_mapped))
     matchups = mapped_matchups
     
     # Check if matchups are provided
@@ -216,9 +232,9 @@ def main():
 
     # Gather all teams involved in the starting bracket
     teams_in_bracket = set()
-    for ta, tb in matchups:
-        teams_in_bracket.add(ta)
-        teams_in_bracket.add(tb)
+    for match in matchups:
+        teams_in_bracket.add(match[0])
+        teams_in_bracket.add(match[1])
 
     sorted_teams = sorted(teams_in_bracket, key=lambda t: win_counts.get(t, 0), reverse=True)
     

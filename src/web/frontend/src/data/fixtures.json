@@ -1369,22 +1369,99 @@
       }
     },
     {
+      "match_id": "group_2026-06-28_SouthAfrica_Canada",
+      "stage": "Group Stage",
+      "team1": "South Africa",
+      "team2": "Canada",
+      "date": "2026-06-28",
+      "prediction": {
+        "win_prob": 0.14380761096649677,
+        "draw_prob": 0.21100774654236856,
+        "loss_prob": 0.6451846424911347,
+        "xG1": 0.781930536031723,
+        "xG2": 1.9337912797927856
+      },
+      "result": {
+        "score1": 0,
+        "score2": 1,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-29_Netherlands_Morocco",
+      "stage": "Group Stage",
+      "team1": "Netherlands",
+      "team2": "Morocco",
+      "date": "2026-06-29",
+      "prediction": {
+        "win_prob": 0.4481059172360239,
+        "draw_prob": 0.2613982506537721,
+        "loss_prob": 0.29049583211020397,
+        "xG1": 1.4515808820724487,
+        "xG2": 1.1154529452323914
+      },
+      "result": {
+        "score1": 1,
+        "score2": 1,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-30_Germany_Paraguay",
+      "stage": "Group Stage",
+      "team1": "Germany",
+      "team2": "Paraguay",
+      "date": "2026-06-30",
+      "prediction": {
+        "win_prob": 0.42082623578140393,
+        "draw_prob": 0.26323485030726385,
+        "loss_prob": 0.3159389139113322,
+        "xG1": 1.4008489847183228,
+        "xG2": 1.1773428320884705
+      },
+      "result": {
+        "score1": 1,
+        "score2": 1,
+        "status": "Finished"
+      }
+    },
+    {
+      "match_id": "group_2026-06-29_Brazil_Japan",
+      "stage": "Group Stage",
+      "team1": "Brazil",
+      "team2": "Japan",
+      "date": "2026-06-29",
+      "prediction": {
+        "win_prob": 0.6575135974698681,
+        "draw_prob": 0.20609293577339455,
+        "loss_prob": 0.13639346675673736,
+        "xG1": 1.97211492061615,
+        "xG2": 0.7647132575511932
+      },
+      "result": {
+        "score1": 2,
+        "score2": 1,
+        "status": "Finished"
+      }
+    },
+    {
       "match_id": "r32_0_SouthAfrica_Canada",
       "stage": "Round of 32",
       "team1": "South Africa",
       "team2": "Canada",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.17305770594231037,
-        "draw_prob": 0.22599295409151804,
-        "loss_prob": 0.6009493399661715,
-        "xG1": 0.8578078746795654,
-        "xG2": 1.818976640701294
+        "win_prob": 0.14380761096649677,
+        "draw_prob": 0.21100774654236856,
+        "loss_prob": 0.6451846424911347,
+        "xG1": 0.781930536031723,
+        "xG2": 1.9337912797927856
       },
       "result": {
         "score1": null,
         "score2": null,
-        "status": "Upcoming"
+        "status": "Finished",
+        "winner": "Canada"
       }
     },
     {
@@ -1394,16 +1471,17 @@
       "team2": "Morocco",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.4529691601708056,
-        "draw_prob": 0.26055071091605847,
-        "loss_prob": 0.286480128913136,
-        "xG1": 1.4640318155288696,
-        "xG2": 1.108437955379486
+        "win_prob": 0.4481059172360239,
+        "draw_prob": 0.2613982506537721,
+        "loss_prob": 0.29049583211020397,
+        "xG1": 1.4515808820724487,
+        "xG2": 1.1154529452323914
       },
       "result": {
         "score1": null,
         "score2": null,
-        "status": "Upcoming"
+        "status": "Finished",
+        "winner": "Morocco"
       }
     },
     {
@@ -1413,16 +1491,17 @@
       "team2": "Paraguay",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.4376200753379284,
-        "draw_prob": 0.26146692175027075,
-        "loss_prob": 0.30091300291180095,
-        "xG1": 1.4383119940757751,
-        "xG2": 1.1462474465370178
+        "win_prob": 0.42082623578140393,
+        "draw_prob": 0.26323485030726385,
+        "loss_prob": 0.3159389139113322,
+        "xG1": 1.4008489847183228,
+        "xG2": 1.1773428320884705
       },
       "result": {
         "score1": null,
         "score2": null,
-        "status": "Upcoming"
+        "status": "Finished",
+        "winner": "Paraguay"
       }
     },
     {
@@ -1432,16 +1511,17 @@
       "team2": "Sweden",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.7322996551571096,
-        "draw_prob": 0.1752122352001367,
-        "loss_prob": 0.09248810964275363,
-        "xG1": 2.1868072748184204,
-        "xG2": 0.6286226809024811
+        "win_prob": 0.7288616923129777,
+        "draw_prob": 0.1767821587463861,
+        "loss_prob": 0.09435614894063625,
+        "xG1": 2.175940990447998,
+        "xG2": 0.6348682045936584
       },
       "result": {
         "score1": null,
         "score2": null,
-        "status": "Upcoming"
+        "status": "Upcoming",
+        "winner": null
       }
     },
     {
@@ -1451,16 +1531,17 @@
       "team2": "Senegal",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.5075694197640389,
-        "draw_prob": 0.2521239609680388,
-        "loss_prob": 0.2403066192679223,
-        "xG1": 1.5782276391983032,
-        "xG2": 1.001642882823944
+        "win_prob": 0.5055139807463359,
+        "draw_prob": 0.2527025818796902,
+        "loss_prob": 0.24178343737397398,
+        "xG1": 1.5721124410629272,
+        "xG2": 1.0037543177604675
       },
       "result": {
         "score1": null,
         "score2": null,
-        "status": "Upcoming"
+        "status": "Upcoming",
+        "winner": null
       }
     },
     {
@@ -1470,16 +1551,17 @@
       "team2": "Bosnia and Herzegovina",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.6383230473547519,
-        "draw_prob": 0.21293578467741142,
-        "loss_prob": 0.14874116796783668,
-        "xG1": 1.9226187467575073,
-        "xG2": 0.7997559010982513
+        "win_prob": 0.6365866610302461,
+        "draw_prob": 0.21358605630528033,
+        "loss_prob": 0.14982728266447365,
+        "xG1": 1.9175291657447815,
+        "xG2": 0.8023415207862854
       },
       "result": {
         "score1": null,
         "score2": null,
-        "status": "Upcoming"
+        "status": "Upcoming",
+        "winner": null
       }
     },
     {
@@ -1489,16 +1571,17 @@
       "team2": "Austria",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.6674159989907481,
-        "draw_prob": 0.2033274765050126,
-        "loss_prob": 0.12925652450423927,
-        "xG1": 1.9849541783332825,
-        "xG2": 0.7358424961566925
+        "win_prob": 0.6649960418217945,
+        "draw_prob": 0.20426108635605336,
+        "loss_prob": 0.1307428718221521,
+        "xG1": 1.9783247709274292,
+        "xG2": 0.7400788068771362
       },
       "result": {
         "score1": null,
         "score2": null,
-        "status": "Upcoming"
+        "status": "Upcoming",
+        "winner": null
       }
     },
     {
@@ -1508,16 +1591,17 @@
       "team2": "Croatia",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.46602320147531745,
-        "draw_prob": 0.25799558536515355,
-        "loss_prob": 0.27598121315952895,
-        "xG1": 1.4988263845443726,
-        "xG2": 1.0910486578941345
+        "win_prob": 0.46618319776763617,
+        "draw_prob": 0.2581545088412346,
+        "loss_prob": 0.2756622933911293,
+        "xG1": 1.4976012110710144,
+        "xG2": 1.0890072584152222
       },
       "result": {
         "score1": null,
         "score2": null,
-        "status": "Upcoming"
+        "status": "Upcoming",
+        "winner": null
       }
     },
     {
@@ -1527,16 +1611,17 @@
       "team2": "Japan",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.6173136138886077,
-        "draw_prob": 0.22042206582278143,
-        "loss_prob": 0.16226432028861099,
-        "xG1": 1.8641132712364197,
-        "xG2": 0.8328319191932678
+        "win_prob": 0.6575135974698681,
+        "draw_prob": 0.20609293577339455,
+        "loss_prob": 0.13639346675673736,
+        "xG1": 1.97211492061615,
+        "xG2": 0.7647132575511932
       },
       "result": {
         "score1": null,
         "score2": null,
-        "status": "Upcoming"
+        "status": "Finished",
+        "winner": "Brazil"
       }
     },
     {
@@ -1546,16 +1631,17 @@
       "team2": "Norway",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.21539875290532895,
-        "draw_prob": 0.2443128484926477,
-        "loss_prob": 0.5402883986020234,
-        "xG1": 0.9485649168491364,
-        "xG2": 1.65761399269104
+        "win_prob": 0.21722632462252559,
+        "draw_prob": 0.24503094380588294,
+        "loss_prob": 0.5377427315715915,
+        "xG1": 0.9520233869552612,
+        "xG2": 1.6507033109664917
       },
       "result": {
         "score1": null,
         "score2": null,
-        "status": "Upcoming"
+        "status": "Upcoming",
+        "winner": null
       }
     },
     {
@@ -1565,16 +1651,17 @@
       "team2": "Ecuador",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.39503487606399057,
-        "draw_prob": 0.2639215725988644,
-        "loss_prob": 0.34104355133714503,
-        "xG1": 1.3530985713005066,
-        "xG2": 1.2379780411720276
+        "win_prob": 0.39441681820708263,
+        "draw_prob": 0.26411930168744846,
+        "loss_prob": 0.34146388010546896,
+        "xG1": 1.3504706025123596,
+        "xG2": 1.2376233339309692
       },
       "result": {
         "score1": null,
         "score2": null,
-        "status": "Upcoming"
+        "status": "Upcoming",
+        "winner": null
       }
     },
     {
@@ -1584,16 +1671,17 @@
       "team2": "DR Congo",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.7514530835741716,
-        "draw_prob": 0.16674681477293693,
-        "loss_prob": 0.08180010165289146,
-        "xG1": 2.2389813661575317,
-        "xG2": 0.5864444375038147
+        "win_prob": 0.7489003975454005,
+        "draw_prob": 0.16800789493403168,
+        "loss_prob": 0.08309170752056781,
+        "xG1": 2.2298589944839478,
+        "xG2": 0.5906957983970642
       },
       "result": {
         "score1": null,
         "score2": null,
-        "status": "Upcoming"
+        "status": "Upcoming",
+        "winner": null
       }
     },
     {
@@ -1603,16 +1691,17 @@
       "team2": "Algeria",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.5339153763973443,
-        "draw_prob": 0.24598791560070454,
-        "loss_prob": 0.22009670800195114,
-        "xG1": 1.6414270401000977,
-        "xG2": 0.9583036303520203
+        "win_prob": 0.5329815121367611,
+        "draw_prob": 0.24631457519811228,
+        "loss_prob": 0.2207039126651265,
+        "xG1": 1.6382272243499756,
+        "xG2": 0.9588969945907593
       },
       "result": {
         "score1": null,
         "score2": null,
-        "status": "Upcoming"
+        "status": "Upcoming",
+        "winner": null
       }
     },
     {
@@ -1622,16 +1711,17 @@
       "team2": "Ghana",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.8126647297325228,
-        "draw_prob": 0.13429857790642252,
-        "loss_prob": 0.0530366923610546,
-        "xG1": 2.482820987701416,
-        "xG2": 0.48048126697540283
+        "win_prob": 0.811366755338465,
+        "draw_prob": 0.13500942913115582,
+        "loss_prob": 0.05362381553037922,
+        "xG1": 2.4776188135147095,
+        "xG2": 0.4831782579421997
       },
       "result": {
         "score1": null,
         "score2": null,
-        "status": "Upcoming"
+        "status": "Upcoming",
+        "winner": null
       }
     },
     {
@@ -1641,16 +1731,17 @@
       "team2": "Egypt",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.3481195530126798,
-        "draw_prob": 0.26273920844034815,
-        "loss_prob": 0.389141238546972,
-        "xG1": 1.2635163068771362,
-        "xG2": 1.351311445236206
+        "win_prob": 0.34224627548766856,
+        "draw_prob": 0.2627886779461357,
+        "loss_prob": 0.3949650465661958,
+        "xG1": 1.2489330172538757,
+        "xG2": 1.3617073893547058
       },
       "result": {
         "score1": null,
         "score2": null,
-        "status": "Upcoming"
+        "status": "Upcoming",
+        "winner": null
       }
     },
     {
@@ -1660,16 +1751,17 @@
       "team2": "Cape Verde",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.8720034055609147,
-        "draw_prob": 0.09850121620174927,
-        "loss_prob": 0.02949537823733599,
-        "xG1": 2.7921364307403564,
-        "xG2": 0.3665952980518341
+        "win_prob": 0.8697260640199873,
+        "draw_prob": 0.09990128347042551,
+        "loss_prob": 0.030372652509587185,
+        "xG1": 2.7804640531539917,
+        "xG2": 0.37245839834213257
       },
       "result": {
         "score1": null,
         "score2": null,
-        "status": "Upcoming"
+        "status": "Upcoming",
+        "winner": null
       }
     },
     {
@@ -1688,7 +1780,8 @@
       "result": {
         "score1": null,
         "score2": null,
-        "status": "Upcoming"
+        "status": "Upcoming",
+        "winner": null
       }
     },
     {
@@ -1707,7 +1800,8 @@
       "result": {
         "score1": null,
         "score2": null,
-        "status": "Upcoming"
+        "status": "Upcoming",
+        "winner": null
       }
     },
     {
@@ -1726,7 +1820,8 @@
       "result": {
         "score1": null,
         "score2": null,
-        "status": "Upcoming"
+        "status": "Upcoming",
+        "winner": null
       }
     },
     {
@@ -1745,7 +1840,8 @@
       "result": {
         "score1": null,
         "score2": null,
-        "status": "Upcoming"
+        "status": "Upcoming",
+        "winner": null
       }
     },
     {
@@ -1764,7 +1860,8 @@
       "result": {
         "score1": null,
         "score2": null,
-        "status": "Upcoming"
+        "status": "Upcoming",
+        "winner": null
       }
     },
     {
@@ -1783,7 +1880,8 @@
       "result": {
         "score1": null,
         "score2": null,
-        "status": "Upcoming"
+        "status": "Upcoming",
+        "winner": null
       }
     },
     {
@@ -1802,7 +1900,8 @@
       "result": {
         "score1": null,
         "score2": null,
-        "status": "Upcoming"
+        "status": "Upcoming",
+        "winner": null
       }
     },
     {
@@ -1821,7 +1920,8 @@
       "result": {
         "score1": null,
         "score2": null,
-        "status": "Upcoming"
+        "status": "Upcoming",
+        "winner": null
       }
     },
     {
@@ -1840,7 +1940,8 @@
       "result": {
         "score1": null,
         "score2": null,
-        "status": "Upcoming"
+        "status": "Upcoming",
+        "winner": null
       }
     },
     {
@@ -1859,7 +1960,8 @@
       "result": {
         "score1": null,
         "score2": null,
-        "status": "Upcoming"
+        "status": "Upcoming",
+        "winner": null
       }
     },
     {
@@ -1878,7 +1980,8 @@
       "result": {
         "score1": null,
         "score2": null,
-        "status": "Upcoming"
+        "status": "Upcoming",
+        "winner": null
       }
     },
     {
@@ -1897,7 +2000,8 @@
       "result": {
         "score1": null,
         "score2": null,
-        "status": "Upcoming"
+        "status": "Upcoming",
+        "winner": null
       }
     },
     {
@@ -1916,7 +2020,8 @@
       "result": {
         "score1": null,
         "score2": null,
-        "status": "Upcoming"
+        "status": "Upcoming",
+        "winner": null
       }
     },
     {
@@ -1935,7 +2040,8 @@
       "result": {
         "score1": null,
         "score2": null,
-        "status": "Upcoming"
+        "status": "Upcoming",
+        "winner": null
       }
     },
     {
@@ -1954,7 +2060,8 @@
       "result": {
         "score1": null,
         "score2": null,
-        "status": "Upcoming"
+        "status": "Upcoming",
+        "winner": null
       }
     },
     {
@@ -1973,7 +2080,8 @@
       "result": {
         "score1": null,
         "score2": null,
-        "status": "Upcoming"
+        "status": "Upcoming",
+        "winner": null
       }
     }
   ]

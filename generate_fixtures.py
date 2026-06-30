@@ -122,9 +122,9 @@ stage_names = {
 for stage_key, matchups in MATCHUPS_BY_STAGE.items():
     stage_name = stage_names.get(stage_key, stage_key.upper())
     
-    for i, (t1, t2) in enumerate(matchups):
-        t1 = normalize_name(t1)
-        t2 = normalize_name(t2)
+    for i, match_tuple in enumerate(matchups):
+        t1 = normalize_name(match_tuple[0])
+        t2 = normalize_name(match_tuple[1])
         match_id = f"{stage_key}_{i}_{t1}_{t2}".replace(" ", "")
         
         # If the match already exists and is NOT upcoming (i.e. played), preserve its prediction
@@ -144,6 +144,8 @@ for stage_key, matchups in MATCHUPS_BY_STAGE.items():
                 
             probs = calculate_match_probs(xg1, xg2)
             
+            is_finished = len(match_tuple) > 2 and match_tuple[2] not in [None, "TBD", ""]
+            
             fixtures.append({
                 "match_id": match_id,
                 "stage": stage_name,
@@ -160,7 +162,8 @@ for stage_key, matchups in MATCHUPS_BY_STAGE.items():
                 "result": {
                     "score1": None,
                     "score2": None,
-                    "status": "Upcoming"
+                    "status": "Finished" if is_finished else "Upcoming",
+                    "winner": normalize_name(match_tuple[2]) if is_finished else None
                 }
             })
 
