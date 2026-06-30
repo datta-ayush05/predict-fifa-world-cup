@@ -28,6 +28,37 @@ with open(predictions_path, "r") as f:
     pred_data = json.load(f)
 prob_matrix = pred_data.get("prob_matrix", {})
 
+import sys
+sys.path.append(os.path.join(os.path.dirname(__file__), "src", "predict_wc"))
+try:
+    from predict_stage import MATCHUPS_BY_STAGE
+except ImportError as e:
+    print(f"Failed to import: {e}")
+    MATCHUPS_BY_STAGE = {}
+
+stage_names = {
+    "r32": "Round of 32",
+    "r16": "Round of 16",
+    "qf": "Quarter-Final",
+    "sf": "Semi-Final",
+    "third_place": "Third Place Play-off",
+    "final": "Final"
+}
+
+def normalize_name(name):
+    if name == "USA": return "United States"
+    if name == "Curaçao": return "Curacao"
+    return name
+
+knockout_lookup = {}
+for stage_key, matchups in MATCHUPS_BY_STAGE.items():
+    s_name = stage_names.get(stage_key, stage_key.upper())
+    for m in matchups:
+        t1_norm = normalize_name(m[0])
+        t2_norm = normalize_name(m[1])
+        knockout_lookup[f"{t1_norm}::{t2_norm}"] = s_name
+        knockout_lookup[f"{t2_norm}::{t1_norm}"] = s_name
+
 out_dir = os.path.join("src", "web", "frontend", "src", "data")
 out_path = os.path.join(out_dir, "fixtures.json")
 
@@ -44,10 +75,7 @@ if os.path.exists(out_path):
 
 fixtures = []
 
-def normalize_name(name):
-    if name == "USA": return "United States"
-    if name == "Curaçao": return "Curacao"
-    return name
+fixtures = []
 
 # 1. Parse Group Stage from results.csv
 results_csv_path = os.path.join("data", "results.csv")
@@ -60,7 +88,9 @@ with open(results_csv_path, "r", encoding="utf-8") as f:
             score1 = int(row["home_score"]) if row["home_score"] else None
             score2 = int(row["away_score"]) if row["away_score"] else None
             
-            match_id = f"group_{row['date']}_{t1}_{t2}".replace(" ", "")
+            stage_name_for_match = knockout_lookup.get(f"{t1}::{t2}", "Group Stage")
+            match_id_prefix = "group" if stage_name_for_match == "Group Stage" else "knockout"
+            match_id = f"{match_id_prefix}_{row['date']}_{t1}_{t2}".replace(" ", "")
             
             if match_id in existing_fixtures and existing_fixtures[match_id]["result"].get("status") != "Upcoming":
                 fixture = existing_fixtures[match_id]
@@ -83,7 +113,7 @@ with open(results_csv_path, "r", encoding="utf-8") as f:
                 
                 fixtures.append({
                     "match_id": match_id,
-                    "stage": "Group Stage",
+                    "stage": stage_name_for_match,
                     "team1": t1,
                     "team2": t2,
                     "date": row["date"],
@@ -102,22 +132,7 @@ with open(results_csv_path, "r", encoding="utf-8") as f:
                 })
 
 # 2. Add Knockout matches from predict_stage.py
-import sys
-sys.path.append(os.path.join(os.path.dirname(__file__), "src", "predict_wc"))
-try:
-    from predict_stage import MATCHUPS_BY_STAGE
-except ImportError as e:
-    print(f"Failed to import: {e}")
-    MATCHUPS_BY_STAGE = {}
-
-stage_names = {
-    "r32": "Round of 32",
-    "r16": "Round of 16",
-    "qf": "Quarter-Final",
-    "sf": "Semi-Final",
-    "third_place": "Third Place Play-off",
-    "final": "Final"
-}
+# (Only those that were not already added from results.csv)
 
 for stage_key, matchups in MATCHUPS_BY_STAGE.items():
     stage_name = stage_names.get(stage_key, stage_key.upper())
@@ -125,6 +140,17 @@ for stage_key, matchups in MATCHUPS_BY_STAGE.items():
     for i, match_tuple in enumerate(matchups):
         t1 = normalize_name(match_tuple[0])
         t2 = normalize_name(match_tuple[1])
+        
+        # Check if already added from results.csv
+        already_added = False
+        for f_existing in fixtures:
+            if f_existing["team1"] in [t1, t2] and f_existing["team2"] in [t1, t2]:
+                already_added = True
+                break
+        
+        if already_added:
+            continue
+            
         match_id = f"{stage_key}_{i}_{t1}_{t2}".replace(" ", "")
         
         # If the match already exists and is NOT upcoming (i.e. played), preserve its prediction

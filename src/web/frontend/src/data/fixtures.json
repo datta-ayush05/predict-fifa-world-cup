@@ -1369,8 +1369,8 @@
       }
     },
     {
-      "match_id": "group_2026-06-28_SouthAfrica_Canada",
-      "stage": "Group Stage",
+      "match_id": "knockout_2026-06-28_SouthAfrica_Canada",
+      "stage": "Round of 32",
       "team1": "South Africa",
       "team2": "Canada",
       "date": "2026-06-28",
@@ -1388,8 +1388,8 @@
       }
     },
     {
-      "match_id": "group_2026-06-29_Netherlands_Morocco",
-      "stage": "Group Stage",
+      "match_id": "knockout_2026-06-29_Netherlands_Morocco",
+      "stage": "Round of 32",
       "team1": "Netherlands",
       "team2": "Morocco",
       "date": "2026-06-29",
@@ -1407,8 +1407,8 @@
       }
     },
     {
-      "match_id": "group_2026-06-30_Germany_Paraguay",
-      "stage": "Group Stage",
+      "match_id": "knockout_2026-06-30_Germany_Paraguay",
+      "stage": "Round of 32",
       "team1": "Germany",
       "team2": "Paraguay",
       "date": "2026-06-30",
@@ -1426,8 +1426,8 @@
       }
     },
     {
-      "match_id": "group_2026-06-29_Brazil_Japan",
-      "stage": "Group Stage",
+      "match_id": "knockout_2026-06-29_Brazil_Japan",
+      "stage": "Round of 32",
       "team1": "Brazil",
       "team2": "Japan",
       "date": "2026-06-29",
@@ -1442,66 +1442,6 @@
         "score1": 2,
         "score2": 1,
         "status": "Finished"
-      }
-    },
-    {
-      "match_id": "r32_0_SouthAfrica_Canada",
-      "stage": "Round of 32",
-      "team1": "South Africa",
-      "team2": "Canada",
-      "date": "TBD",
-      "prediction": {
-        "win_prob": 0.14380761096649677,
-        "draw_prob": 0.21100774654236856,
-        "loss_prob": 0.6451846424911347,
-        "xG1": 0.781930536031723,
-        "xG2": 1.9337912797927856
-      },
-      "result": {
-        "score1": null,
-        "score2": null,
-        "status": "Finished",
-        "winner": "Canada"
-      }
-    },
-    {
-      "match_id": "r32_1_Netherlands_Morocco",
-      "stage": "Round of 32",
-      "team1": "Netherlands",
-      "team2": "Morocco",
-      "date": "TBD",
-      "prediction": {
-        "win_prob": 0.4481059172360239,
-        "draw_prob": 0.2613982506537721,
-        "loss_prob": 0.29049583211020397,
-        "xG1": 1.4515808820724487,
-        "xG2": 1.1154529452323914
-      },
-      "result": {
-        "score1": null,
-        "score2": null,
-        "status": "Finished",
-        "winner": "Morocco"
-      }
-    },
-    {
-      "match_id": "r32_2_Germany_Paraguay",
-      "stage": "Round of 32",
-      "team1": "Germany",
-      "team2": "Paraguay",
-      "date": "TBD",
-      "prediction": {
-        "win_prob": 0.42082623578140393,
-        "draw_prob": 0.26323485030726385,
-        "loss_prob": 0.3159389139113322,
-        "xG1": 1.4008489847183228,
-        "xG2": 1.1773428320884705
-      },
-      "result": {
-        "score1": null,
-        "score2": null,
-        "status": "Finished",
-        "winner": "Paraguay"
       }
     },
     {
@@ -1602,26 +1542,6 @@
         "score2": null,
         "status": "Upcoming",
         "winner": null
-      }
-    },
-    {
-      "match_id": "r32_8_Brazil_Japan",
-      "stage": "Round of 32",
-      "team1": "Brazil",
-      "team2": "Japan",
-      "date": "TBD",
-      "prediction": {
-        "win_prob": 0.6575135974698681,
-        "draw_prob": 0.20609293577339455,
-        "loss_prob": 0.13639346675673736,
-        "xG1": 1.97211492061615,
-        "xG2": 0.7647132575511932
-      },
-      "result": {
-        "score1": null,
-        "score2": null,
-        "status": "Finished",
-        "winner": "Brazil"
       }
     },
     {
@@ -1767,306 +1687,6 @@
     {
       "match_id": "r16_0_TBD_TBD",
       "stage": "Round of 16",
-      "team1": "TBD",
-      "team2": "TBD",
-      "date": "TBD",
-      "prediction": {
-        "win_prob": 0.34574580434747654,
-        "draw_prob": 0.30850839130504687,
-        "loss_prob": 0.3457458043474765,
-        "xG1": 1.0,
-        "xG2": 1.0
-      },
-      "result": {
-        "score1": null,
-        "score2": null,
-        "status": "Upcoming",
-        "winner": null
-      }
-    },
-    {
-      "match_id": "r16_1_TBD_TBD",
-      "stage": "Round of 16",
-      "team1": "TBD",
-      "team2": "TBD",
-      "date": "TBD",
-      "prediction": {
-        "win_prob": 0.34574580434747654,
-        "draw_prob": 0.30850839130504687,
-        "loss_prob": 0.3457458043474765,
-        "xG1": 1.0,
-        "xG2": 1.0
-      },
-      "result": {
-        "score1": null,
-        "score2": null,
-        "status": "Upcoming",
-        "winner": null
-      }
-    },
-    {
-      "match_id": "r16_2_TBD_TBD",
-      "stage": "Round of 16",
-      "team1": "TBD",
-      "team2": "TBD",
-      "date": "TBD",
-      "prediction": {
-        "win_prob": 0.34574580434747654,
-        "draw_prob": 0.30850839130504687,
-        "loss_prob": 0.3457458043474765,
-        "xG1": 1.0,
-        "xG2": 1.0
-      },
-      "result": {
-        "score1": null,
-        "score2": null,
-        "status": "Upcoming",
-        "winner": null
-      }
-    },
-    {
-      "match_id": "r16_3_TBD_TBD",
-      "stage": "Round of 16",
-      "team1": "TBD",
-      "team2": "TBD",
-      "date": "TBD",
-      "prediction": {
-        "win_prob": 0.34574580434747654,
-        "draw_prob": 0.30850839130504687,
-        "loss_prob": 0.3457458043474765,
-        "xG1": 1.0,
-        "xG2": 1.0
-      },
-      "result": {
-        "score1": null,
-        "score2": null,
-        "status": "Upcoming",
-        "winner": null
-      }
-    },
-    {
-      "match_id": "r16_4_TBD_TBD",
-      "stage": "Round of 16",
-      "team1": "TBD",
-      "team2": "TBD",
-      "date": "TBD",
-      "prediction": {
-        "win_prob": 0.34574580434747654,
-        "draw_prob": 0.30850839130504687,
-        "loss_prob": 0.3457458043474765,
-        "xG1": 1.0,
-        "xG2": 1.0
-      },
-      "result": {
-        "score1": null,
-        "score2": null,
-        "status": "Upcoming",
-        "winner": null
-      }
-    },
-    {
-      "match_id": "r16_5_TBD_TBD",
-      "stage": "Round of 16",
-      "team1": "TBD",
-      "team2": "TBD",
-      "date": "TBD",
-      "prediction": {
-        "win_prob": 0.34574580434747654,
-        "draw_prob": 0.30850839130504687,
-        "loss_prob": 0.3457458043474765,
-        "xG1": 1.0,
-        "xG2": 1.0
-      },
-      "result": {
-        "score1": null,
-        "score2": null,
-        "status": "Upcoming",
-        "winner": null
-      }
-    },
-    {
-      "match_id": "r16_6_TBD_TBD",
-      "stage": "Round of 16",
-      "team1": "TBD",
-      "team2": "TBD",
-      "date": "TBD",
-      "prediction": {
-        "win_prob": 0.34574580434747654,
-        "draw_prob": 0.30850839130504687,
-        "loss_prob": 0.3457458043474765,
-        "xG1": 1.0,
-        "xG2": 1.0
-      },
-      "result": {
-        "score1": null,
-        "score2": null,
-        "status": "Upcoming",
-        "winner": null
-      }
-    },
-    {
-      "match_id": "r16_7_TBD_TBD",
-      "stage": "Round of 16",
-      "team1": "TBD",
-      "team2": "TBD",
-      "date": "TBD",
-      "prediction": {
-        "win_prob": 0.34574580434747654,
-        "draw_prob": 0.30850839130504687,
-        "loss_prob": 0.3457458043474765,
-        "xG1": 1.0,
-        "xG2": 1.0
-      },
-      "result": {
-        "score1": null,
-        "score2": null,
-        "status": "Upcoming",
-        "winner": null
-      }
-    },
-    {
-      "match_id": "qf_0_TBD_TBD",
-      "stage": "Quarter-Final",
-      "team1": "TBD",
-      "team2": "TBD",
-      "date": "TBD",
-      "prediction": {
-        "win_prob": 0.34574580434747654,
-        "draw_prob": 0.30850839130504687,
-        "loss_prob": 0.3457458043474765,
-        "xG1": 1.0,
-        "xG2": 1.0
-      },
-      "result": {
-        "score1": null,
-        "score2": null,
-        "status": "Upcoming",
-        "winner": null
-      }
-    },
-    {
-      "match_id": "qf_1_TBD_TBD",
-      "stage": "Quarter-Final",
-      "team1": "TBD",
-      "team2": "TBD",
-      "date": "TBD",
-      "prediction": {
-        "win_prob": 0.34574580434747654,
-        "draw_prob": 0.30850839130504687,
-        "loss_prob": 0.3457458043474765,
-        "xG1": 1.0,
-        "xG2": 1.0
-      },
-      "result": {
-        "score1": null,
-        "score2": null,
-        "status": "Upcoming",
-        "winner": null
-      }
-    },
-    {
-      "match_id": "qf_2_TBD_TBD",
-      "stage": "Quarter-Final",
-      "team1": "TBD",
-      "team2": "TBD",
-      "date": "TBD",
-      "prediction": {
-        "win_prob": 0.34574580434747654,
-        "draw_prob": 0.30850839130504687,
-        "loss_prob": 0.3457458043474765,
-        "xG1": 1.0,
-        "xG2": 1.0
-      },
-      "result": {
-        "score1": null,
-        "score2": null,
-        "status": "Upcoming",
-        "winner": null
-      }
-    },
-    {
-      "match_id": "qf_3_TBD_TBD",
-      "stage": "Quarter-Final",
-      "team1": "TBD",
-      "team2": "TBD",
-      "date": "TBD",
-      "prediction": {
-        "win_prob": 0.34574580434747654,
-        "draw_prob": 0.30850839130504687,
-        "loss_prob": 0.3457458043474765,
-        "xG1": 1.0,
-        "xG2": 1.0
-      },
-      "result": {
-        "score1": null,
-        "score2": null,
-        "status": "Upcoming",
-        "winner": null
-      }
-    },
-    {
-      "match_id": "sf_0_TBD_TBD",
-      "stage": "Semi-Final",
-      "team1": "TBD",
-      "team2": "TBD",
-      "date": "TBD",
-      "prediction": {
-        "win_prob": 0.34574580434747654,
-        "draw_prob": 0.30850839130504687,
-        "loss_prob": 0.3457458043474765,
-        "xG1": 1.0,
-        "xG2": 1.0
-      },
-      "result": {
-        "score1": null,
-        "score2": null,
-        "status": "Upcoming",
-        "winner": null
-      }
-    },
-    {
-      "match_id": "sf_1_TBD_TBD",
-      "stage": "Semi-Final",
-      "team1": "TBD",
-      "team2": "TBD",
-      "date": "TBD",
-      "prediction": {
-        "win_prob": 0.34574580434747654,
-        "draw_prob": 0.30850839130504687,
-        "loss_prob": 0.3457458043474765,
-        "xG1": 1.0,
-        "xG2": 1.0
-      },
-      "result": {
-        "score1": null,
-        "score2": null,
-        "status": "Upcoming",
-        "winner": null
-      }
-    },
-    {
-      "match_id": "third_place_0_TBD_TBD",
-      "stage": "Third Place Play-off",
-      "team1": "TBD",
-      "team2": "TBD",
-      "date": "TBD",
-      "prediction": {
-        "win_prob": 0.34574580434747654,
-        "draw_prob": 0.30850839130504687,
-        "loss_prob": 0.3457458043474765,
-        "xG1": 1.0,
-        "xG2": 1.0
-      },
-      "result": {
-        "score1": null,
-        "score2": null,
-        "status": "Upcoming",
-        "winner": null
-      }
-    },
-    {
-      "match_id": "final_0_TBD_TBD",
-      "stage": "Final",
       "team1": "TBD",
       "team2": "TBD",
       "date": "TBD",
