@@ -231,15 +231,22 @@ function App() {
                     </div>
 
                     {/* Center Score */}
-                    <div style={{flex: '0 0 100px', textAlign: 'center', fontSize: '1.8rem', fontWeight: 'bold', display: 'flex', justifyContent: 'center', gap: '0.5rem', background: 'var(--glass-border)', padding: '0.5rem', borderRadius: '8px', margin: '0 1.5rem'}}>
-                      {m.result.status === 'Finished' ? (
-                        <>
-                          <span style={{color: 'var(--text-main)'}}>{m.result.score1}</span>
-                          <span style={{color: 'var(--text-muted)'}}>-</span>
-                          <span style={{color: 'var(--text-main)'}}>{m.result.score2}</span>
-                        </>
-                      ) : (
-                        <span style={{fontSize: '1.2rem', color: 'var(--text-muted)'}}>vs</span>
+                    <div style={{flex: '0 0 100px', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.2rem', margin: '0 1.5rem'}}>
+                      <div style={{fontSize: '1.8rem', fontWeight: 'bold', display: 'flex', justifyContent: 'center', gap: '0.5rem', background: 'var(--glass-border)', padding: '0.5rem', borderRadius: '8px', width: '100%'}}>
+                        {m.result.status === 'Finished' ? (
+                          <>
+                            <span style={{color: 'var(--text-main)'}}>{m.result.score1}</span>
+                            <span style={{color: 'var(--text-muted)'}}>-</span>
+                            <span style={{color: 'var(--text-main)'}}>{m.result.score2}</span>
+                          </>
+                        ) : (
+                          <span style={{fontSize: '1.2rem', color: 'var(--text-muted)'}}>vs</span>
+                        )}
+                      </div>
+                      {m.result.shootout_score && (
+                        <div style={{fontSize: '0.8rem', color: 'var(--accent)', fontWeight: 'bold', whiteSpace: 'nowrap'}}>
+                          (Pens: {m.result.shootout_score})
+                        </div>
                       )}
                     </div>
 

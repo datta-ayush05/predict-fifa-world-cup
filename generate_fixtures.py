@@ -59,6 +59,36 @@ for stage_key, matchups in MATCHUPS_BY_STAGE.items():
         knockout_lookup[f"{t1_norm}::{t2_norm}"] = s_name
         knockout_lookup[f"{t2_norm}::{t1_norm}"] = s_name
 
+import csv
+knockout_results = {}
+knockouts_path = os.path.join("data", "knockouts.csv")
+if os.path.exists(knockouts_path):
+    with open(knockouts_path, "r", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            t1_norm = normalize_name(row["team1"])
+            t2_norm = normalize_name(row["team2"])
+            
+            s1 = int(row["score1"]) if row.get("score1") else None
+            s2 = int(row["score2"]) if row.get("score2") else None
+            w = normalize_name(row["winner"]) if row.get("winner") else None
+            sh = str(row["shootout_score"]) if row.get("shootout_score") else None
+            
+            knockout_results[f"{t1_norm}::{t2_norm}"] = {
+                "score1": s1, "score2": s2, "winner": w, "shootout_score": sh
+            }
+            # Reverse shootout score
+            sh_rev = sh
+            if sh and "-" in sh:
+                try:
+                    p1, p2 = sh.split("-")
+                    sh_rev = f"{p2}-{p1}"
+                except:
+                    pass
+            knockout_results[f"{t2_norm}::{t1_norm}"] = {
+                "score1": s2, "score2": s1, "winner": w, "shootout_score": sh_rev
+            }
+
 out_dir = os.path.join("src", "web", "frontend", "src", "data")
 out_path = os.path.join(out_dir, "fixtures.json")
 
@@ -127,7 +157,8 @@ with open(results_csv_path, "r", encoding="utf-8") as f:
                     "result": {
                         "score1": score1,
                         "score2": score2,
-                        "status": "Finished" if score1 is not None else "Upcoming"
+                        "status": "Finished" if score1 is not None else "Upcoming",
+                        "shootout_score": knockout_results.get(f"{t1}::{t2}", {}).get("shootout_score")
                     }
                 })
 
@@ -170,7 +201,19 @@ for stage_key, matchups in MATCHUPS_BY_STAGE.items():
                 
             probs = calculate_match_probs(xg1, xg2)
             
-            is_finished = len(match_tuple) > 2 and match_tuple[2] not in [None, "TBD", ""]
+            ko_data = knockout_results.get(f"{t1}::{t2}")
+            if ko_data:
+                is_finished = ko_data["winner"] is not None
+                score1 = ko_data["score1"]
+                score2 = ko_data["score2"]
+                winner = ko_data["winner"]
+                shootout = ko_data["shootout_score"]
+            else:
+                is_finished = False
+                score1 = None
+                score2 = None
+                winner = None
+                shootout = None
             
             fixtures.append({
                 "match_id": match_id,
@@ -186,10 +229,11 @@ for stage_key, matchups in MATCHUPS_BY_STAGE.items():
                     "xG2": xg2
                 },
                 "result": {
-                    "score1": None,
-                    "score2": None,
+                    "score1": score1,
+                    "score2": score2,
                     "status": "Finished" if is_finished else "Upcoming",
-                    "winner": normalize_name(match_tuple[2]) if is_finished else None
+                    "winner": winner,
+                    "shootout_score": shootout
                 }
             })
 

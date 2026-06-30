@@ -7,6 +7,7 @@ from collections import defaultdict
 import torch
 from tqdm import tqdm
 import os
+import csv
 
 import wc_predict_gnn
 
@@ -17,15 +18,15 @@ import wc_predict_gnn
 # ==============================================================================
 
 MATCHUPS_R32 = [
-    ("South Africa", "Canada", "Canada"),
-    ("Netherlands", "Morocco", "Morocco"),
-    ("Germany", "Paraguay", "Paraguay"),
+    ("South Africa", "Canada"),
+    ("Netherlands", "Morocco"),
+    ("Germany", "Paraguay"),
     ("France", "Sweden"),
     ("Belgium", "Senegal"),
     ("USA", "Bosnia and Herzegovina"),
     ("Spain", "Austria"),
     ("Portugal", "Croatia"),
-    ("Brazil", "Japan", "Brazil"),
+    ("Brazil", "Japan"),
     ("Ivory Coast", "Norway"),
     ("Mexico", "Ecuador"),
     ("England", "DR Congo"),
@@ -86,6 +87,20 @@ def simulate_from_stage(
     current_elos,
     n_sims=10000
 ):
+    # Load locked winners from knockouts.csv
+    locked_winners_map = {}
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    knockouts_path = os.path.join(script_dir, "..", "..", "data", "knockouts.csv")
+    if os.path.exists(knockouts_path):
+        with open(knockouts_path, "r", encoding="utf-8") as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                t1 = wc_predict_gnn.NAME_MAP.get(row["team1"], row["team1"])
+                t2 = wc_predict_gnn.NAME_MAP.get(row["team2"], row["team2"])
+                winner = wc_predict_gnn.NAME_MAP.get(row["winner"], row["winner"])
+                if winner:
+                    locked_winners_map[f"{t1}::{t2}"] = winner
+                    locked_winners_map[f"{t2}::{t1}"] = winner
     device = next(model.parameters()).device
     graph = graph.to(device)
 
@@ -120,9 +135,7 @@ def simulate_from_stage(
             for match in current_matchups:
                 ta = match[0]
                 tb = match[1]
-                locked_winner = None
-                if len(match) > 2 and match[2] not in [None, "TBD", ""]:
-                    locked_winner = match[2]
+                locked_winner = locked_winners_map.get(f"{ta}::{tb}")
 
                 # If we are in SF, keep track of who played for reporting
                 if stage_name == "sf":
@@ -150,6 +163,37 @@ def simulate_from_stage(
 
     return win_counts, final_counts, sf_counts, prob_matrix
 
+def sync_knockouts_to_results():
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    data_dir = os.path.join(script_dir, "..", "..", "data")
+    knockouts_path = os.path.join(data_dir, "knockouts.csv")
+    results_path = os.path.join(data_dir, "results.csv")
+    
+    if not os.path.exists(knockouts_path):
+        return
+        
+    existing_results = set()
+    with open(results_path, "r", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            existing_results.add((row["date"], row["home_team"], row["away_team"]))
+            
+    new_rows = []
+    with open(knockouts_path, "r", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            key = (row["date"], row["team1"], row["team2"])
+            if key not in existing_results:
+                new_rows.append(
+                    f"{row['date']},{row['team1']},{row['team2']},{row['score1']},{row['score2']},FIFA World Cup,{row['city']},{row['country']},{row['neutral']}\n"
+                )
+                existing_results.add(key)
+                
+    if new_rows:
+        with open(results_path, "a", encoding="utf-8") as f:
+            f.writelines(new_rows)
+        print(f"> Synced {len(new_rows)} new matches from knockouts.csv to results.csv")
+
 def main():
     import sys
     if hasattr(sys.stdout, 'reconfigure'):
@@ -166,6 +210,8 @@ def main():
     parser.add_argument("--sims", type=int, default=10000, help="Number of simulations")
     args = parser.parse_args()
 
+    sync_knockouts_to_results()
+
     matchups = MATCHUPS_BY_STAGE[args.stage]
     
     # Map country names to canonical names
@@ -175,12 +221,7 @@ def main():
         tb = match[1]
         ta_mapped = wc_predict_gnn.NAME_MAP.get(ta, ta)
         tb_mapped = wc_predict_gnn.NAME_MAP.get(tb, tb)
-        
-        if len(match) > 2 and match[2] not in [None, "TBD", ""]:
-            winner_mapped = wc_predict_gnn.NAME_MAP.get(match[2], match[2])
-            mapped_matchups.append((ta_mapped, tb_mapped, winner_mapped))
-        else:
-            mapped_matchups.append((ta_mapped, tb_mapped))
+        mapped_matchups.append((ta_mapped, tb_mapped))
     matchups = mapped_matchups
     
     # Check if matchups are provided
