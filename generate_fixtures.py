@@ -115,8 +115,8 @@ with open(results_csv_path, "r", encoding="utf-8") as f:
         if row["date"].startswith("2026") and row["tournament"] == "FIFA World Cup":
             t1 = normalize_name(row["home_team"])
             t2 = normalize_name(row["away_team"])
-            score1 = int(row["home_score"]) if row["home_score"] else None
-            score2 = int(row["away_score"]) if row["away_score"] else None
+            score1 = int(row["home_score"]) if row["home_score"] and row["home_score"] != "NA" else None
+            score2 = int(row["away_score"]) if row["away_score"] and row["away_score"] != "NA" else None
             
             stage_name_for_match = knockout_lookup.get(f"{t1}::{t2}", "Group Stage")
             match_id_prefix = "group" if stage_name_for_match == "Group Stage" else "knockout"
@@ -174,10 +174,11 @@ for stage_key, matchups in MATCHUPS_BY_STAGE.items():
         
         # Check if already added from results.csv
         already_added = False
-        for f_existing in fixtures:
-            if f_existing["team1"] in [t1, t2] and f_existing["team2"] in [t1, t2]:
-                already_added = True
-                break
+        if t1 != "TBD" and t2 != "TBD":
+            for f_existing in fixtures:
+                if f_existing["team1"] in [t1, t2] and f_existing["team2"] in [t1, t2]:
+                    already_added = True
+                    break
         
         if already_added:
             continue

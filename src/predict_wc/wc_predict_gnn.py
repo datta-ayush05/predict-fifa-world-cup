@@ -180,10 +180,12 @@ class EloSystem:
     def _k(self, tournament: str) -> float:
         return get_tournament_weight(tournament)
 
-    def _expected(self, elo_h: float, elo_a: float, neutral: bool) -> float:
+    def _expected(self, elo_h: float, elo_a: float, home_adv_h: bool, home_adv_a: bool) -> float:
         delta = elo_h - elo_a
-        if not neutral:
+        if home_adv_h:
             delta += self.HOME_ADV
+        elif home_adv_a:
+            delta -= self.HOME_ADV
         return 1 / (1 + 10 ** (-delta / 400))
 
     def update(self, row: pd.Series):
@@ -191,14 +193,17 @@ class EloSystem:
         away = row["away_team"]
         hs = int(row["home_score"])
         aw = int(row["away_score"])
-        neutral = bool(row.get("neutral", False))
+        country = str(row.get("country", ""))
         tournament = str(row.get("tournament", ""))
         date = row["date"]
 
         ra = self.ratings[home]
         rb = self.ratings[away]
 
-        ea = self._expected(ra, rb, neutral)
+        home_adv_h = (home == country or NAME_MAP.get(home, home) == NAME_MAP.get(country, country))
+        home_adv_a = (away == country or NAME_MAP.get(away, away) == NAME_MAP.get(country, country))
+
+        ea = self._expected(ra, rb, home_adv_h, home_adv_a)
         eb = 1 - ea
 
         if hs > aw:
@@ -369,8 +374,17 @@ def build_graph(
         hi, ai = team_idx[h], team_idx[a]
         hs, aw = int(row["home_score"]), int(row["away_score"])
         tw = row["tw"]
-        neutral = bool(row.get("neutral", False))
-        venue_flag = 0.0 if neutral else 1.0
+        country = str(row.get("country", ""))
+        
+        home_adv_h = (h == country or NAME_MAP.get(h, h) == NAME_MAP.get(country, country))
+        home_adv_a = (a == country or NAME_MAP.get(a, a) == NAME_MAP.get(country, country))
+        
+        if home_adv_h:
+            venue_flag = 1.0
+        elif home_adv_a:
+            venue_flag = -1.0
+        else:
+            venue_flag = 0.0
 
         key = (hi, ai)
         if key not in edge_agg:
