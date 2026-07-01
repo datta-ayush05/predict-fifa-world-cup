@@ -1441,211 +1441,53 @@
       }
     },
     {
-      "match_id": "knockout_2026-06-28_SouthAfrica_Canada",
+      "match_id": "r32_0_SouthAfrica_Canada",
       "stage": "Round of 32",
       "team1": "South Africa",
       "team2": "Canada",
       "date": "2026-06-28",
       "prediction": {
-        "win_prob": 0.17314717908581448,
-        "draw_prob": 0.22605071579067965,
-        "loss_prob": 0.600802105123506,
-        "xG1": 0.857937216758728,
-        "xG2": 1.8184691667556763
+        "win_prob": 0.1512577600176703,
+        "draw_prob": 0.21471166981432446,
+        "loss_prob": 0.6340305701680052,
+        "xG1": 0.8042062222957611,
+        "xG2": 1.9077853560447693
       },
       "result": {
         "score1": 0,
         "score2": 1,
         "status": "Finished",
+        "winner": "Canada",
         "shootout_score": null
       }
     },
     {
-      "match_id": "knockout_2026-06-29_Brazil_Japan",
-      "stage": "Round of 32",
-      "team1": "Brazil",
-      "team2": "Japan",
-      "date": "2026-06-29",
-      "prediction": {
-        "win_prob": 0.6160640821756,
-        "draw_prob": 0.2208182224679134,
-        "loss_prob": 0.16311769535648665,
-        "xG1": 1.861116886138916,
-        "xG2": 0.8351680040359497
-      },
-      "result": {
-        "score1": 2,
-        "score2": 1,
-        "status": "Finished",
-        "shootout_score": null
-      }
-    },
-    {
-      "match_id": "knockout_2026-06-29_Germany_Paraguay",
-      "stage": "Round of 32",
-      "team1": "Germany",
-      "team2": "Paraguay",
-      "date": "2026-06-29",
-      "prediction": {
-        "win_prob": 0.4373744150405072,
-        "draw_prob": 0.2614408771725348,
-        "loss_prob": 0.301184707786958,
-        "xG1": 1.4382108449935913,
-        "xG2": 1.1472169160842896
-      },
-      "result": {
-        "score1": 1,
-        "score2": 1,
-        "status": "Finished",
-        "shootout_score": "3-4"
-      }
-    },
-    {
-      "match_id": "knockout_2026-06-29_Netherlands_Morocco",
+      "match_id": "r32_1_Netherlands_Morocco",
       "stage": "Round of 32",
       "team1": "Netherlands",
       "team2": "Morocco",
       "date": "2026-06-29",
       "prediction": {
-        "win_prob": 0.45240519681462155,
-        "draw_prob": 0.2605626516057468,
-        "loss_prob": 0.2870321515796317,
-        "xG1": 1.463318645954132,
-        "xG2": 1.1100784540176392
+        "win_prob": 0.44914526825240675,
+        "draw_prob": 0.2607533502464627,
+        "loss_prob": 0.2901013815011306,
+        "xG1": 1.4581042528152466,
+        "xG2": 1.1183446049690247
       },
       "result": {
         "score1": 1,
         "score2": 1,
         "status": "Finished",
+        "winner": "Morocco",
         "shootout_score": "2-3"
       }
     },
     {
-      "match_id": "knockout_2026-06-30_IvoryCoast_Norway",
-      "stage": "Round of 32",
-      "team1": "Ivory Coast",
-      "team2": "Norway",
-      "date": "2026-06-30",
-      "prediction": {
-        "win_prob": 0.21795694736029522,
-        "draw_prob": 0.24523617467588127,
-        "loss_prob": 0.5368068779638235,
-        "xG1": 0.953857421875,
-        "xG2": 1.6487334370613098
-      },
-      "result": {
-        "score1": 1,
-        "score2": 2,
-        "status": "Finished",
-        "shootout_score": null
-      }
-    },
-    {
-      "match_id": "knockout_2026-06-30_France_Sweden",
-      "stage": "Round of 32",
-      "team1": "France",
-      "team2": "Sweden",
-      "date": "2026-06-30",
-      "prediction": {
-        "win_prob": 0.7287247920294864,
-        "draw_prob": 0.1768198750659642,
-        "loss_prob": 0.09445533290454945,
-        "xG1": 2.1759458780288696,
-        "xG2": 0.635431170463562
-      },
-      "result": {
-        "score1": 3,
-        "score2": 0,
-        "status": "Finished",
-        "shootout_score": null
-      }
-    },
-    {
-      "match_id": "knockout_2026-06-30_Mexico_Ecuador",
-      "stage": "Round of 32",
-      "team1": "Mexico",
-      "team2": "Ecuador",
-      "date": "2026-06-30",
-      "prediction": {
-        "win_prob": 0.39432502531504576,
-        "draw_prob": 0.26404254069593985,
-        "loss_prob": 0.34163243398901444,
-        "xG1": 1.350890874862671,
-        "xG2": 1.2385730743408203
-      },
-      "result": {
-        "score1": 2,
-        "score2": 0,
-        "status": "Finished",
-        "shootout_score": null
-      }
-    },
-    {
-      "match_id": "knockout_2026-07-01_England_DRCongo",
-      "stage": "Round of 32",
-      "team1": "England",
-      "team2": "DR Congo",
-      "date": "2026-07-01",
-      "prediction": {
-        "win_prob": 0.7506482743817005,
-        "draw_prob": 0.16695244821723512,
-        "loss_prob": 0.0823992774010643,
-        "xG1": 2.2397944927215576,
-        "xG2": 0.5903441607952118
-      },
-      "result": {
-        "score1": null,
-        "score2": null,
-        "status": "Upcoming",
-        "shootout_score": null
-      }
-    },
-    {
-      "match_id": "knockout_2026-07-01_Belgium_Senegal",
-      "stage": "Round of 32",
-      "team1": "Belgium",
-      "team2": "Senegal",
-      "date": "2026-07-01",
-      "prediction": {
-        "win_prob": 0.5072281050838146,
-        "draw_prob": 0.25193375083595043,
-        "loss_prob": 0.2408381440802351,
-        "xG1": 1.5798658728599548,
-        "xG2": 1.0047531723976135
-      },
-      "result": {
-        "score1": null,
-        "score2": null,
-        "status": "Upcoming",
-        "shootout_score": null
-      }
-    },
-    {
-      "match_id": "knockout_2026-07-01_UnitedStates_BosniaandHerzegovina",
-      "stage": "Round of 32",
-      "team1": "United States",
-      "team2": "Bosnia and Herzegovina",
-      "date": "2026-07-01",
-      "prediction": {
-        "win_prob": 0.6377263483871392,
-        "draw_prob": 0.21284890551029437,
-        "loss_prob": 0.14942474610256654,
-        "xG1": 1.9249984622001648,
-        "xG2": 0.8041392862796783
-      },
-      "result": {
-        "score1": null,
-        "score2": null,
-        "status": "Upcoming",
-        "shootout_score": null
-      }
-    },
-    {
-      "match_id": "knockout_2026-06-30_Germany_Paraguay",
+      "match_id": "r32_2_Germany_Paraguay",
       "stage": "Round of 32",
       "team1": "Germany",
       "team2": "Paraguay",
-      "date": "2026-06-30",
+      "date": "2026-06-29",
       "prediction": {
         "win_prob": 0.407835134774652,
         "draw_prob": 0.2635827151681907,
@@ -1657,7 +1499,71 @@
         "score1": 1,
         "score2": 1,
         "status": "Finished",
+        "winner": "Paraguay",
         "shootout_score": "3-4"
+      }
+    },
+    {
+      "match_id": "r32_3_France_Sweden",
+      "stage": "Round of 32",
+      "team1": "France",
+      "team2": "Sweden",
+      "date": "2026-06-30",
+      "prediction": {
+        "win_prob": 0.7467468408426889,
+        "draw_prob": 0.16810717781190707,
+        "loss_prob": 0.08514598134540399,
+        "xG1": 2.2404425144195557,
+        "xG2": 0.6069881916046143
+      },
+      "result": {
+        "score1": 3,
+        "score2": 0,
+        "status": "Finished",
+        "winner": "France",
+        "shootout_score": null
+      }
+    },
+    {
+      "match_id": "r32_4_Belgium_Senegal",
+      "stage": "Round of 32",
+      "team1": "Belgium",
+      "team2": "Senegal",
+      "date": "TBD",
+      "prediction": {
+        "win_prob": 0.5073816801343457,
+        "draw_prob": 0.2518863919911191,
+        "loss_prob": 0.2407319278745352,
+        "xG1": 1.5803616642951965,
+        "xG2": 1.0046347975730896
+      },
+      "result": {
+        "score1": null,
+        "score2": null,
+        "status": "Upcoming",
+        "winner": null,
+        "shootout_score": null
+      }
+    },
+    {
+      "match_id": "r32_5_UnitedStates_BosniaandHerzegovina",
+      "stage": "Round of 32",
+      "team1": "United States",
+      "team2": "Bosnia and Herzegovina",
+      "date": "TBD",
+      "prediction": {
+        "win_prob": 0.6376692159744288,
+        "draw_prob": 0.21285756490793714,
+        "loss_prob": 0.14947321911763414,
+        "xG1": 1.9250000715255737,
+        "xG2": 0.8043678104877472
+      },
+      "result": {
+        "score1": null,
+        "score2": null,
+        "status": "Upcoming",
+        "winner": null,
+        "shootout_score": null
       }
     },
     {
@@ -1667,11 +1573,11 @@
       "team2": "Austria",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.6673333929737326,
-        "draw_prob": 0.2030708331457396,
-        "loss_prob": 0.12959577388052787,
-        "xG1": 1.9888445138931274,
-        "xG2": 0.739303857088089
+        "win_prob": 0.6673014305697003,
+        "draw_prob": 0.2030717322358005,
+        "loss_prob": 0.1296268371944992,
+        "xG1": 1.9889203906059265,
+        "xG2": 0.7394918203353882
       },
       "result": {
         "score1": null,
@@ -1688,11 +1594,11 @@
       "team2": "Croatia",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.46574973251639357,
-        "draw_prob": 0.25769831568165913,
-        "loss_prob": 0.2765519518019473,
-        "xG1": 1.501147985458374,
-        "xG2": 1.0947908759117126
+        "win_prob": 0.46578477225699233,
+        "draw_prob": 0.25767549669743706,
+        "loss_prob": 0.27653973104557067,
+        "xG1": 1.5013782978057861,
+        "xG2": 1.0948952436447144
       },
       "result": {
         "score1": null,
@@ -1703,17 +1609,101 @@
       }
     },
     {
+      "match_id": "r32_8_Brazil_Japan",
+      "stage": "Round of 32",
+      "team1": "Brazil",
+      "team2": "Japan",
+      "date": "2026-06-29",
+      "prediction": {
+        "win_prob": 0.6574885941010886,
+        "draw_prob": 0.2058146898585326,
+        "loss_prob": 0.13669671604037878,
+        "xG1": 1.976092278957367,
+        "xG2": 0.7680700719356537
+      },
+      "result": {
+        "score1": 2,
+        "score2": 1,
+        "status": "Finished",
+        "winner": "Brazil",
+        "shootout_score": null
+      }
+    },
+    {
+      "match_id": "r32_9_IvoryCoast_Norway",
+      "stage": "Round of 32",
+      "team1": "Ivory Coast",
+      "team2": "Norway",
+      "date": "2026-06-30",
+      "prediction": {
+        "win_prob": 0.18910774137498174,
+        "draw_prob": 0.23436806711623376,
+        "loss_prob": 0.5765241915087844,
+        "xG1": 0.8889458179473877,
+        "xG2": 1.7468760013580322
+      },
+      "result": {
+        "score1": 1,
+        "score2": 2,
+        "status": "Finished",
+        "winner": "Norway",
+        "shootout_score": null
+      }
+    },
+    {
+      "match_id": "r32_10_Mexico_Ecuador",
+      "stage": "Round of 32",
+      "team1": "Mexico",
+      "team2": "Ecuador",
+      "date": "2026-06-30",
+      "prediction": {
+        "win_prob": 0.457700295019143,
+        "draw_prob": 0.2579381408574133,
+        "loss_prob": 0.28436156412344366,
+        "xG1": 1.4912095069885254,
+        "xG2": 1.1184765100479126
+      },
+      "result": {
+        "score1": 2,
+        "score2": 0,
+        "status": "Finished",
+        "winner": "Mexico",
+        "shootout_score": null
+      }
+    },
+    {
+      "match_id": "r32_11_England_DRCongo",
+      "stage": "Round of 32",
+      "team1": "England",
+      "team2": "DR Congo",
+      "date": "2026-07-01",
+      "prediction": {
+        "win_prob": 0.7506482743817005,
+        "draw_prob": 0.16695244821723512,
+        "loss_prob": 0.0823992774010643,
+        "xG1": 2.2397944927215576,
+        "xG2": 0.5903441607952118
+      },
+      "result": {
+        "score1": 2,
+        "score2": 1,
+        "status": "Finished",
+        "winner": "England",
+        "shootout_score": null
+      }
+    },
+    {
       "match_id": "r32_12_Switzerland_Algeria",
       "stage": "Round of 32",
       "team1": "Switzerland",
       "team2": "Algeria",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.5347685498879586,
-        "draw_prob": 0.24549856812083296,
-        "loss_prob": 0.21973288199120847,
-        "xG1": 1.6462385058403015,
-        "xG2": 0.9596386551856995
+        "win_prob": 0.5348926306792336,
+        "draw_prob": 0.24545390177683504,
+        "loss_prob": 0.21965346754393134,
+        "xG1": 1.6466765403747559,
+        "xG2": 0.9595714509487152
       },
       "result": {
         "score1": null,
@@ -1730,11 +1720,11 @@
       "team2": "Ghana",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.8116507469974533,
-        "draw_prob": 0.13470496834156767,
-        "loss_prob": 0.05364428466097903,
-        "xG1": 2.482618808746338,
-        "xG2": 0.48493391275405884
+        "win_prob": 0.8116802422676714,
+        "draw_prob": 0.1346827653544477,
+        "loss_prob": 0.05363699237788085,
+        "xG1": 2.4828948974609375,
+        "xG2": 0.4849684238433838
       },
       "result": {
         "score1": null,
@@ -1751,11 +1741,11 @@
       "team2": "Egypt",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.3470376550442111,
-        "draw_prob": 0.2624626111239713,
-        "loss_prob": 0.39049973383181774,
-        "xG1": 1.26291823387146,
-        "xG2": 1.356003761291504
+        "win_prob": 0.3470670712699996,
+        "draw_prob": 0.26244829863941266,
+        "loss_prob": 0.3904846300905876,
+        "xG1": 1.263092279434204,
+        "xG2": 1.3560863733291626
       },
       "result": {
         "score1": null,
@@ -1772,11 +1762,11 @@
       "team2": "Cape Verde",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.8709006968942977,
-        "draw_prob": 0.0990753313290066,
-        "loss_prob": 0.03002397177669573,
-        "xG1": 2.790507197380066,
-        "xG2": 0.3715306669473648
+        "win_prob": 0.8709177488127106,
+        "draw_prob": 0.09906069163452177,
+        "loss_prob": 0.030021559552767637,
+        "xG1": 2.7907557487487793,
+        "xG2": 0.37157000601291656
       },
       "result": {
         "score1": null,

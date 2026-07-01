@@ -75,7 +75,7 @@ if os.path.exists(knockouts_path):
             sh = str(row["shootout_score"]) if row.get("shootout_score") else None
             
             knockout_results[f"{t1_norm}::{t2_norm}"] = {
-                "score1": s1, "score2": s2, "winner": w, "shootout_score": sh
+                "score1": s1, "score2": s2, "winner": w, "shootout_score": sh, "date": row["date"]
             }
             # Reverse shootout score
             sh_rev = sh
@@ -86,7 +86,7 @@ if os.path.exists(knockouts_path):
                 except:
                     pass
             knockout_results[f"{t2_norm}::{t1_norm}"] = {
-                "score1": s2, "score2": s1, "winner": w, "shootout_score": sh_rev
+                "score1": s2, "score2": s1, "winner": w, "shootout_score": sh_rev, "date": row["date"]
             }
 
 out_dir = os.path.join("src", "web", "frontend", "src", "data")
@@ -119,7 +119,12 @@ with open(results_csv_path, "r", encoding="utf-8") as f:
             score2 = int(row["away_score"]) if row["away_score"] and row["away_score"] != "NA" else None
             
             stage_name_for_match = knockout_lookup.get(f"{t1}::{t2}", "Group Stage")
-            match_id_prefix = "group" if stage_name_for_match == "Group Stage" else "knockout"
+            
+            # Skip knockout matches here, they are handled by the second block with the correct match_id
+            if stage_name_for_match != "Group Stage":
+                continue
+                
+            match_id_prefix = "group"
             match_id = f"{match_id_prefix}_{row['date']}_{t1}_{t2}".replace(" ", "")
             
             if match_id in existing_fixtures and existing_fixtures[match_id]["result"].get("status") != "Upcoming":
@@ -209,19 +214,21 @@ for stage_key, matchups in MATCHUPS_BY_STAGE.items():
                 score2 = ko_data["score2"]
                 winner = ko_data["winner"]
                 shootout = ko_data["shootout_score"]
+                match_date = ko_data.get("date", "TBD")
             else:
                 is_finished = False
                 score1 = None
                 score2 = None
                 winner = None
                 shootout = None
+                match_date = "TBD"
             
             fixtures.append({
                 "match_id": match_id,
                 "stage": stage_name,
                 "team1": t1,
                 "team2": t2,
-                "date": "TBD",
+                "date": match_date,
                 "prediction": {
                     "win_prob": probs["win"],
                     "draw_prob": probs["draw"],
