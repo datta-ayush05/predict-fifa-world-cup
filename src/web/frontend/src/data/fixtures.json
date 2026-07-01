@@ -1521,23 +1521,62 @@
       }
     },
     {
-      "match_id": "r32_3_France_Sweden",
+      "match_id": "knockout_2026-06-30_IvoryCoast_Norway",
+      "stage": "Round of 32",
+      "team1": "Ivory Coast",
+      "team2": "Norway",
+      "date": "2026-06-30",
+      "prediction": {
+        "win_prob": 0.19000587553999726,
+        "draw_prob": 0.23495298956744196,
+        "loss_prob": 0.5750411348925608,
+        "xG1": 0.8898569345474243,
+        "xG2": 1.7415301203727722
+      },
+      "result": {
+        "score1": 1,
+        "score2": 2,
+        "status": "Finished",
+        "shootout_score": null
+      }
+    },
+    {
+      "match_id": "knockout_2026-06-30_France_Sweden",
       "stage": "Round of 32",
       "team1": "France",
       "team2": "Sweden",
-      "date": "TBD",
+      "date": "2026-06-30",
       "prediction": {
-        "win_prob": 0.7288525160625337,
-        "draw_prob": 0.17678583304814102,
-        "loss_prob": 0.09436165088932541,
-        "xG1": 2.1759209632873535,
-        "xG2": 0.6348912417888641
+        "win_prob": 0.7454909842430922,
+        "draw_prob": 0.16880662463518692,
+        "loss_prob": 0.0857023911217209,
+        "xG1": 2.234294891357422,
+        "xG2": 0.607904851436615
       },
       "result": {
-        "score1": null,
-        "score2": null,
-        "status": "Upcoming",
-        "winner": null,
+        "score1": 3,
+        "score2": 0,
+        "status": "Finished",
+        "shootout_score": null
+      }
+    },
+    {
+      "match_id": "knockout_2026-06-30_Mexico_Ecuador",
+      "stage": "Round of 32",
+      "team1": "Mexico",
+      "team2": "Ecuador",
+      "date": "2026-06-30",
+      "prediction": {
+        "win_prob": 0.4566869250552545,
+        "draw_prob": 0.25832837994021424,
+        "loss_prob": 0.28498469500453116,
+        "xG1": 1.4868002533912659,
+        "xG2": 1.117935061454773
+      },
+      "result": {
+        "score1": 2,
+        "score2": 0,
+        "status": "Finished",
         "shootout_score": null
       }
     },
@@ -1548,11 +1587,11 @@
       "team2": "Senegal",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.5055148258196018,
-        "draw_prob": 0.2527014772315932,
-        "loss_prob": 0.24178369694880505,
-        "xG1": 1.5721229314804077,
-        "xG2": 1.0037617683410645
+        "win_prob": 0.5071465128653074,
+        "draw_prob": 0.2521569777666387,
+        "loss_prob": 0.24069650936805384,
+        "xG1": 1.577767252922058,
+        "xG2": 1.002907931804657
       },
       "result": {
         "score1": null,
@@ -1569,11 +1608,11 @@
       "team2": "Bosnia and Herzegovina",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.6365696038848514,
-        "draw_prob": 0.21359128470957955,
-        "loss_prob": 0.149839111405569,
-        "xG1": 1.9174943566322327,
-        "xG2": 0.8023797273635864
+        "win_prob": 0.6361864130238261,
+        "draw_prob": 0.2135457617984563,
+        "loss_prob": 0.15026782517771772,
+        "xG1": 1.91886568069458,
+        "xG2": 0.8050644099712372
       },
       "result": {
         "score1": null,
@@ -1590,11 +1629,11 @@
       "team2": "Austria",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.6649784342302285,
-        "draw_prob": 0.20426733857747975,
-        "loss_prob": 0.13075422719229168,
-        "xG1": 1.978283941745758,
-        "xG2": 0.7401155233383179
+        "win_prob": 0.6650711850287301,
+        "draw_prob": 0.2040786133323308,
+        "loss_prob": 0.13085020163893912,
+        "xG1": 1.9807032942771912,
+        "xG2": 0.741704672574997
       },
       "result": {
         "score1": null,
@@ -1611,53 +1650,11 @@
       "team2": "Croatia",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.4661731763875278,
-        "draw_prob": 0.2581550390769178,
-        "loss_prob": 0.2756717845355545,
-        "xG1": 1.4975874423980713,
-        "xG2": 1.0890349745750427
-      },
-      "result": {
-        "score1": null,
-        "score2": null,
-        "status": "Upcoming",
-        "winner": null,
-        "shootout_score": null
-      }
-    },
-    {
-      "match_id": "r32_9_IvoryCoast_Norway",
-      "stage": "Round of 32",
-      "team1": "Ivory Coast",
-      "team2": "Norway",
-      "date": "TBD",
-      "prediction": {
-        "win_prob": 0.2172393323322731,
-        "draw_prob": 0.24503395138683093,
-        "loss_prob": 0.537726716280896,
-        "xG1": 0.9520598351955414,
-        "xG2": 1.6506747007369995
-      },
-      "result": {
-        "score1": null,
-        "score2": null,
-        "status": "Upcoming",
-        "winner": null,
-        "shootout_score": null
-      }
-    },
-    {
-      "match_id": "r32_10_Mexico_Ecuador",
-      "stage": "Round of 32",
-      "team1": "Mexico",
-      "team2": "Ecuador",
-      "date": "TBD",
-      "prediction": {
-        "win_prob": 0.3944309973997514,
-        "draw_prob": 0.2641168909042154,
-        "loss_prob": 0.34145211169603323,
-        "xG1": 1.3505146503448486,
-        "xG2": 1.2376114130020142
+        "win_prob": 0.46596918951380323,
+        "draw_prob": 0.2579564351310158,
+        "loss_prob": 0.27607437535518087,
+        "xG1": 1.4991151094436646,
+        "xG2": 1.0915997624397278
       },
       "result": {
         "score1": null,
@@ -1674,11 +1671,11 @@
       "team2": "DR Congo",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.7488986743388361,
-        "draw_prob": 0.1680082765499415,
-        "loss_prob": 0.08309304911122241,
-        "xG1": 2.2298617362976074,
-        "xG2": 0.5907048285007477
+        "win_prob": 0.7495803664381274,
+        "draw_prob": 0.1675752748381135,
+        "loss_prob": 0.08284435872375906,
+        "xG1": 2.2341400384902954,
+        "xG2": 0.5908527076244354
       },
       "result": {
         "score1": null,
@@ -1695,11 +1692,11 @@
       "team2": "Algeria",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.532976002682721,
-        "draw_prob": 0.24631493788886036,
-        "loss_prob": 0.2207090594284186,
-        "xG1": 1.6382237076759338,
-        "xG2": 0.9589158296585083
+        "win_prob": 0.5340562148400883,
+        "draw_prob": 0.24585453434826823,
+        "loss_prob": 0.2200892508116435,
+        "xG1": 1.6427395343780518,
+        "xG2": 0.9590414464473724
       },
       "result": {
         "score1": null,
@@ -1716,11 +1713,11 @@
       "team2": "Ghana",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.8113405979866483,
-        "draw_prob": 0.13502370899388227,
-        "loss_prob": 0.05363569301946943,
-        "xG1": 2.477514863014221,
-        "xG2": 0.48323291540145874
+        "win_prob": 0.8106856733958352,
+        "draw_prob": 0.13532566068496585,
+        "loss_prob": 0.05398866591919895,
+        "xG1": 2.4763399362564087,
+        "xG2": 0.48546695709228516
       },
       "result": {
         "score1": null,
@@ -1737,11 +1734,11 @@
       "team2": "Egypt",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.34224216738398233,
-        "draw_prob": 0.26278735230706257,
-        "loss_prob": 0.3949704803089551,
-        "xG1": 1.2489323616027832,
-        "xG2": 1.36172753572464
+        "win_prob": 0.3449011226408195,
+        "draw_prob": 0.2627267380716768,
+        "loss_prob": 0.39237213928750364,
+        "xG1": 1.2558576464653015,
+        "xG2": 1.357441008090973
       },
       "result": {
         "score1": null,
@@ -1758,11 +1755,11 @@
       "team2": "Cape Verde",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.8697203943485531,
-        "draw_prob": 0.09990476829671861,
-        "loss_prob": 0.03037483735472829,
-        "xG1": 2.7804348468780518,
-        "xG2": 0.37247276306152344
+        "win_prob": 0.8700941647183688,
+        "draw_prob": 0.09967981948313073,
+        "loss_prob": 0.030226015798500566,
+        "xG1": 2.7821751832962036,
+        "xG2": 0.37142816185951233
       },
       "result": {
         "score1": null,
