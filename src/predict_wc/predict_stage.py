@@ -324,6 +324,13 @@ def main():
     with open(out_path, "w") as f:
         json.dump(out_data, f, indent=2)
     print(f"\nSaved updated predictions to {out_path}")
+    
+    frontend_dir = os.path.join(script_dir, "..", "..", "src", "web", "frontend", "src", "data")
+    if os.path.exists(frontend_dir):
+        frontend_out = os.path.join(frontend_dir, "predictions.json")
+        with open(frontend_out, "w") as f:
+            json.dump(out_data, f, indent=2)
+        print(f"Also saved predictions to frontend: {frontend_out}")
 
 if __name__ == "__main__":
     main()
