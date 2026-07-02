@@ -7,9 +7,11 @@ def run_cmd(cmd):
     print(f"> {cmd}")
     subprocess.run(cmd, shell=True, check=True, env=env)
 
+import sys
+
 if __name__ == "__main__":
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    python_exe = os.path.join(script_dir, ".venv", "Scripts", "python.exe")
+    python_exe = sys.executable
     
     print("=" * 50)
     print("  Daily Update Script")
