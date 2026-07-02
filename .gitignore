@@ -18,5 +18,4 @@ __pycache__
 .env/
 
 # Workflow Scripts
-daily_update.py
 rebuild_history.py
