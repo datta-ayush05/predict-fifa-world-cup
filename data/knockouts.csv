@@ -1,0 +1,11 @@
+date,stage,team1,team2,score1,score2,shootout_score,winner,city,country,neutral
+2026-06-28,r32,South Africa,Canada,0,1,,Canada,Inglewood,United States,TRUE
+2026-06-29,r32,Netherlands,Morocco,1,1,2-3,Morocco,Guadalupe,Mexico,TRUE
+2026-06-29,r32,Germany,Paraguay,1,1,3-4,Paraguay,Foxborough,United States,TRUE
+2026-06-29,r32,Brazil,Japan,2,1,,Brazil,Houston,United States,TRUE
+2026-06-30,r32,Ivory Coast,Norway,1,2,,Norway,Arlington,United States,TRUE
+2026-06-30,r32,France,Sweden,3,0,,France,East Rutherford,United States,TRUE
+2026-06-30,r32,Mexico,Ecuador,2,0,,Mexico,Mexico City,Mexico,FALSE
+2026-07-01,r32,England,DR Congo,2,1,,England,Atlanta,United States,TRUE
+2026-07-01,r32,Belgium,Senegal,3,2,,Belgium,Seattle,United States,TRUE
+2026-07-01,r32,United States,Bosnia and Herzegovina,2,0,,United States,Santa Clara,United States,FALSE

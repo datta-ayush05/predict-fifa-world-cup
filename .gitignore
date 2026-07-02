@@ -1,7 +1,8 @@
 # Datasets
 *.csv
 *.xlsx
-
+!data/results.csv
+!data/knockouts.csv
 # PyTorch Models
 *.pt
 *.pth
