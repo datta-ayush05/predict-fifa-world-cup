@@ -28,13 +28,11 @@ from collections import defaultdict
 from functools import cmp_to_key
 from itertools import combinations
 
-import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-
 from torch_geometric.data import Data
 from torch_geometric.nn import GATConv
 from tqdm import tqdm
@@ -180,7 +178,9 @@ class EloSystem:
     def _k(self, tournament: str) -> float:
         return get_tournament_weight(tournament)
 
-    def _expected(self, elo_h: float, elo_a: float, home_adv_h: bool, home_adv_a: bool) -> float:
+    def _expected(
+        self, elo_h: float, elo_a: float, home_adv_h: bool, home_adv_a: bool
+    ) -> float:
         delta = elo_h - elo_a
         if home_adv_h:
             delta += self.HOME_ADV
@@ -200,8 +200,12 @@ class EloSystem:
         ra = self.ratings[home]
         rb = self.ratings[away]
 
-        home_adv_h = (home == country or NAME_MAP.get(home, home) == NAME_MAP.get(country, country))
-        home_adv_a = (away == country or NAME_MAP.get(away, away) == NAME_MAP.get(country, country))
+        home_adv_h = home == country or NAME_MAP.get(home, home) == NAME_MAP.get(
+            country, country
+        )
+        home_adv_a = away == country or NAME_MAP.get(away, away) == NAME_MAP.get(
+            country, country
+        )
 
         ea = self._expected(ra, rb, home_adv_h, home_adv_a)
         eb = 1 - ea
@@ -375,10 +379,14 @@ def build_graph(
         hs, aw = int(row["home_score"]), int(row["away_score"])
         tw = row["tw"]
         country = str(row.get("country", ""))
-        
-        home_adv_h = (h == country or NAME_MAP.get(h, h) == NAME_MAP.get(country, country))
-        home_adv_a = (a == country or NAME_MAP.get(a, a) == NAME_MAP.get(country, country))
-        
+
+        home_adv_h = h == country or NAME_MAP.get(h, h) == NAME_MAP.get(
+            country, country
+        )
+        home_adv_a = a == country or NAME_MAP.get(a, a) == NAME_MAP.get(
+            country, country
+        )
+
         if home_adv_h:
             venue_flag = 1.0
         elif home_adv_a:
@@ -1070,8 +1078,6 @@ def print_mc_report(win_counts, final_counts, sf_counts, n_sims):
     )
 
 
-
-
 # ─────────────────────────────────────────────
 # 13. MAIN
 # ─────────────────────────────────────────────
@@ -1102,8 +1108,6 @@ def main(
     total_epochs = epochs * (end_year - start_year)
     opt = torch.optim.Adam(model.parameters(), lr=1e-3, weight_decay=1e-4)
     scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(opt, T_max=total_epochs)
-
-
 
     for year in range(start_year, end_year):
         window_start = pd.Timestamp(f"{year}-01-01")
@@ -1141,22 +1145,6 @@ def main(
             tg = train_graph.to(device)
             embeddings = model.encode(tg)
 
-            hi, ai = samples["hi"].to(device), samples["ai"].to(device)
-            elo_a, elo_b = samples["elo_a"].to(device), samples["elo_b"].to(device)
-            venue = samples["venue"].to(device)
-
-            ea = embeddings[hi]
-            eb = embeddings[ai]
-            elo_norm = ((elo_a - elo_b) / 400.0).unsqueeze(1)
-            venue_col = venue.unsqueeze(1)
-            extra = torch.cat([elo_norm, venue_col], dim=1)
-            inp = torch.cat([ea, eb, extra], dim=1)
-
-            raw_lambda = model.predictor(inp)
-            lambdas = F.softplus(raw_lambda).cpu().numpy()
-
-
-
         model = train_model(
             model,
             train_graph,
@@ -1166,8 +1154,6 @@ def main(
             opt=opt,
             scheduler=scheduler,
         )
-
-
 
     print("\n🔗 Building Full Inference Graph (up to 2026) ...")
     graph, team_idx = build_graph(df, current_elos)
@@ -1180,8 +1166,6 @@ def main(
     prob_matrix = precompute_match_probabilities(
         model, embeddings, team_idx, current_elos
     )
-
-
 
     win_counts, final_counts, sf_counts, group_adv_counts, _ = simulate_tournament(
         model,
