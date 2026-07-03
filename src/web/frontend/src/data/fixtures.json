@@ -1571,7 +1571,7 @@
       "stage": "Round of 32",
       "team1": "Spain",
       "team2": "Austria",
-      "date": "TBD",
+      "date": "2026-07-02",
       "prediction": {
         "win_prob": 0.6658419107753857,
         "draw_prob": 0.203786391411819,
@@ -1580,10 +1580,10 @@
         "xG2": 0.7403063476085663
       },
       "result": {
-        "score1": null,
-        "score2": null,
-        "status": "Upcoming",
-        "winner": null,
+        "score1": 3,
+        "score2": 0,
+        "status": "Finished",
+        "winner": "Spain",
         "shootout_score": null
       }
     },
@@ -1592,7 +1592,7 @@
       "stage": "Round of 32",
       "team1": "Portugal",
       "team2": "Croatia",
-      "date": "TBD",
+      "date": "2026-07-02",
       "prediction": {
         "win_prob": 0.46631211008665324,
         "draw_prob": 0.25787948518493387,
@@ -1601,10 +1601,10 @@
         "xG2": 1.0912137031555176
       },
       "result": {
-        "score1": null,
-        "score2": null,
-        "status": "Upcoming",
-        "winner": null,
+        "score1": 2,
+        "score2": 1,
+        "status": "Finished",
+        "winner": "Portugal",
         "shootout_score": null
       }
     },
@@ -1697,7 +1697,7 @@
       "stage": "Round of 32",
       "team1": "Switzerland",
       "team2": "Algeria",
-      "date": "TBD",
+      "date": "2026-07-02",
       "prediction": {
         "win_prob": 0.5336434050037023,
         "draw_prob": 0.24594633693172616,
@@ -1706,10 +1706,10 @@
         "xG2": 0.9598219394683838
       },
       "result": {
-        "score1": null,
-        "score2": null,
-        "status": "Upcoming",
-        "winner": null,
+        "score1": 2,
+        "score2": 0,
+        "status": "Finished",
+        "winner": "Switzerland",
         "shootout_score": null
       }
     },
@@ -1720,11 +1720,11 @@
       "team2": "Ghana",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.8114861299783008,
-        "draw_prob": 0.13488043296021765,
-        "loss_prob": 0.05363343706148151,
-        "xG1": 2.4797438383102417,
-        "xG2": 0.4839308261871338
+        "win_prob": 0.8141076910697401,
+        "draw_prob": 0.13341440853554384,
+        "loss_prob": 0.052477900394716046,
+        "xG1": 2.491033673286438,
+        "xG2": 0.47892212867736816
       },
       "result": {
         "score1": null,
@@ -1741,11 +1741,11 @@
       "team2": "Egypt",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.3453445831913702,
-        "draw_prob": 0.2627277034772613,
-        "loss_prob": 0.39192771333136844,
-        "xG1": 1.256925642490387,
-        "xG2": 1.3566113710403442
+        "win_prob": 0.3461156582997448,
+        "draw_prob": 0.2627668034870269,
+        "loss_prob": 0.39111753821322826,
+        "xG1": 1.2585084438323975,
+        "xG2": 1.3548040390014648
       },
       "result": {
         "score1": null,
@@ -1762,11 +1762,11 @@
       "team2": "Cape Verde",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.8703917859664426,
-        "draw_prob": 0.09946828311251317,
-        "loss_prob": 0.030139930921044108,
-        "xG1": 2.7848016023635864,
-        "xG2": 0.37123681604862213
+        "win_prob": 0.8708044887351236,
+        "draw_prob": 0.09919486242983959,
+        "loss_prob": 0.03000064883503674,
+        "xG1": 2.7876815795898438,
+        "xG2": 0.37057197093963623
       },
       "result": {
         "score1": null,
