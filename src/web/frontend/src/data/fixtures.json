@@ -1739,7 +1739,7 @@
       "stage": "Round of 32",
       "team1": "Australia",
       "team2": "Egypt",
-      "date": "TBD",
+      "date": "2026-07-03",
       "prediction": {
         "win_prob": 0.34869534067400515,
         "draw_prob": 0.2624791746754121,
@@ -1748,11 +1748,11 @@
         "xG2": 1.3527218103408813
       },
       "result": {
-        "score1": null,
-        "score2": null,
-        "status": "Upcoming",
-        "winner": null,
-        "shootout_score": null
+        "score1": 1,
+        "score2": 1,
+        "status": "Finished",
+        "winner": "Egypt",
+        "shootout_score": "2-4"
       }
     },
     {
