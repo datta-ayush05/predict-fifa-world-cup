@@ -1718,7 +1718,7 @@
       "stage": "Round of 32",
       "team1": "Colombia",
       "team2": "Ghana",
-      "date": "TBD",
+      "date": "2026-07-03",
       "prediction": {
         "win_prob": 0.8141076910697401,
         "draw_prob": 0.13341440853554384,
@@ -1727,10 +1727,10 @@
         "xG2": 0.47892212867736816
       },
       "result": {
-        "score1": null,
-        "score2": null,
-        "status": "Upcoming",
-        "winner": null,
+        "score1": 1,
+        "score2": 0,
+        "status": "Finished",
+        "winner": "Colombia",
         "shootout_score": null
       }
     },
@@ -1741,11 +1741,11 @@
       "team2": "Egypt",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.3461156582997448,
-        "draw_prob": 0.2627668034870269,
-        "loss_prob": 0.39111753821322826,
-        "xG1": 1.2585084438323975,
-        "xG2": 1.3548040390014648
+        "win_prob": 0.34869534067400515,
+        "draw_prob": 0.2624791746754121,
+        "loss_prob": 0.3888254846505827,
+        "xG1": 1.266768991947174,
+        "xG2": 1.3527218103408813
       },
       "result": {
         "score1": null,
@@ -1760,7 +1760,7 @@
       "stage": "Round of 32",
       "team1": "Argentina",
       "team2": "Cape Verde",
-      "date": "TBD",
+      "date": "2026-07-03",
       "prediction": {
         "win_prob": 0.8708044887351236,
         "draw_prob": 0.09919486242983959,
@@ -1769,10 +1769,10 @@
         "xG2": 0.37057197093963623
       },
       "result": {
-        "score1": null,
-        "score2": null,
-        "status": "Upcoming",
-        "winner": null,
+        "score1": 3,
+        "score2": 2,
+        "status": "Finished",
+        "winner": "Argentina",
         "shootout_score": null
       }
     },
