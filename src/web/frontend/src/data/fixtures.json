@@ -1781,7 +1781,7 @@
       "stage": "Round of 16",
       "team1": "Canada",
       "team2": "Morocco",
-      "date": "TBD",
+      "date": "2026-07-04",
       "prediction": {
         "win_prob": 0.30673157506486654,
         "draw_prob": 0.26139377519455254,
@@ -1790,10 +1790,10 @@
         "xG2": 1.4313483238220215
       },
       "result": {
-        "score1": null,
-        "score2": null,
-        "status": "Upcoming",
-        "winner": null,
+        "score1": 0,
+        "score2": 3,
+        "status": "Finished",
+        "winner": "Morocco",
         "shootout_score": null
       }
     },
@@ -1802,7 +1802,7 @@
       "stage": "Round of 16",
       "team1": "Paraguay",
       "team2": "France",
-      "date": "TBD",
+      "date": "2026-07-04",
       "prediction": {
         "win_prob": 0.1489531502994833,
         "draw_prob": 0.21448878642796973,
@@ -1811,10 +1811,10 @@
         "xG2": 1.9057394862174988
       },
       "result": {
-        "score1": null,
-        "score2": null,
-        "status": "Upcoming",
-        "winner": null,
+        "score1": 0,
+        "score2": 1,
+        "status": "Finished",
+        "winner": "France",
         "shootout_score": null
       }
     },
@@ -1825,11 +1825,11 @@
       "team2": "United States",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.3899066192660132,
-        "draw_prob": 0.26380424260159047,
-        "loss_prob": 0.34628913813239637,
-        "xG1": 1.3445850014686584,
-        "xG2": 1.2515230774879456
+        "win_prob": 0.388390378666705,
+        "draw_prob": 0.263680217485245,
+        "loss_prob": 0.3479294038480499,
+        "xG1": 1.3426833748817444,
+        "xG2": 1.2563185691833496
       },
       "result": {
         "score1": null,
@@ -1846,11 +1846,11 @@
       "team2": "Portugal",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.5352056959323951,
-        "draw_prob": 0.24513694287695287,
-        "loss_prob": 0.21965736119065207,
-        "xG1": 1.649812936782837,
-        "xG2": 0.9614230394363403
+        "win_prob": 0.5329062262383866,
+        "draw_prob": 0.24559468543971108,
+        "loss_prob": 0.2214990883219024,
+        "xG1": 1.645333468914032,
+        "xG2": 0.9663007259368896
       },
       "result": {
         "score1": null,
@@ -1867,11 +1867,11 @@
       "team2": "Norway",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.5444852068601846,
-        "draw_prob": 0.2424011291922486,
-        "loss_prob": 0.2131136639475668,
-        "xG1": 1.6763116717338562,
-        "xG2": 0.9499923884868622
+        "win_prob": 0.5386942085618995,
+        "draw_prob": 0.24379211079244284,
+        "loss_prob": 0.21751368064565757,
+        "xG1": 1.6630371809005737,
+        "xG2": 0.9603840112686157
       },
       "result": {
         "score1": null,
@@ -1888,11 +1888,11 @@
       "team2": "England",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.3341918547727639,
-        "draw_prob": 0.26343832276384993,
-        "loss_prob": 0.40236982246338626,
-        "xG1": 1.2242389917373657,
-        "xG2": 1.369728147983551
+        "win_prob": 0.3352815306400375,
+        "draw_prob": 0.2633224937742382,
+        "loss_prob": 0.4013959755857243,
+        "xG1": 1.2278070449829102,
+        "xG2": 1.368951439857483
       },
       "result": {
         "score1": null,
@@ -1909,11 +1909,11 @@
       "team2": "Colombia",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.27866690514558223,
-        "draw_prob": 0.2588513897967099,
-        "loss_prob": 0.4624817050577079,
-        "xG1": 1.0943914651870728,
-        "xG2": 1.4881341457366943
+        "win_prob": 0.28142652949821867,
+        "draw_prob": 0.2591190376370303,
+        "loss_prob": 0.459454432864751,
+        "xG1": 1.1015599966049194,
+        "xG2": 1.4828717708587646
       },
       "result": {
         "score1": null,
@@ -1930,11 +1930,11 @@
       "team2": "Argentina",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.0648413362582369,
-        "draw_prob": 0.147926745640582,
-        "loss_prob": 0.787231918101181,
-        "xG1": 0.5310789346694946,
-        "xG2": 2.3835192918777466
+        "win_prob": 0.0661969750551445,
+        "draw_prob": 0.14966891379368397,
+        "loss_prob": 0.7841341111511715,
+        "xG1": 0.5351294279098511,
+        "xG2": 2.3689725399017334
       },
       "result": {
         "score1": null,
