@@ -1825,11 +1825,11 @@
       "team2": "United States",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.3883930983472078,
-        "draw_prob": 0.2636797566982108,
-        "loss_prob": 0.34792714495458127,
-        "xG1": 1.3426920175552368,
-        "xG2": 1.2563164830207825
+        "win_prob": 0.3903573848326831,
+        "draw_prob": 0.2633133827277096,
+        "loss_prob": 0.3463292324396073,
+        "xG1": 1.3491791486740112,
+        "xG2": 1.2551110982894897
       },
       "result": {
         "score1": null,
@@ -1846,11 +1846,11 @@
       "team2": "Portugal",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.5328986616208953,
-        "draw_prob": 0.24559648035524576,
-        "loss_prob": 0.22150485802385894,
-        "xG1": 1.6453157663345337,
-        "xG2": 0.9663138091564178
+        "win_prob": 0.5353308155720424,
+        "draw_prob": 0.24479729361222877,
+        "loss_prob": 0.2198718908157289,
+        "xG1": 1.6531963348388672,
+        "xG2": 0.9642810821533203
       },
       "result": {
         "score1": null,
@@ -1865,7 +1865,7 @@
       "stage": "Round of 16",
       "team1": "Brazil",
       "team2": "Norway",
-      "date": "TBD",
+      "date": "2026-07-05",
       "prediction": {
         "win_prob": 0.5386849468642476,
         "draw_prob": 0.2437943309719215,
@@ -1874,10 +1874,10 @@
         "xG2": 0.9604003727436066
       },
       "result": {
-        "score1": null,
-        "score2": null,
-        "status": "Upcoming",
-        "winner": null,
+        "score1": 1,
+        "score2": 2,
+        "status": "Finished",
+        "winner": "Norway",
         "shootout_score": null
       }
     },
@@ -1886,7 +1886,7 @@
       "stage": "Round of 16",
       "team1": "Mexico",
       "team2": "England",
-      "date": "TBD",
+      "date": "2026-07-05",
       "prediction": {
         "win_prob": 0.3352794925675061,
         "draw_prob": 0.26332194224150207,
@@ -1895,10 +1895,10 @@
         "xG2": 1.368960201740265
       },
       "result": {
-        "score1": null,
-        "score2": null,
-        "status": "Upcoming",
-        "winner": null,
+        "score1": 2,
+        "score2": 3,
+        "status": "Finished",
+        "winner": "England",
         "shootout_score": null
       }
     },
@@ -1909,11 +1909,11 @@
       "team2": "Colombia",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.2814301202684326,
-        "draw_prob": 0.25911915370137206,
-        "loss_prob": 0.4594507260301953,
-        "xG1": 1.101570725440979,
-        "xG2": 1.4828670620918274
+        "win_prob": 0.2809152200684975,
+        "draw_prob": 0.25869691744636314,
+        "loss_prob": 0.46038786248513935,
+        "xG1": 1.1025974750518799,
+        "xG2": 1.487406075000763
       },
       "result": {
         "score1": null,
@@ -1930,11 +1930,11 @@
       "team2": "Argentina",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.06619947192681563,
-        "draw_prob": 0.1496717206041573,
-        "loss_prob": 0.7841288074690271,
-        "xG1": 0.5351387858390808,
-        "xG2": 2.3689515590667725
+        "win_prob": 0.065166608728575,
+        "draw_prob": 0.14855753514146403,
+        "loss_prob": 0.786275856129961,
+        "xG1": 0.5309834182262421,
+        "xG2": 2.376915454864502
       },
       "result": {
         "score1": null,
