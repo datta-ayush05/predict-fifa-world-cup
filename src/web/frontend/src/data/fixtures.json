@@ -1945,17 +1945,17 @@
       }
     },
     {
-      "match_id": "qf_0_TBD_TBD",
+      "match_id": "qf_0_France_Morocco",
       "stage": "Quarter-Final",
-      "team1": "TBD",
-      "team2": "TBD",
+      "team1": "France",
+      "team2": "Morocco",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.34574580434747654,
-        "draw_prob": 0.30850839130504687,
-        "loss_prob": 0.3457458043474765,
-        "xG1": 1.0,
-        "xG2": 1.0
+        "win_prob": 0.5951781952889468,
+        "draw_prob": 0.2290528403953973,
+        "loss_prob": 0.1757689643156559,
+        "xG1": 1.7898268103599548,
+        "xG2": 0.854397714138031
       },
       "result": {
         "score1": null,
@@ -1966,17 +1966,17 @@
       }
     },
     {
-      "match_id": "qf_1_TBD_TBD",
+      "match_id": "qf_1_Spain_Belgium",
       "stage": "Quarter-Final",
-      "team1": "TBD",
-      "team2": "TBD",
+      "team1": "Spain",
+      "team2": "Belgium",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.34574580434747654,
-        "draw_prob": 0.30850839130504687,
-        "loss_prob": 0.3457458043474765,
-        "xG1": 1.0,
-        "xG2": 1.0
+        "win_prob": 0.5889258580211393,
+        "draw_prob": 0.23013386006933684,
+        "loss_prob": 0.18094028190952394,
+        "xG1": 1.783818244934082,
+        "xG2": 0.8737319111824036
       },
       "result": {
         "score1": null,
@@ -1987,17 +1987,17 @@
       }
     },
     {
-      "match_id": "qf_2_TBD_TBD",
+      "match_id": "qf_2_Norway_England",
       "stage": "Quarter-Final",
-      "team1": "TBD",
-      "team2": "TBD",
+      "team1": "Norway",
+      "team2": "England",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.34574580434747654,
-        "draw_prob": 0.30850839130504687,
-        "loss_prob": 0.3457458043474765,
-        "xG1": 1.0,
-        "xG2": 1.0
+        "win_prob": 0.24556531170454773,
+        "draw_prob": 0.25104581144875504,
+        "loss_prob": 0.5033888768466972,
+        "xG1": 1.027732789516449,
+        "xG2": 1.5866561532020569
       },
       "result": {
         "score1": null,
@@ -2008,17 +2008,17 @@
       }
     },
     {
-      "match_id": "qf_3_TBD_TBD",
+      "match_id": "qf_3_Argentina_Switzerland",
       "stage": "Quarter-Final",
-      "team1": "TBD",
-      "team2": "TBD",
+      "team1": "Argentina",
+      "team2": "Switzerland",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.34574580434747654,
-        "draw_prob": 0.30850839130504687,
-        "loss_prob": 0.3457458043474765,
-        "xG1": 1.0,
-        "xG2": 1.0
+        "win_prob": 0.5797036747531036,
+        "draw_prob": 0.23296406468690375,
+        "loss_prob": 0.18733226055999266,
+        "xG1": 1.7599906921386719,
+        "xG2": 0.8884858191013336
       },
       "result": {
         "score1": null,
