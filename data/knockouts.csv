@@ -21,3 +21,5 @@ date,stage,team1,team2,score1,score2,shootout_score,winner,city,country,neutral
 2026-07-05,r16,Mexico,England,2,3,,England,Mexico City,Mexico,FALSE
 2026-07-06,r16,Portugal,Spain,0,1,,Spain,Arlington,United States,TRUE
 2026-07-06,r16,United States,Belgium,1,4,,Belgium,Seattle,United States,FALSE
+2026-07-07,r16,Argentina,Egypt,3,2,,Argentina,Atlanta,United States,TRUE
+2026-07-07,r16,Colombia,Switzerland,0,0,3-4,Switzerland,Vancouver,Canada,TRUE
