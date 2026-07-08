@@ -1907,7 +1907,7 @@
       "stage": "Round of 16",
       "team1": "Switzerland",
       "team2": "Colombia",
-      "date": "TBD",
+      "date": "2026-07-07",
       "prediction": {
         "win_prob": 0.2843120632124831,
         "draw_prob": 0.2593397346837565,
@@ -1916,11 +1916,11 @@
         "xG2": 1.4778165221214294
       },
       "result": {
-        "score1": null,
-        "score2": null,
-        "status": "Upcoming",
-        "winner": null,
-        "shootout_score": null
+        "score1": 0,
+        "score2": 0,
+        "status": "Finished",
+        "winner": "Switzerland",
+        "shootout_score": "4-3"
       }
     },
     {
@@ -1928,7 +1928,7 @@
       "stage": "Round of 16",
       "team1": "Egypt",
       "team2": "Argentina",
-      "date": "TBD",
+      "date": "2026-07-07",
       "prediction": {
         "win_prob": 0.06618166089571535,
         "draw_prob": 0.14937861915529665,
@@ -1937,10 +1937,10 @@
         "xG2": 2.373082756996155
       },
       "result": {
-        "score1": null,
-        "score2": null,
-        "status": "Upcoming",
-        "winner": null,
+        "score1": 2,
+        "score2": 3,
+        "status": "Finished",
+        "winner": "Argentina",
         "shootout_score": null
       }
     },
