@@ -48,10 +48,10 @@ MATCHUPS_R16 = [
 ]
 
 MATCHUPS_QF = [
-    ("TBD", "TBD"),
-    ("TBD", "TBD"),
-    ("TBD", "TBD"),
-    ("TBD", "TBD"),
+    ("France", "Morocco"),
+    ("Spain", "Belgium"),
+    ("Norway", "England"),
+    ("Argentina", "Switzerland"),
 ]
 
 MATCHUPS_SF = [
