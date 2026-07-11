@@ -260,6 +260,16 @@ def main():
     # Load model and ELOs by running main with n_sims=1
     model, graph, team_idx, current_elos = wc_predict_gnn.main(epochs=40, n_sims=1)
 
+    # --- SAVE ELOS TO JSON ---
+    elo_out_path = os.path.join(os.path.dirname(__file__), "..", "..", "data", "current_elos.json")
+    with open(elo_out_path, "w") as f:
+        # Sort by Elo descending for convenience
+        import json
+        sorted_elos = dict(sorted(current_elos.items(), key=lambda item: item[1], reverse=True))
+        json.dump(sorted_elos, f, indent=2)
+    print(f"> Saved current Elo ratings to {elo_out_path}")
+    # -------------------------------------
+
     # Restore original functions just in case
     wc_predict_gnn.simulate_tournament = original_sim
     wc_predict_gnn.print_mc_report = original_report
