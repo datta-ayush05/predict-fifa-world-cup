@@ -1970,7 +1970,7 @@
       "stage": "Quarter-Final",
       "team1": "Spain",
       "team2": "Belgium",
-      "date": "TBD",
+      "date": "2026-07-10",
       "prediction": {
         "win_prob": 0.5889213262161975,
         "draw_prob": 0.23013633971608566,
@@ -1979,10 +1979,10 @@
         "xG2": 0.8737280070781708
       },
       "result": {
-        "score1": null,
-        "score2": null,
-        "status": "Upcoming",
-        "winner": null,
+        "score1": 2,
+        "score2": 1,
+        "status": "Finished",
+        "winner": "Spain",
         "shootout_score": null
       }
     },
@@ -1993,11 +1993,11 @@
       "team2": "England",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.2455609952334448,
-        "draw_prob": 0.25104627362191345,
-        "loss_prob": 0.5033927311446418,
-        "xG1": 1.0277138948440552,
-        "xG2": 1.5866534113883972
+        "win_prob": 0.2452129975916232,
+        "draw_prob": 0.2511095138349101,
+        "loss_prob": 0.5036774885734667,
+        "xG1": 1.0260326266288757,
+        "xG2": 1.5861771702766418
       },
       "result": {
         "score1": null,
@@ -2014,11 +2014,11 @@
       "team2": "Switzerland",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.579611597674318,
-        "draw_prob": 0.23299177815360733,
-        "loss_prob": 0.18739662417207464,
-        "xG1": 1.7597548961639404,
-        "xG2": 0.8886339068412781
+        "win_prob": 0.5808385071726391,
+        "draw_prob": 0.23273690626411203,
+        "loss_prob": 0.18642458656324878,
+        "xG1": 1.7616117596626282,
+        "xG2": 0.8854677081108093
       },
       "result": {
         "score1": null,
