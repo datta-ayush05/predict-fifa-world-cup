@@ -1991,7 +1991,7 @@
       "stage": "Quarter-Final",
       "team1": "Norway",
       "team2": "England",
-      "date": "TBD",
+      "date": "2026-07-11",
       "prediction": {
         "win_prob": 0.2452129676571484,
         "draw_prob": 0.25110951509274365,
@@ -2000,10 +2000,10 @@
         "xG2": 1.5861771702766418
       },
       "result": {
-        "score1": null,
-        "score2": null,
-        "status": "Upcoming",
-        "winner": null,
+        "score1": 1,
+        "score2": 2,
+        "status": "Finished",
+        "winner": "England",
         "shootout_score": null
       }
     },
@@ -2012,7 +2012,7 @@
       "stage": "Quarter-Final",
       "team1": "Argentina",
       "team2": "Switzerland",
-      "date": "TBD",
+      "date": "2026-07-11",
       "prediction": {
         "win_prob": 0.5808385540782613,
         "draw_prob": 0.23273687615347627,
@@ -2021,25 +2021,25 @@
         "xG2": 0.8854677975177765
       },
       "result": {
-        "score1": null,
-        "score2": null,
-        "status": "Upcoming",
-        "winner": null,
+        "score1": 3,
+        "score2": 1,
+        "status": "Finished",
+        "winner": "Argentina",
         "shootout_score": null
       }
     },
     {
-      "match_id": "sf_0_TBD_TBD",
+      "match_id": "sf_0_France_Spain",
       "stage": "Semi-Final",
-      "team1": "TBD",
-      "team2": "TBD",
+      "team1": "France",
+      "team2": "Spain",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.34574580434747654,
-        "draw_prob": 0.30850839130504687,
-        "loss_prob": 0.3457458043474765,
-        "xG1": 1.0,
-        "xG2": 1.0
+        "win_prob": 0.33767213629593723,
+        "draw_prob": 0.265028762108153,
+        "loss_prob": 0.39729910159590986,
+        "xG1": 1.2219849228858948,
+        "xG2": 1.3486998677253723
       },
       "result": {
         "score1": null,
@@ -2050,17 +2050,17 @@
       }
     },
     {
-      "match_id": "sf_1_TBD_TBD",
+      "match_id": "sf_1_England_Argentina",
       "stage": "Semi-Final",
-      "team1": "TBD",
-      "team2": "TBD",
+      "team1": "England",
+      "team2": "Argentina",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.34574580434747654,
-        "draw_prob": 0.30850839130504687,
-        "loss_prob": 0.3457458043474765,
-        "xG1": 1.0,
-        "xG2": 1.0
+        "win_prob": 0.2832166785114605,
+        "draw_prob": 0.2595721922869016,
+        "loss_prob": 0.4572111292016379,
+        "xG1": 1.1043840646743774,
+        "xG2": 1.476743221282959
       },
       "result": {
         "score1": null,
