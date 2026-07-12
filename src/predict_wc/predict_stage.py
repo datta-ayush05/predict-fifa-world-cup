@@ -55,8 +55,8 @@ MATCHUPS_QF = [
 ]
 
 MATCHUPS_SF = [
-    ("TBD", "TBD"),
-    ("TBD", "TBD"),
+    ("France", "Spain"),
+    ("England", "Argentina"),
 ]
 
 MATCHUPS_FINAL = [("TBD", "TBD")]
