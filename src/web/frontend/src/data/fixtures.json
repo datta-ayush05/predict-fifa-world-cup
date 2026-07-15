@@ -2033,7 +2033,7 @@
       "stage": "Semi-Final",
       "team1": "France",
       "team2": "Spain",
-      "date": "TBD",
+      "date": "2026-07-14",
       "prediction": {
         "win_prob": 0.33767213629593723,
         "draw_prob": 0.265028762108153,
@@ -2042,10 +2042,10 @@
         "xG2": 1.3486998677253723
       },
       "result": {
-        "score1": null,
-        "score2": null,
-        "status": "Upcoming",
-        "winner": null,
+        "score1": 0,
+        "score2": 2,
+        "status": "Finished",
+        "winner": "Spain",
         "shootout_score": null
       }
     },
@@ -2056,11 +2056,11 @@
       "team2": "Argentina",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.2832166785114605,
-        "draw_prob": 0.2595721922869016,
-        "loss_prob": 0.4572111292016379,
-        "xG1": 1.1043840646743774,
-        "xG2": 1.476743221282959
+        "win_prob": 0.2825084900112948,
+        "draw_prob": 0.25933148429185593,
+        "loss_prob": 0.45816002569684927,
+        "xG1": 1.1036616563796997,
+        "xG2": 1.4797562956809998
       },
       "result": {
         "score1": null,
