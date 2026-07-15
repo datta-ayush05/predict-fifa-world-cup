@@ -2071,17 +2071,17 @@
       }
     },
     {
-      "match_id": "third_place_0_TBD_TBD",
+      "match_id": "third_place_0_England_France",
       "stage": "Third Place Play-off",
-      "team1": "TBD",
-      "team2": "TBD",
+      "team1": "England",
+      "team2": "France",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.34574580434747654,
-        "draw_prob": 0.30850839130504687,
-        "loss_prob": 0.3457458043474765,
-        "xG1": 1.0,
-        "xG2": 1.0
+        "win_prob": 0.31595252786851125,
+        "draw_prob": 0.2628155110778309,
+        "loss_prob": 0.4212319610536579,
+        "xG1": 1.1801813840866089,
+        "xG2": 1.4047840237617493
       },
       "result": {
         "score1": null,
@@ -2092,17 +2092,17 @@
       }
     },
     {
-      "match_id": "final_0_TBD_TBD",
+      "match_id": "final_0_Argentina_Spain",
       "stage": "Final",
-      "team1": "TBD",
-      "team2": "TBD",
+      "team1": "Argentina",
+      "team2": "Spain",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.34574580434747654,
-        "draw_prob": 0.30850839130504687,
-        "loss_prob": 0.3457458043474765,
-        "xG1": 1.0,
-        "xG2": 1.0
+        "win_prob": 0.3380204393109833,
+        "draw_prob": 0.26471853512439686,
+        "loss_prob": 0.39726102556461984,
+        "xG1": 1.2249829769134521,
+        "xG2": 1.3509885668754578
       },
       "result": {
         "score1": null,
