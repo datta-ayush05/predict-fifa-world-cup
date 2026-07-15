@@ -20,3 +20,5 @@ __pycache__
 
 # Workflow Scripts
 rebuild_history.py
+calculate_rps.py
+check_accuracy.py
