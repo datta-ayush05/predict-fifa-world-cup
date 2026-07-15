@@ -59,9 +59,9 @@ MATCHUPS_SF = [
     ("England", "Argentina"),
 ]
 
-MATCHUPS_FINAL = [("TBD", "TBD")]
+MATCHUPS_FINAL = [("Argentina", "Spain")]
 
-MATCHUPS_THIRD_PLACE = [("TBD", "TBD")]
+MATCHUPS_THIRD_PLACE = [("England", "France")]
 
 MATCHUPS_BY_STAGE = {
     "r32": MATCHUPS_R32,
