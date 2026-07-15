@@ -2054,7 +2054,7 @@
       "stage": "Semi-Final",
       "team1": "England",
       "team2": "Argentina",
-      "date": "TBD",
+      "date": "2026-07-15",
       "prediction": {
         "win_prob": 0.2825084900112948,
         "draw_prob": 0.25933148429185593,
@@ -2063,10 +2063,10 @@
         "xG2": 1.4797562956809998
       },
       "result": {
-        "score1": null,
-        "score2": null,
-        "status": "Upcoming",
-        "winner": null,
+        "score1": 1,
+        "score2": 2,
+        "status": "Finished",
+        "winner": "Argentina",
         "shootout_score": null
       }
     },
