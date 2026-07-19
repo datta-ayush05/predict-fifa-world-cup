@@ -2075,7 +2075,7 @@
       "stage": "Third Place Play-off",
       "team1": "England",
       "team2": "France",
-      "date": "TBD",
+      "date": "2026-07-18",
       "prediction": {
         "win_prob": 0.31595252786851125,
         "draw_prob": 0.2628155110778309,
@@ -2084,10 +2084,10 @@
         "xG2": 1.4047840237617493
       },
       "result": {
-        "score1": null,
-        "score2": null,
-        "status": "Upcoming",
-        "winner": null,
+        "score1": 6,
+        "score2": 4,
+        "status": "Finished",
+        "winner": "England",
         "shootout_score": null
       }
     },
@@ -2098,11 +2098,11 @@
       "team2": "Spain",
       "date": "TBD",
       "prediction": {
-        "win_prob": 0.3380204393109833,
-        "draw_prob": 0.26471853512439686,
-        "loss_prob": 0.39726102556461984,
-        "xG1": 1.2249829769134521,
-        "xG2": 1.3509885668754578
+        "win_prob": 0.33636245286076893,
+        "draw_prob": 0.2650804349727781,
+        "loss_prob": 0.39855711216645284,
+        "xG1": 1.218377947807312,
+        "xG2": 1.350517451763153
       },
       "result": {
         "score1": null,
