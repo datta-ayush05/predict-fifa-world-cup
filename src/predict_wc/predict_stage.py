@@ -116,12 +116,13 @@ def simulate_from_stage(
         current_stage = stage
 
         # Step through the remaining stages based on where we start
-        stages = ["r32", "r16", "qf", "sf", "final"]
+        stages = ["r32", "r16", "qf", "sf", "third_place", "final"]
         start_idx = stages.index(current_stage)
 
         for i in range(start_idx, len(stages)):
             stage_name = stages[i]
             next_winners = []
+            next_losers = []
 
             for match in current_matchups:
                 ta = match[0]
@@ -135,6 +136,7 @@ def simulate_from_stage(
 
                 if locked_winner:
                     next_winners.append(locked_winner)
+                    next_losers.append(tb if locked_winner == ta else ta)
                 else:
                     winner, res = wc_predict_gnn.simulate_match(
                         model,
@@ -148,6 +150,7 @@ def simulate_from_stage(
                         prob_matrix=prob_matrix,
                     )
                     next_winners.append(winner)
+                    next_losers.append(tb if winner == ta else ta)
 
             if stage_name == "final":
                 # The winner of the final is the tournament winner
@@ -155,6 +158,21 @@ def simulate_from_stage(
                 # Both finalists get recorded
                 final_counts[current_matchups[0][0]] += 1
                 final_counts[current_matchups[0][1]] += 1
+            elif stage_name == "sf":
+                # Save winners for the final, and use losers for third_place
+                final_matchup = [(next_winners[0], next_winners[1])]
+                current_matchups = [(next_losers[0], next_losers[1])]
+            elif stage_name == "third_place":
+                # Restore the final matchup that was saved during sf
+                # If we started at third_place, we assume the final is fixed in MATCHUPS_BY_STAGE
+                if 'final_matchup' in locals():
+                    current_matchups = final_matchup
+                else:
+                    # Fallback if starting exactly at third_place
+                    mapped_final = []
+                    for m in MATCHUPS_BY_STAGE["final"]:
+                        mapped_final.append((wc_predict_gnn.NAME_MAP.get(m[0], m[0]), wc_predict_gnn.NAME_MAP.get(m[1], m[1])))
+                    current_matchups = mapped_final
             else:
                 # Pair the winners for the next round (adjacent pairs)
                 current_matchups = [
@@ -207,7 +225,7 @@ def main():
     parser.add_argument(
         "--stage",
         type=str,
-        choices=["r32", "r16", "qf", "sf", "final"],
+        choices=["r32", "r16", "qf", "sf", "third_place", "final"],
         required=True,
         help="The stage to start simulating from",
     )
@@ -236,7 +254,7 @@ def main():
         return
 
     # Check validity of matchups count
-    expected_matches = {"r32": 16, "r16": 8, "qf": 4, "sf": 2, "final": 1}
+    expected_matches = {"r32": 16, "r16": 8, "qf": 4, "sf": 2, "third_place": 1, "final": 1}
     if len(matchups) != expected_matches[args.stage]:
         print(
             f"Warning: Expected {expected_matches[args.stage]} matches for {args.stage}, but found {len(matchups)}."
