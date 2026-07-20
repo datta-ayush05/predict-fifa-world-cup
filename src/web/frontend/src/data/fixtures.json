@@ -2096,7 +2096,7 @@
       "stage": "Final",
       "team1": "Argentina",
       "team2": "Spain",
-      "date": "TBD",
+      "date": "2026-07-19",
       "prediction": {
         "win_prob": 0.33636245286076893,
         "draw_prob": 0.2650804349727781,
@@ -2105,10 +2105,10 @@
         "xG2": 1.350517451763153
       },
       "result": {
-        "score1": null,
-        "score2": null,
-        "status": "Upcoming",
-        "winner": null,
+        "score1": 0,
+        "score2": 1,
+        "status": "Finished",
+        "winner": "Spain",
         "shootout_score": null
       }
     }
